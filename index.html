@@ -21,6 +21,7 @@
             --color-surface-hover: #1f1f1f;
             --color-white: #ffffff;
             --color-gold: #D4AF37;
+            --color-red: #8B0000;
             --color-gray: #888888;
             --color-light-gray: #e0e0e0;
             
@@ -392,13 +393,196 @@
         .check-list li::before { content: '□'; font-size: 1.2rem; color: #444; }
 
         /* ==========================================================================
+           4. IDENTIDADE VISUAL STYLES
+           ========================================================================== */
+        .id-hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .id-hero .image-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            border-radius: 0;
+            border: none;
+            font-size: 1.5rem;
+        }
+
+        /* Paleta de Cores */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .color-card {
+            background: var(--color-surface);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition-smooth);
+        }
+
+        .color-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            border-color: var(--color-gold);
+        }
+
+        .color-swatch {
+            height: 140px;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--color-white);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .color-details {
+            padding: 2rem;
+        }
+
+        .color-details h4 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-details p {
+            font-size: 0.85rem;
+            color: var(--color-gray);
+            margin-bottom: 1rem;
+        }
+
+        .color-details strong {
+            color: var(--color-white);
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Tipografia */
+        .type-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .type-sample {
+            padding: 4rem;
+            background: var(--color-surface);
+            border-radius: 12px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+
+        .type-sample-title {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            color: var(--color-gold);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .type-sample-body {
+            font-family: var(--font-body);
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--color-white);
+            line-height: 1;
+        }
+
+        /* Moodboard */
+        .moodboard-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            grid-auto-rows: 250px;
+        }
+
+        .moodboard-item {
+            background-color: var(--color-surface);
+            border: 1px solid #333;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gray);
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: var(--transition-smooth);
+        }
+
+        .moodboard-item:hover {
+            border-color: var(--color-gold);
+            color: var(--color-white);
+        }
+
+        .mb-large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .mb-wide {
+            grid-column: span 2;
+        }
+
+        /* Resumo Executivo */
+        .executive-summary {
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-black) 100%);
+            border: 1px solid var(--color-gold);
+            padding: 5rem;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .executive-summary::before {
+            content: '✦';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-black);
+            padding: 0 1rem;
+            font-size: 2rem;
+            color: var(--color-gold);
+        }
+
+        /* ==========================================================================
            RESPONSIVE DESIGN
            ========================================================================== */
         @media (max-width: 1024px) {
             .pillars-grid { grid-template-columns: repeat(3, 1fr); }
+            .moodboard-grid { grid-template-columns: repeat(2, 1fr); }
+            .mb-large { grid-column: span 2; grid-row: span 2; }
+            .mb-wide { grid-column: span 2; }
         }
         @media (max-width: 900px) {
-            .potential-grid, .distribution-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .potential-grid, .distribution-grid, .type-grid { grid-template-columns: 1fr; gap: 2rem; }
             .premium-table, .premium-table tbody, .premium-table tr, .premium-table td, .premium-table th { display: block; }
             .premium-table tr { margin-bottom: 2rem; border: 1px solid #333; border-radius: 8px; }
             .premium-table td { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding: 1rem; }
@@ -410,6 +594,7 @@
             .problem-section { padding: 10vw 5vw; margin: 0; border-radius: 0; }
             .pillars-grid { grid-template-columns: repeat(2, 1fr); }
             .nav-links { display: none; }
+            .executive-summary { padding: 3rem 1.5rem; }
         }
         @media (max-width: 480px) {
             .timeline-container::before { left: 20px; }
@@ -417,6 +602,8 @@
             .timeline-time { position: relative; text-align: left; width: auto; background: transparent; margin-bottom: 0.5rem; top: auto; }
             .timeline-dot { left: 16px; top: 50px; }
             .pillars-grid, .problem-cards { grid-template-columns: 1fr; }
+            .moodboard-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+            .mb-large, .mb-wide { grid-column: span 1; grid-row: span 1; }
         }
     </style>
 </head>
@@ -429,6 +616,7 @@
             <a href="#home" class="nav-item">Home</a>
             <a href="#experiencia" class="nav-item">Experiência</a>
             <a href="#arquitetura" class="nav-item">Arquitetura</a>
+            <a href="#identidade" class="nav-item">Identidade Visual</a>
         </div>
     </nav>
 
@@ -526,7 +714,7 @@
             <h2 class="title-large reveal-up">A oportunidade</h2>
             
             <div class="text-lead reveal-up" style="max-width: 800px;">
-                <p>No interior, a grande maioria dos estabelecimentos noturnos concentra sua estratégia em uma única variável: o preço. Essa abordagem cria espaços funcionais, porém estéreis, desprovidos de identidade e magnetismo.</p>
+                <p>No interior, a grande maioria dos establishments noturnos concentra sua estratégia em uma única variável: o preço. Essa abordagem cria espaços funcionais, porém estéreis, desprovidos de identidade e magnetismo.</p>
                 <p>Acreditamos que experiências memoráveis são o verdadeiro motor da fidelização. O Dom Henrique une o melhor de dois mundos: a atmosfera estética de um bar premium da capital com a operação simplificada e o calor humano que o interior exige.</p>
             </div>
 
@@ -1017,12 +1205,292 @@
     </section>
 
     <!-- ==========================================================================
+         SEÇÃO 4: IDENTIDADE VISUAL
+         ========================================================================== -->
+    <section id="identidade">
+        <header class="id-hero">
+            <div class="image-placeholder reveal-up" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+                [IMAGEM - IDENTIDADE VISUAL]
+            </div>
+            <div class="exp-hero-overlay" style="z-index: 2;"></div>
+            
+            <div class="exp-hero-content reveal-up" style="z-index: 3;">
+                <span class="section-tag" style="justify-content: center; display: flex;">Capítulo 04</span>
+                <h1 class="home-hero-title" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">Identidade Visual</h1>
+                <p class="home-hero-subtitle" style="margin: 0 auto; text-shadow: 0 2px 10px rgba(0,0,0,0.5); color: var(--color-light-gray);">Toda grande marca possui um sistema visual consistente. O Dom Henrique também.</p>
+            </div>
+        </header>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">A Essência</span>
+            <h2 class="title-large reveal-up">Conceito Visual</h2>
+            <div class="text-lead reveal-up">
+                <p>A personalidade visual do Dom Henrique foi construída para transitar perfeitamente entre o rústico do armazém e a curadoria de um design internacional. Nós projetamos o ambiente digital e físico com as seguintes características:</p>
+            </div>
+            
+            <div class="solution-grid" style="margin-top: 4rem;">
+                <div class="solution-card reveal-up">
+                    <div class="icon">🏢</div>
+                    <h4>Moderno & Urbano</h4>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;"><strong>Motivo:</strong> Quebrar o estigma de que "bar de cidade pequena" precisa ter visual rudimentar ou sertanejo. Linhas limpas e fundo escuro trazem peso de capital.</p>
+                </div>
+                <div class="solution-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="icon">⚡</div>
+                    <h4>Jovem & Vibrante</h4>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;"><strong>Motivo:</strong> Conectar-se com os universitários. A linguagem visual não pode ser entediante. O uso de neons e dourado cria o senso de "energia noturna".</p>
+                </div>
+                <div class="solution-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="icon">🎩</div>
+                    <h4>Elegante & Acolhedor</h4>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;"><strong>Motivo:</strong> A elegância eleva a percepção de valor (a cerveja parece mais premium), enquanto o acolhimento (madeiras, luz quente) diz que todos são bem-vindos.</p>
+                </div>
+                <div class="solution-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="icon">📸</div>
+                    <h4>Instagramável</h4>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;"><strong>Motivo:</strong> O marketing mais barato e efetivo é o do cliente. Todo elemento gráfico é pensado para funcionar perfeitamente em telas e stories.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container" style="background-color: var(--color-dark); padding: 10vh 5vw; border-radius: 20px;">
+            <span class="section-tag reveal-left">As Cores</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Paleta de Cores</h2>
+
+            <div class="color-grid">
+                <!-- Primária 1 -->
+                <div class="color-card reveal-up">
+                    <div class="color-swatch" style="background-color: var(--color-black);">#000000</div>
+                    <div class="color-details">
+                        <h4>Preto Absoluto</h4>
+                        <strong>Primária</strong>
+                        <p><strong>RGB:</strong> 0, 0, 0</p>
+                        <p><strong>Psicologia:</strong> Poder, elegância, mistério. Foca a atenção no que realmente importa.</p>
+                        <p><strong>Uso:</strong> Fundo principal de sites, cardápios, paredes gerais e tetos da arquitetura.</p>
+                    </div>
+                </div>
+                <!-- Primária 2 -->
+                <div class="color-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="color-swatch" style="background-color: var(--color-dark);">#0A0A0A</div>
+                    <div class="color-details">
+                        <h4>Cinza Asfalto</h4>
+                        <strong>Primária</strong>
+                        <p><strong>RGB:</strong> 10, 10, 10</p>
+                        <p><strong>Psicologia:</strong> Profundidade e textura urbana. Quebra a dureza do preto puro.</p>
+                        <p><strong>Uso:</strong> Cards, sobreposições, móveis de metal e áreas de transição visual.</p>
+                    </div>
+                </div>
+                <!-- Secundária 1 -->
+                <div class="color-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="color-swatch" style="background-color: var(--color-gold); color: var(--color-black);">#D4AF37</div>
+                    <div class="color-details">
+                        <h4 style="color: var(--color-gold);">Dourado Cerveja</h4>
+                        <strong>Secundária</strong>
+                        <p><strong>RGB:</strong> 212, 175, 55</p>
+                        <p><strong>Psicologia:</strong> Premium, celebração, qualidade. Remete diretamente à cor da bebida pilar do bar.</p>
+                        <p><strong>Uso:</strong> Títulos, detalhes, botões, luzes neon e sinalização de fachada.</p>
+                    </div>
+                </div>
+                <!-- Secundária 2 -->
+                <div class="color-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="color-swatch" style="background-color: var(--color-red);">#8B0000</div>
+                    <div class="color-details">
+                        <h4 style="color: var(--color-red);">Vermelho Profundo</h4>
+                        <strong>Secundária</strong>
+                        <p><strong>RGB:</strong> 139, 0, 0</p>
+                        <p><strong>Psicologia:</strong> Paixão, energia, fome e atenção. Acende o lado vibrante da noite.</p>
+                        <p><strong>Uso:</strong> Pequenos detalhes de destaque, tags de preço e luzes de preenchimento (fill light) no bar.</p>
+                    </div>
+                </div>
+                <!-- Apoio 1 -->
+                <div class="color-card reveal-up">
+                    <div class="color-swatch" style="background-color: var(--color-gray); color: var(--color-black);">#888888</div>
+                    <div class="color-details">
+                        <h4>Cinza Neutro</h4>
+                        <strong>Apoio</strong>
+                        <p><strong>RGB:</strong> 136, 136, 136</p>
+                        <p><strong>Uso:</strong> Textos de apoio, legendas e descrições para não cansar a leitura no fundo escuro.</p>
+                    </div>
+                </div>
+                <!-- Apoio 2 -->
+                <div class="color-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="color-swatch" style="background-color: var(--color-white); color: var(--color-black);">#FFFFFF</div>
+                    <div class="color-details">
+                        <h4>Branco Neve</h4>
+                        <strong>Neutra</strong>
+                        <p><strong>RGB:</strong> 255, 255, 255</p>
+                        <p><strong>Uso:</strong> Textos principais e ícones onde o contraste absoluto é exigido para legibilidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">A Voz Gráfica</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Tipografia</h2>
+
+            <div class="type-grid">
+                <div class="type-sample reveal-up">
+                    <div class="type-sample-title">Playfair Display</div>
+                    <div style="color: var(--color-gray); margin-bottom: 1.5rem; font-style: italic;">"A Esquina Redefinida."</div>
+                    <div style="font-family: var(--font-display); font-size: 1.5rem; line-height: 1.2;">Aa Bb Cc Dd Ee Ff 0123456789</div>
+                </div>
+                <div class="reveal-up">
+                    <h4 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-gold);">Fonte Primária (Títulos)</h4>
+                    <p style="color: var(--color-gray); margin-bottom: 1rem;"><strong>Uso:</strong> Fachada, cabeçalhos, destaques e frases de efeito (Manifesto).</p>
+                    <p style="color: var(--color-gray);"><strong>Estratégia:</strong> Uma fonte serifada de alto contraste. Traz o peso de marcas premium e destilarias clássicas. Utilizamos em tamanhos gigantes e pesos variados (Regular e Italic) para criar hierarquia editorial elegante.</p>
+                </div>
+
+                <div class="type-sample reveal-up">
+                    <div class="type-sample-body" style="margin-bottom: 0.5rem; color: var(--color-white);">Inter</div>
+                    <div style="color: var(--color-gray); margin-bottom: 1.5rem; font-family: var(--font-body);">Design desenhado para telas e legibilidade instantânea.</div>
+                    <div style="font-family: var(--font-body); font-size: 1.2rem; font-weight: 300;">Aa Bb Cc Dd Ee Ff 0123456789</div>
+                </div>
+                <div class="reveal-up">
+                    <h4 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-white);">Fonte Secundária (Textos)</h4>
+                    <p style="color: var(--color-gray); margin-bottom: 1rem;"><strong>Uso:</strong> Cardápios, redes sociais (textos de apoio), UI do site e comunicados operacionais.</p>
+                    <p style="color: var(--color-gray);"><strong>Estratégia:</strong> Sem serifa, geométrica e absurdamente legível mesmo em tamanhos pequenos ou ambientes com pouca luz. Equilibra o ar clássico da Playfair com uma estética 100% digital e moderna da Geração Z.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">A Lente</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Estilo Fotográfico</h2>
+            
+            <p class="text-lead reveal-up" style="margin-bottom: 3rem;">Nenhuma foto do Dom Henrique deve parecer foto de banco de imagens ou "boteco de dia". A regra é: <strong>Noturno, quente e vivo.</strong></p>
+
+            <div class="distribution-grid">
+                <div class="dist-item reveal-up">
+                    <h4>Iluminação & Cores</h4>
+                    <p>Forte presença do claro-escuro (chiaroscuro). Fundos escuros sub-expostos contrastando com luzes quentes (âmbar) e neons (dourado/vermelho) iluminando os rostos e os produtos. Nunca usar flash chapado frontal.</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4>Pessoas & Expressões</h4>
+                    <p>Ação espontânea. Sorrisos reais, brindes em movimento, pessoas conversando e rindo. Fotos em bando (grupos universitários). Ninguém deve olhar diretamente para a câmera fazendo "pose congelada".</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4>Bebidas & Comidas</h4>
+                    <p>Foco absurdo em textura. A garrafa de cerveja deve estar visivelmente suada e gelada (macrofotografia). O balde de caipirinha deve mostrar o frescor da fruta. Desfoque de profundidade (bokeh) no fundo para destacar o produto.</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4>Ambiente & Arquitetura</h4>
+                    <p>Mostrar a escala e o movimento. Fotografias em ângulos mais abertos (wide) pegando a calçada cheia e a fachada iluminada. Destacar o tijolo e o neon. A sensação deve ser "eu queria estar lá agora".</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container" style="background-color: var(--color-dark); padding: 10vh 5vw; border-radius: 20px;">
+            <span class="section-tag reveal-left">Sensorial</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Texturas</h2>
+            
+            <div class="principles-grid">
+                <div class="principle-card reveal-up">
+                    <h3>🧱 Concreto & Tijolo</h3>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Aplicado nas paredes principais. Quebra o "certinho" e traz a estética urbana e "crua" para o fundo de todas as artes e fotos.</p>
+                </div>
+                <div class="principle-card reveal-up" style="transition-delay: 0.1s;">
+                    <h3>🪵 Madeira Escura</h3>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Aparece em tampos de mesa e elementos gráficos dos menus. Traz peso e aquece a comunicação visual.</p>
+                </div>
+                <div class="principle-card reveal-up" style="transition-delay: 0.2s;">
+                    <h3>⬛ Metal Fosco</h3>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Aplicado em ícones, divisórias de design e tambores físicos. Traz a solidez industrial do projeto.</p>
+                </div>
+                <div class="principle-card reveal-up" style="transition-delay: 0.3s;">
+                    <h3>🪞 Vidro / Reflexos</h3>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Utilizado no bar e nos espelhos dos banheiros. Graficamente, efeitos de blur/vidro desfocado em UI e stories.</p>
+                </div>
+                <div class="principle-card reveal-up">
+                    <h3>🌿 Vegetação</h3>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Plantas aparentes (jiboias) contrastando com o cinza. No design, traz frescor orgânico contra as linhas retas.</p>
+                </div>
+                <div class="principle-card reveal-up" style="transition-delay: 0.1s;">
+                    <h3>⚡ Luz Neon</h3>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">A principal textura luminosa. Aplicada digitalmente como sombras coloridas (glow) e fisicamente como letreiros focais.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">O Sistema Gráfico</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Elementos Gráficos</h2>
+
+            <div class="distribution-grid">
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-white);">Linhas e Separadores</h4>
+                    <p>Finas, precisas (1px), frequentemente usando gradientes sutis do dourado para o transparente. Remetem ao editorial de revistas premium.</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-white);">Ícones</h4>
+                    <p>Sempre minimalistas, sem preenchimento sólido pesado (line-art), preferencialmente brancos ou dourados. Nunca infantis ou coloridos.</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-white);">Bordas, Cards e Botões</h4>
+                    <p>Bordas levemente arredondadas (8px a 16px) para manter a elegância digital. Botões são fantasma (ghost buttons) com borda dourada, preenchendo apenas ao passar o mouse.</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-white);">Sombras e Gradientes</h4>
+                    <p>Sombras difusas e alongadas (drop shadow suave) para dar profundidade de flutuação em fundos escuros. Gradientes escuros e suaves servindo apenas como overlays de imagens.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">Inspiração</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Moodboard</h2>
+            
+            <div class="moodboard-grid reveal-up">
+                <div class="moodboard-item mb-large">[MOODBOARD 01]</div>
+                <div class="moodboard-item">[MOODBOARD 02]</div>
+                <div class="moodboard-item">[MOODBOARD 03]</div>
+                <div class="moodboard-item mb-wide">[MOODBOARD 04]</div>
+                <div class="moodboard-item">[MOODBOARD 05]</div>
+                <div class="moodboard-item">[MOODBOARD 06]</div>
+            </div>
+        </div>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">Prática</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Aplicações</h2>
+            
+            <div class="solution-grid">
+                <div class="solution-card reveal-up">
+                    <h4 style="color: var(--color-white);">Fachada & Ambiente</h4>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Tinta preta, letreiro em metal cortado e retro-iluminado. Interior focado no contraste da luz pontual.</p>
+                </div>
+                <div class="solution-card reveal-up" style="transition-delay: 0.1s;">
+                    <h4 style="color: var(--color-white);">Uniformes</h4>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Total black. Camisetas e aventais pretos, logotipo dourado ou branco discreto. Aparência ágil e profissional.</p>
+                </div>
+                <div class="solution-card reveal-up" style="transition-delay: 0.2s;">
+                    <h4 style="color: var(--color-white);">Cardápios & Copos</h4>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Minimalistas. Textura escura no fundo, hierarquia clara de preços (Playfair e Inter). Copos limpos com o brasão.</p>
+                </div>
+                <div class="solution-card reveal-up" style="transition-delay: 0.3s;">
+                    <h4 style="color: var(--color-white);">Instagram (Feed/Stories)</h4>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Uso massivo das cores preta/dourada nos cards de divulgação. Textos grandes, poucas palavras, foco absoluto na foto do evento.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container">
+            <div class="executive-summary reveal-up">
+                <span class="section-tag" style="justify-content: center; display: flex;">Resumo Executivo</span>
+                <h2 class="title-large" style="margin-bottom: 2rem;">A síntese da estética.</h2>
+                <p style="color: var(--color-gray); font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                    Para arquitetos, designers e fornecedores: o Dom Henrique se pauta pela teoria da subtração. Retire o excesso de cor, elimine texturas artificiais, desligue as luzes brancas de teto. A identidade visual se resume ao encontro do <strong>escuro fosco absoluto</strong> com o <strong>dourado/quente do feixe de luz</strong>. Menos informação no design, mais qualidade no acabamento visual.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
          SCRIPTS GLOBAIS DO SPA
          ========================================================================== -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             
-            // 1. Efeito Parallax Suave para Hero Images
+            // 1. Efeito Parallax Suave para Hero Images (Home/Exp)
             const expHeroImg = document.querySelector('.exp-hero-img');
             window.addEventListener('scroll', () => {
                 let scrollPos = window.pageYOffset;
