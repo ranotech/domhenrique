@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom Henrique | Brand Book Oficial</title>
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -259,7 +258,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.35);
+            background: rgba(0, 0, 0, 0.45);
             z-index: 2;
         }
 
@@ -421,155 +420,85 @@
             font-size: 1.5rem;
         }
 
-        /* Paleta de Cores */
-        .color-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
+        .color-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+        .color-card { background: var(--color-surface); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition-smooth); }
+        .color-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.5); border-color: var(--color-gold); }
+        .color-swatch { height: 140px; width: 100%; display: flex; align-items: flex-end; padding: 1.5rem; font-family: monospace; font-size: 0.9rem; font-weight: bold; color: var(--color-white); text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .color-details { padding: 2rem; }
+        .color-details h4 { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 0.5rem; }
+        .color-details p { font-size: 0.85rem; color: var(--color-gray); margin-bottom: 1rem; }
+        .color-details strong { color: var(--color-white); display: block; margin-top: 0.5rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
 
-        .color-card {
-            background: var(--color-surface);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: var(--transition-smooth);
-        }
+        .type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .type-sample { padding: 4rem; background: var(--color-surface); border-radius: 12px; border: 1px solid #333; text-align: center; }
+        .type-sample-title { font-family: var(--font-display); font-size: 4rem; color: var(--color-gold); line-height: 1; margin-bottom: 1rem; }
+        .type-sample-body { font-family: var(--font-body); font-size: 2rem; font-weight: 300; color: var(--color-white); line-height: 1; }
 
-        .color-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-            border-color: var(--color-gold);
-        }
+        .moodboard-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; grid-auto-rows: 250px; }
+        .moodboard-item { background-color: var(--color-surface); border: 1px solid #333; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--color-gray); font-family: var(--font-body); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: var(--transition-smooth); }
+        .moodboard-item:hover { border-color: var(--color-gold); color: var(--color-white); }
+        .mb-large { grid-column: span 2; grid-row: span 2; }
+        .mb-wide { grid-column: span 2; }
 
-        .color-swatch {
-            height: 140px;
-            width: 100%;
-            display: flex;
-            align-items: flex-end;
-            padding: 1.5rem;
-            font-family: monospace;
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: var(--color-white);
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-        }
+        .executive-summary { background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-black) 100%); border: 1px solid var(--color-gold); padding: 5rem; border-radius: 20px; text-align: center; position: relative; }
+        .executive-summary::before { content: '✦'; position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: var(--color-black); padding: 0 1rem; font-size: 2rem; color: var(--color-gold); }
 
-        .color-details {
-            padding: 2rem;
-        }
-
-        .color-details h4 {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .color-details p {
-            font-size: 0.85rem;
-            color: var(--color-gray);
-            margin-bottom: 1rem;
-        }
-
-        .color-details strong {
-            color: var(--color-white);
-            display: block;
-            margin-top: 0.5rem;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Tipografia */
-        .type-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .type-sample {
-            padding: 4rem;
-            background: var(--color-surface);
-            border-radius: 12px;
-            border: 1px solid #333;
-            text-align: center;
-        }
-
-        .type-sample-title {
-            font-family: var(--font-display);
-            font-size: 4rem;
-            color: var(--color-gold);
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
-
-        .type-sample-body {
-            font-family: var(--font-body);
-            font-size: 2rem;
-            font-weight: 300;
-            color: var(--color-white);
-            line-height: 1;
-        }
-
-        /* Moodboard */
-        .moodboard-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            grid-auto-rows: 250px;
-        }
-
-        .moodboard-item {
-            background-color: var(--color-surface);
-            border: 1px solid #333;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-gray);
-            font-family: var(--font-body);
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: var(--transition-smooth);
-        }
-
-        .moodboard-item:hover {
-            border-color: var(--color-gold);
-            color: var(--color-white);
-        }
-
-        .mb-large {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .mb-wide {
-            grid-column: span 2;
-        }
-
-        /* Resumo Executivo */
-        .executive-summary {
-            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-black) 100%);
-            border: 1px solid var(--color-gold);
-            padding: 5rem;
-            border-radius: 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        .executive-summary::before {
-            content: '✦';
+        /* ==========================================================================
+           5. FACHADA E PRIMEIRA IMPRESSÃO STYLES
+           ========================================================================== */
+        
+        .scroll-indicator {
             position: absolute;
-            top: -20px;
+            bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--color-black);
-            padding: 0 1rem;
-            font-size: 2rem;
+            z-index: 4;
+            animation: bounce 2s infinite;
             color: var(--color-gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-20px) translateX(-50%); }
+            60% { transform: translateY(-10px) translateX(-50%); }
+        }
+
+        .error-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .error-card {
+            background-color: var(--color-surface);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border-top: 3px solid var(--color-red);
+            transition: var(--transition-smooth);
+        }
+
+        .error-card:hover {
+            transform: translateY(-5px);
+            background-color: var(--color-surface-hover);
+            box-shadow: 0 10px 30px rgba(139,0,0,0.2);
+        }
+
+        .error-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .error-card p {
+            font-size: 0.95rem;
+            color: var(--color-gray);
+            line-height: 1.6;
         }
 
         /* ==========================================================================
@@ -609,7 +538,6 @@
 </head>
 <body>
 
-    <!-- NAVEGAÇÃO SPA -->
     <nav>
         <a href="#home" class="nav-logo">Dom Henrique</a>
         <div class="nav-links">
@@ -617,12 +545,10 @@
             <a href="#experiencia" class="nav-item">Experiência</a>
             <a href="#arquitetura" class="nav-item">Arquitetura</a>
             <a href="#identidade" class="nav-item">Identidade Visual</a>
+            <a href="#fachada" class="nav-item">Fachada</a>
         </div>
     </nav>
 
-    <!-- ==========================================================================
-         SEÇÃO 1: HOME (DNA DA MARCA)
-         ========================================================================== -->
     <section id="home">
         <header class="home-hero">
             <div class="reveal-up">
@@ -694,9 +620,6 @@
         </section>
     </section>
 
-    <!-- ==========================================================================
-         SEÇÃO 2: EXPERIÊNCIA E ESTRATÉGIA
-         ========================================================================== -->
     <section id="experiencia">
         <header class="exp-hero">
             <img src="https://i.imgur.com/aoWMzsL.jpeg" alt="Dom Henrique Brand Experience" class="exp-hero-img" loading="lazy">
@@ -896,9 +819,6 @@
         </div>
     </section>
 
-    <!-- ==========================================================================
-         SEÇÃO 3: ARQUITETURA & CONCEITO
-         ========================================================================== -->
     <section id="arquitetura">
         <header class="arch-hero reveal-up">
             <span class="section-tag" style="justify-content: center; display: flex;">Capítulo 03</span>
@@ -1204,9 +1124,6 @@
         </div>
     </section>
 
-    <!-- ==========================================================================
-         SEÇÃO 4: IDENTIDADE VISUAL
-         ========================================================================== -->
     <section id="identidade">
         <header class="id-hero">
             <div class="image-placeholder reveal-up" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
@@ -1257,7 +1174,6 @@
             <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Paleta de Cores</h2>
 
             <div class="color-grid">
-                <!-- Primária 1 -->
                 <div class="color-card reveal-up">
                     <div class="color-swatch" style="background-color: var(--color-black);">#000000</div>
                     <div class="color-details">
@@ -1268,7 +1184,6 @@
                         <p><strong>Uso:</strong> Fundo principal de sites, cardápios, paredes gerais e tetos da arquitetura.</p>
                     </div>
                 </div>
-                <!-- Primária 2 -->
                 <div class="color-card reveal-up" style="transition-delay: 0.1s;">
                     <div class="color-swatch" style="background-color: var(--color-dark);">#0A0A0A</div>
                     <div class="color-details">
@@ -1279,7 +1194,6 @@
                         <p><strong>Uso:</strong> Cards, sobreposições, móveis de metal e áreas de transição visual.</p>
                     </div>
                 </div>
-                <!-- Secundária 1 -->
                 <div class="color-card reveal-up" style="transition-delay: 0.2s;">
                     <div class="color-swatch" style="background-color: var(--color-gold); color: var(--color-black);">#D4AF37</div>
                     <div class="color-details">
@@ -1290,7 +1204,6 @@
                         <p><strong>Uso:</strong> Títulos, detalhes, botões, luzes neon e sinalização de fachada.</p>
                     </div>
                 </div>
-                <!-- Secundária 2 -->
                 <div class="color-card reveal-up" style="transition-delay: 0.3s;">
                     <div class="color-swatch" style="background-color: var(--color-red);">#8B0000</div>
                     <div class="color-details">
@@ -1301,7 +1214,6 @@
                         <p><strong>Uso:</strong> Pequenos detalhes de destaque, tags de preço e luzes de preenchimento (fill light) no bar.</p>
                     </div>
                 </div>
-                <!-- Apoio 1 -->
                 <div class="color-card reveal-up">
                     <div class="color-swatch" style="background-color: var(--color-gray); color: var(--color-black);">#888888</div>
                     <div class="color-details">
@@ -1311,7 +1223,6 @@
                         <p><strong>Uso:</strong> Textos de apoio, legendas e descrições para não cansar a leitura no fundo escuro.</p>
                     </div>
                 </div>
-                <!-- Apoio 2 -->
                 <div class="color-card reveal-up" style="transition-delay: 0.1s;">
                     <div class="color-swatch" style="background-color: var(--color-white); color: var(--color-black);">#FFFFFF</div>
                     <div class="color-details">
@@ -1484,19 +1395,337 @@
         </div>
     </section>
 
-    <!-- ==========================================================================
-         SCRIPTS GLOBAIS DO SPA
-         ========================================================================== -->
+    <section id="fachada">
+        <header class="exp-hero">
+            <img src="https://i.imgur.com/aoWMzsL.jpeg" alt="Fachada Dom Henrique" class="exp-hero-img" loading="lazy">
+            <div class="exp-hero-overlay" style="background: rgba(0, 0, 0, 0.6);"></div>
+            
+            <div class="exp-hero-content reveal-up">
+                <span class="section-tag" style="justify-content: center; display: flex;">Capítulo 05</span>
+                <h1 class="home-hero-title" style="text-shadow: 0 4px 20px rgba(0,0,0,0.8); font-size: clamp(2.5rem, 6vw, 5rem);">A primeira impressão precisa fazer as pessoas diminuírem a velocidade.</h1>
+                <p class="home-hero-subtitle" style="margin: 0 auto; text-shadow: 0 2px 10px rgba(0,0,0,0.8); color: var(--color-light-gray);">A fachada do Dom Henrique é o maior anúncio da marca.</p>
+            </div>
+            
+            <a href="#poder-esquina" class="scroll-indicator" style="text-decoration: none;">↓</a>
+        </header>
+
+        <div id="poder-esquina" class="section-padding container">
+            <span class="section-tag reveal-left">O Ponto</span>
+            <h2 class="title-large reveal-up">O poder de uma esquina.</h2>
+            
+            <div class="potential-grid reveal-up">
+                <div class="potential-text">
+                    <p>Esquinas não são apenas endereços, são <strong>faróis urbanos</strong>. Diferente de um bar no meio do quarteirão que exige que o motorista ou pedestre vire a cabeça 90 graus para notá-lo, uma esquina oferece um raio de visibilidade de 180 a 270 graus. Ela é avistada quarteirões antes de ser alcançada.</p>
+                    <p>No Dom Henrique, usamos essa geometria a favor do marketing. A fachada deixa de ser uma "parede que separa" e passa a ser uma <strong>publicidade 24 horas por dia</strong>. Durante o dia, a pintura preta monolítica desperta curiosidade em Cassilândia; à noite, o show de iluminação quente transforma o antigo armazém em um ponto de referência inevitável.</p>
+                </div>
+                <div class="potential-text">
+                    <p>Tratar a esquina como ativo significa que não a escondemos com banners ou letreiros de patrocinadores. A arquitetura nua *é* o atrativo. Ao iluminar o exterior do prédio com precisão cirúrgica, nós forçamos psicologicamente o fluxo de veículos da avenida a diminuir a velocidade para observar o movimento.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container" style="background-color: var(--color-dark); padding: 10vh 5vw; border-radius: 20px;">
+            <span class="section-tag reveal-left">Filosofia Estética</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 2rem;">Conceito Arquitetônico.</h2>
+            <p class="text-lead reveal-up" style="margin-bottom: 4rem;">A linguagem urbana contemporânea encontra a realidade do interior.</p>
+
+            <div class="distribution-grid">
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-white);">Simplicidade Sofisticada</h4>
+                    <p>Não construímos castelos, reformamos armazéns. A estética não vem de materiais caros, mas da harmonia entre o preto fosco e os cortes de luz dourada. É a prova visual de que não é preciso luxo ostensivo para ter um visual de altíssimo nível.</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-white);">Influência de Capital</h4>
+                    <p>Buscamos inspiração nos bares mais desejados e instagramáveis de Campo Grande e grandes centros. Trazemos essa "vibe de capital" (luzes pendentes, metal aparente, foco no design) e a adaptamos perfeitamente para Cassilândia, sem a elitização.</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-white);">Sensação de Movimento</h4>
+                    <p>A fachada nunca deve parecer um paredão cego. Grandes aberturas, mesas espalhadas para a calçada e som voltado para fora criam uma permeabilidade que dissolve a fronteira entre a rua e o lounge.</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-white);">Atmosfera Acolhedora</h4>
+                    <p>O design urbano, de metal e concreto, pode ser frio. O acolhimento entra através da temperatura da luz (sempre quente) e das texturas orgânicas, garantindo que o cliente universitário sinta-se "em casa".</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">Componentes Visuais</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Elementos da fachada.</h2>
+            
+            <div class="cards-grid">
+                <div class="premium-card reveal-up">
+                    <h3 style="color: var(--color-gold);">Logo Principal</h3>
+                    <p><strong>Objetivo:</strong> Identidade instantânea.</p>
+                    <p><strong>Estética:</strong> Metalon ou acrílico retro-iluminado. Minimalista.</p>
+                    <p><strong>Comercial:</strong> Fixação de marca na mente do passante.</p>
+                    <p><strong>Psicológico:</strong> Confiança e profissionalismo.</p>
+                    <p><strong>Prioridade:</strong> Alta.</p>
+                </div>
+                <div class="premium-card reveal-up" style="transition-delay: 0.1s;">
+                    <h3 style="color: var(--color-gold);">Iluminação</h3>
+                    <p><strong>Objetivo:</strong> Destacar a textura do prédio.</p>
+                    <p><strong>Estética:</strong> Arandelas jogando luz "wash" na parede preta.</p>
+                    <p><strong>Comercial:</strong> Atrai os olhares a quilômetros de distância.</p>
+                    <p><strong>Psicológico:</strong> Magnetismo noturno.</p>
+                    <p><strong>Prioridade:</strong> Máxima.</p>
+                </div>
+                <div class="premium-card reveal-up" style="transition-delay: 0.2s;">
+                    <h3 style="color: var(--color-gold);">Pintura</h3>
+                    <p><strong>Objetivo:</strong> Unificar a fachada acidentada.</p>
+                    <p><strong>Estética:</strong> Preto absoluto ou cinza asfalto fosco.</p>
+                    <p><strong>Comercial:</strong> Barato de executar, esconde imperfeições.</p>
+                    <p><strong>Psicológico:</strong> Modernidade e contraste.</p>
+                    <p><strong>Prioridade:</strong> Máxima.</p>
+                </div>
+                <div class="premium-card reveal-up">
+                    <h3 style="color: var(--color-gold);">Mesas Externas</h3>
+                    <p><strong>Objetivo:</strong> Ocupar o espaço urbano.</p>
+                    <p><strong>Estética:</strong> Tambores pretos e bistrôs rústicos.</p>
+                    <p><strong>Comercial:</strong> Aumenta a capacidade sem custo de obra.</p>
+                    <p><strong>Psicológico:</strong> Efeito manada ("lugar cheio atrai mais gente").</p>
+                    <p><strong>Prioridade:</strong> Alta.</p>
+                </div>
+                <div class="premium-card reveal-up" style="transition-delay: 0.1s;">
+                    <h3 style="color: var(--color-gold);">Área do Cantor</h3>
+                    <p><strong>Objetivo:</strong> Show business de rua.</p>
+                    <p><strong>Estética:</strong> Palco baixo próximo ao limite da rua.</p>
+                    <p><strong>Comercial:</strong> A música funciona como chamariz acústico.</p>
+                    <p><strong>Psicológico:</strong> Sentimento de celebração.</p>
+                    <p><strong>Prioridade:</strong> Alta.</p>
+                </div>
+                <div class="premium-card reveal-up" style="transition-delay: 0.2s;">
+                    <h3 style="color: var(--color-gold);">Calçada & Paisagismo</h3>
+                    <p><strong>Objetivo:</strong> Extensão do lounge.</p>
+                    <p><strong>Estética:</strong> Vasos pesados com plantas rústicas.</p>
+                    <p><strong>Comercial:</strong> Organiza o fluxo sutilmente sem grades.</p>
+                    <p><strong>Psicológico:</strong> Sensação de limite sem confinamento.</p>
+                    <p><strong>Prioridade:</strong> Média.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">Guia de Suprimentos</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 2rem;">Materiais Recomendados.</h2>
+            
+            <table class="premium-table reveal-up">
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Onde Utilizar</th>
+                        <th>Preço</th>
+                        <th>Instalação</th>
+                        <th>Visual</th>
+                        <th>Prioridade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Material"><strong>Pintura Fosca Escura</strong></td>
+                        <td data-label="Onde Utilizar">Todas as paredes externas</td>
+                        <td data-label="Preço">Baixo</td>
+                        <td data-label="Instalação">Fácil</td>
+                        <td data-label="Visual">Alto Impacto</td>
+                        <td data-label="Prioridade"><span class="badge badge-alta">Alta</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Material"><strong>Lâmpadas LED Quente (2700K)</strong></td>
+                        <td data-label="Onde Utilizar">Arandelas, Spots e Pendentes</td>
+                        <td data-label="Preço">Baixo</td>
+                        <td data-label="Instalação">Fácil</td>
+                        <td data-label="Visual">Transformador</td>
+                        <td data-label="Prioridade"><span class="badge badge-alta">Alta</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Material"><strong>Metalon Preto Fosco</strong></td>
+                        <td data-label="Onde Utilizar">Estrutura do letreiro, suportes</td>
+                        <td data-label="Preço">Médio</td>
+                        <td data-label="Instalação">Requer Solda</td>
+                        <td data-label="Visual">Moderno</td>
+                        <td data-label="Prioridade"><span class="badge badge-alta">Alta</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Material"><strong>Fita LED Neon</strong></td>
+                        <td data-label="Onde Utilizar">Letreiros instagramáveis, marcação</td>
+                        <td data-label="Preço">Médio</td>
+                        <td data-label="Instalação">Média</td>
+                        <td data-label="Visual">Instagramável</td>
+                        <td data-label="Prioridade"><span class="badge badge-media">Média</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Material"><strong>Madeira (Pinus/Naval envernizado)</strong></td>
+                        <td data-label="Onde Utilizar">Tampo de mesas externas, detalhes</td>
+                        <td data-label="Preço">Baixo/Médio</td>
+                        <td data-label="Instalação">Fácil</td>
+                        <td data-label="Visual">Acolhedor</td>
+                        <td data-label="Prioridade"><span class="badge badge-media">Média</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Material"><strong>Plantas Resistentes (Ficus, Espadas)</strong></td>
+                        <td data-label="Onde Utilizar">Vasos na calçada, delimitadores</td>
+                        <td data-label="Preço">Baixo</td>
+                        <td data-label="Instalação">Fácil</td>
+                        <td data-label="Visual">Orgânico</td>
+                        <td data-label="Prioridade"><span class="badge badge-baixa">Baixa</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section-padding container" style="background-color: var(--color-dark); padding: 10vh 5vw; border-radius: 20px;">
+            <span class="section-tag reveal-left">Luminotécnica</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Projeto de Iluminação.</h2>
+            
+            <div class="distribution-grid">
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-gold);">Menos luz, mais drama.</h4>
+                    <p>O segredo de um projeto premium não é iluminar tudo, é escolher o que <em>não</em> iluminar. O fundo preto do prédio absorve a luz, criando sombras que escondem as imperfeições da arquitetura antiga. Isso se chama "Chiaroscuro".</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-gold);">Iluminação Indireta</h4>
+                    <p>Nenhuma luz forte deve atingir diretamente os olhos de quem passa de carro ou está sentado. Utilizamos arandelas de duplo facho (cima e baixo) lavando as paredes, e fitas LED escondidas atrás de letreiros e balcões (Backlight/Halo effect).</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-gold);">Temperatura de Cor</h4>
+                    <p>Rigidamente entre 2700K e 3000K (Luz Âmbar/Quente). A luz branca fria (6000K) destrói qualquer atmosfera de bar, parecendo um consultório ou lanchonete barata. A luz quente traz a sensação de brasa, cerveja e conforto.</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-gold);">Contraste e Neon</h4>
+                    <p>Enquanto a base do prédio utiliza luz amarelada pontual (spots), nós quebramos a monotonia com focos muito precisos de Fita Neon vermelho ou dourado em cantos específicos, criando o cenário perfeito para o Instagram.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">A Conquista do Cliente</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 5rem;">A experiência da chegada.</h2>
+
+            <div class="timeline-container">
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; color: var(--color-white);">Visão à distância</div>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Dirigindo pela avenida, o motorista percebe um grande bloco negro elegantemente iluminado por focos quentes. Não há nada parecido na rua.</p>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; color: var(--color-white);">O Apelo Acústico</div>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Ao se aproximar da esquina, o som do violão vaza para a rua. A música funciona como uma rede invisível, capturando a atenção.</p>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; color: var(--color-white);">Prova Social (Efeito Manada)</div>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Pessoas ocupam a calçada, encostadas em tambores, conversando de pé. O movimento confirma psicologicamente que "aqui é o lugar certo".</p>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; color: var(--color-white);">Identificação de Marca</div>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">O letreiro limpo, minimalista e iluminado apenas reafirma: este é o Dom Henrique. Sem poluição, direto ao ponto.</p>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; color: var(--color-gold);">Decisão e Entrada</div>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Dominado pela curiosidade, pela beleza do lugar e pela ausência de barreiras físicas (sem catracas chatas), o cliente estaciona e entra fluidamente.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">O Que Evitar</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Erros fatais na fachada.</h2>
+            <p class="text-lead reveal-up" style="margin-bottom: 3rem;">O Dom Henrique é um lounge de alto valor percebido, não uma loja de conveniência. O que <strong>NÃO</strong> fazer é tão importante quanto o que fazer.</p>
+
+            <div class="error-cards-grid">
+                <div class="error-card reveal-up">
+                    <h4><span style="color: var(--color-red);">❌</span> Poluição e Marcas</h4>
+                    <p>Jamais aceitar letreiros gigantes, faixas ou toldos gratuitos de marcas de cerveja (Ex: "Bar do Zé - Brahma"). A marca principal é o Dom Henrique. A cervejaria é coadjuvante.</p>
+                </div>
+                <div class="error-card reveal-up" style="transition-delay: 0.1s;">
+                    <h4><span style="color: var(--color-red);">❌</span> Luz Branca / Fria</h4>
+                    <p>O uso de refletores de LED de 6000K (brancos) destrói completamente o clima noturno e evidencia todos os defeitos da parede e do chão. Proibido.</p>
+                </div>
+                <div class="error-card reveal-up" style="transition-delay: 0.2s;">
+                    <h4><span style="color: var(--color-red);">❌</span> Excesso de Neon</h4>
+                    <p>Neon é para dar um toque mágico, não para iluminar o ambiente. Usar dezenas de luzes neon transforma um lounge elegante num parque de diversões cafona.</p>
+                </div>
+                <div class="error-card reveal-up">
+                    <h4><span style="color: var(--color-red);">❌</span> Banners Plásticos</h4>
+                    <p>Nada de pendurar faixas plásticas "Hoje tem Promoção" na frente do bar. A comunicação de ofertas deve ser feita digitalmente no Instagram ou internamente no balcão.</p>
+                </div>
+                <div class="error-card reveal-up" style="transition-delay: 0.1s;">
+                    <h4><span style="color: var(--color-red);">❌</span> Cores Gritantes</h4>
+                    <p>Pintar a fachada com blocos de cores fortes (amarelo, vermelho) atrai atenção pelo motivo errado, parecendo fast-food. O fundo deve ser sempre neutro e escuro (preto/cinza asfalto).</p>
+                </div>
+                <div class="error-card reveal-up" style="transition-delay: 0.2s;">
+                    <h4><span style="color: var(--color-red);">❌</span> Cadeiras de Plástico Brancas</h4>
+                    <p>Elas quebram totalmente o design imersivo que estamos construindo. Se for para usar plástico por custo, que seja sempre preto.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container" style="background-color: var(--color-dark); padding: 10vh 5vw; border-radius: 20px; margin-bottom: 10vh;">
+            <span class="section-tag reveal-left">Revisão Final</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 3rem;">Checklist Visual da Fachada.</h2>
+            
+            <div class="checklist-grid reveal-up">
+                <div class="check-category">
+                    <h4 style="color: var(--color-gold);">Estrutura Base</h4>
+                    <ul class="check-list">
+                        <li>□ Pintura preto/cinza uniforme</li>
+                        <li>□ Cabos e fios escondidos ou pintados</li>
+                        <li>□ Marquise ou borda tratada</li>
+                    </ul>
+                </div>
+                <div class="check-category">
+                    <h4 style="color: var(--color-gold);">Luz & Som</h4>
+                    <ul class="check-list">
+                        <li>□ Arandelas duplas com luz 3000K</li>
+                        <li>□ Foco de luz no letreiro principal</li>
+                        <li>□ Caixas de som orientadas para a rua</li>
+                    </ul>
+                </div>
+                <div class="check-category">
+                    <h4 style="color: var(--color-gold);">Calçada</h4>
+                    <ul class="check-list">
+                        <li>□ Chão limpo e desobstruído</li>
+                        <li>□ Tambores pretos posicionados</li>
+                        <li>□ Vasos pesados com vegetação verde</li>
+                    </ul>
+                </div>
+                <div class="check-category">
+                    <h4 style="color: var(--color-gold);">Marca</h4>
+                    <ul class="check-list">
+                        <li>□ Logotipo do Dom Henrique bem legível</li>
+                        <li>□ Nenhuma faixa ou banner pendurado</li>
+                        <li>□ Ausência de logotipos de fornecedores</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container" style="text-align: center; padding-bottom: 15vh;">
+            <div class="executive-summary reveal-up" style="background: none; border: none; border-top: 1px solid #333; border-radius: 0; padding: 5rem 0 0 0;">
+                <h2 class="title-large" style="margin-bottom: 2rem;">O Resultado Esperado</h2>
+                <p style="color: var(--color-gray); font-size: 1.3rem; max-width: 900px; margin: 0 auto; line-height: 1.8; font-family: var(--font-display); font-style: italic;">
+                    "Ao passar pela avenida, as pessoas não devem apenas ver um novo bar; elas devem sentir uma mudança imediata na atmosfera da cidade. O prédio escuro e imponente, rasgado pelo calor dourado da luz e preenchido pela energia da juventude de Cassilândia, deve gerar um pensamento inevitável: 'Eu preciso estar lá'."
+                </p>
+            </div>
+        </div>
+    </section>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             
-            // 1. Efeito Parallax Suave para Hero Images (Home/Exp)
-            const expHeroImg = document.querySelector('.exp-hero-img');
+            // 1. Efeito Parallax Suave para Hero Images (Home/Exp/Fachada)
+            const heroImgs = document.querySelectorAll('.exp-hero-img, .main-image');
             window.addEventListener('scroll', () => {
                 let scrollPos = window.pageYOffset;
-                if(expHeroImg) {
-                    expHeroImg.style.transform = `translateY(${scrollPos * 0.3}px) scale(1.05)`;
-                }
+                heroImgs.forEach(img => {
+                    // Só aplica parallax se a imagem estiver visível para otimizar performance
+                    if(img.getBoundingClientRect().top < window.innerHeight && img.getBoundingClientRect().bottom > 0) {
+                        img.style.transform = `translateY(${scrollPos * 0.2}px) scale(1.05)`;
+                    }
+                });
             });
 
             // 2. Intersection Observer para animações Reveal (Fade Up / Fade Left)
@@ -1529,7 +1758,7 @@
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
                     // Ajuste de offset para o menu fixo
-                    if (window.scrollY >= sectionTop - 100) {
+                    if (window.scrollY >= sectionTop - 150) {
                         current = section.getAttribute('id');
                     }
                 });
