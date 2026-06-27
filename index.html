@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandbook | Dom Henrique</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --text-main: #f2f2f2;
+            --text-muted: #a0a0a0;
+            --accent: #ff4a00; /* Laranja vibrante/Neon */
+            --accent-secondary: #ffae00; /* Amarelo cerveja */
+            --font-main: 'Helvetica Neue', Arial, sans-serif;
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(13,13,13,0) 0%, rgba(13,13,13,1) 100%), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+            border-bottom: 2px solid var(--accent);
+            padding: 2rem;
+        }
+
+        header h1 {
+            font-size: 5rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            color: var(--accent-secondary);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 6rem;
+            opacity: 0.95;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-left: 5px solid var(--accent);
+            padding-left: 1rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 3px solid var(--accent-secondary);
+        }
+
+        .card h4 {
+            color: var(--text-main);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .manifesto {
+            background: var(--accent);
+            color: #000;
+            padding: 4rem 2rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-style: italic;
+            border-radius: 10px;
+        }
+
+        .manifesto p {
+            color: #111;
+            margin: 0 auto 1.5rem auto;
+            max-width: 800px;
+        }
+
+        .highlight {
+            color: var(--accent-secondary);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 3rem; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Dom Henrique</h1>
+        <p>Estratégia de Marca & Experiência</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="introducao">
+            <h2>Visão Executiva da Consultoria</h2>
+            <p>O desafio não é construir um bar, mas projetar um <strong>ecossistema de pertencimento</strong>. A Geração Z não compra produtos; ela consome identidade, estética e velocidade. O Dom Henrique resolve o "Paradoxo do Valor": entrega um ambiente com percepção estética de alta renda, operando com a fricção zero do fast-food e a precificação do boteco universitário. O antigo armazém será a tela em branco para um contraste violento entre o bruto (tijolos, cimento) e o etéreo (neon, luz quente, design sonoro).</p>
+        </section>
+
+        <section id="fundamentos">
+            <h2>Fundamentos da Marca</h2>
+            <div class="grid-2">
+                <div>
+                    <h3>Propósito</h3>
+                    <p>Democratizar o acesso a experiências sociais esteticamente brilhantes. Acreditamos que o design de alto impacto não precisa custar caro e que a juventude de Cassilândia merece um espaço que os faça sentir em uma metrópole.</p>
+                </div>
+                <div>
+                    <h3>Missão</h3>
+                    <p>Transformar noites comuns em celebrações efervescentes, unindo operação ultrarrápida, preços acessíveis e um ambiente altamente instagramável, onde a calçada e o bar se fundem em um único palco.</p>
+                </div>
+                <div>
+                    <h3>Visão</h3>
+                    <p>Ser o epicentro cultural e social da juventude de Cassilândia e região, tornando-se o padrão-ouro de como bares independentes entregam valor percebido fora dos grandes centros.</p>
+                </div>
+                <div>
+                    <h3>Valores</h3>
+                    <ul>
+                        <li><strong>Estética Democrática:</strong> O belo não é luxo, é direito.</li>
+                        <li><strong>Fricção Zero:</strong> Sem filas, sem espera, sem garçom. O tempo do cliente é para celebrar, não para esperar.</li>
+                        <li><strong>Efervescência Urbana:</strong> A rua é nossa. A calçada é a extensão da nossa alma.</li>
+                        <li><strong>Comunidade e Conexão:</strong> Projetado para o encontro, o acaso e o flerte.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="golden-circle">
+            <h2>Golden Circle</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h4>Why (Por quê?)</h4>
+                    <p>Porque todo jovem merece sentir que está no lugar mais legal do mundo, sem precisar esvaziar a carteira para pertencer.</p>
+                </div>
+                <div class="card">
+                    <h4>How (Como?)</h4>
+                    <p>Através de uma arquitetura de contrastes (luz e sombra, rústico e neon), um modelo de autosserviço que elimina filas, e uma integração total com a calçada e a rua.</p>
+                </div>
+                <div class="card">
+                    <h4>What (O quê?)</h4>
+                    <p>Um bar universitário sem frescura, que vende cerveja gelada, caipirinha no balde e petiscos, embalado na melhor atmosfera da cidade.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="posicionamento">
+            <h2>Posicionamento & Proposta Única de Valor (PUV)</h2>
+            <p><strong>Posicionamento:</strong> O Dom Henrique ocupa o espaço inexplorado entre o "boteco sujo universitário" e o "lounge inacessível". Ele é o <em>"High-Low"</em> de Cassilândia: energia de rua, estética de estúdio de design e bolso de estudante.</p>
+            <p><strong>Proposta Única de Valor:</strong> "A experiência visual e magnética dos melhores bares da capital, com o preço, a liberdade e a energia da sua turma de faculdade."</p>
+        </section>
+
+        <section id="personalidade">
+            <h2>Arquétipos & Personalidade</h2>
+            <p>A marca é uma fusão de dois arquétipos principais:</p>
+            <ul>
+                <li><strong>O Criador (30%):</strong> Focado na estética, na luz, no design do antigo armazém. É o lado da marca que arranca a frase: <em>"Nossa, que lugar lindo"</em>.</li>
+                <li><strong>O Cara Comum / O Órfão (70%):</strong> Acessível, zero arrogância, democrático. Mostra que apesar da beleza, o lugar é para todos beberem de copo americano e balde de caipirinha.</li>
+            </ul>
+            <h3>Tom de Voz</h3>
+            <p><strong>Magnético, Ágil, Irreverente e Acolhedor.</strong><br>
+            A marca não usa linguagem rebuscada nem tenta parecer chique (isso quebraria a percepção de preço acessível). A comunicação é direta, usa gírias universitárias locais de forma natural, e foca na urgência do agora (FOMO - Fear of Missing Out).</p>
+        </section>
+
+        <section id="psicologia">
+            <h2>Psicologia do Consumo & Neuromarketing</h2>
+            <div class="grid-2">
+                <div>
+                    <h3>O Efeito "Halo" da Estética</h3>
+                    <p><em>Justificativa CX:</em> Pessoas associam beleza visual a qualidade superior. Ao investir pesado em iluminação estratégica (neon, luzes quentes e focadas, penumbra) no antigo armazém, ativamos o Efeito Halo. O cérebro do consumidor pensa: "Se o lugar é lindo assim, a bebida é melhor e a noite será incrível". Isso permite gerar alto valor percebido com baixo custo de materiais.</p>
+                </div>
+                <div>
+                    <h3>Arquitetura da Fricção Zero</h3>
+                    <p><em>Justificativa Psicológica:</em> Filas geram cortisol (estresse). O modelo de ir ao caixa, pegar a bebida e sentar libera dopamina imediata (recompensa instantânea). A ausência de garçons tira a "pressão" de consumo contínuo, fazendo o cliente relaxar e, paradoxalmente, permanecer mais tempo e consumir mais por impulso visual.</p>
+                </div>
+                <div>
+                    <h3>Prova Social e o "Efeito Calçada"</h3>
+                    <p><em>Justificativa Neuro:</em> O ser humano é atraído por aglomerações felizes. Colocar o cantor de frente para a rua e integrar a calçada cria uma vitrine viva. Quem passa na avenida vê a calçada cheia, o som rolando e luzes saindo do armazém. O gatilho da Prova Social é ativado: <em>"Todo mundo está lá, eu preciso estar também"</em>.</p>
+                </div>
+                <div>
+                    <h3>Contraste de Precificação (Ancoragem)</h3>
+                    <p><em>Justificativa Neuro:</em> O visual do bar "ancora" um preço alto no subconsciente. Quando o cliente chega no caixa e vê o preço da Brahma 500ml e do Balde de Caipirinha iguais aos de um bar comum, o cérebro percebe um "ganho excessivo" (Value for Money). Isso gera euforia e fidelização imediata.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="publico">
+            <h2>Público-Alvo & Personas</h2>
+            <p><strong>Demografia:</strong> 18 a 30 anos, universitários e jovens profissionais de Cassilândia e região.</p>
+            <p><strong>Psicografia:</strong> Geração Z e Millennials hiperconectados. Valorizam experiências compartilháveis, buscam aprovação social via Instagram/TikTok. Estão com o orçamento apertado, mas recusam-se a abrir mão da vida social.</p>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Persona 1: A Socialite Universitária (Camila, 21)</h4>
+                    <p>Estudante de Odonto. É a "Relações Públicas" da turma. Escolhe onde o grupo vai com base na estética do local para render fotos. <em>Objetivo:</em> Ver e ser vista. <em>Como o Dom Henrique a atrai:</em> Iluminação perfeita para selfies, estética de armazém industrial, balde de caipirinha esteticamente bonito.</p>
+                </div>
+                <div class="card">
+                    <h4>Persona 2: O Agitador da Galera (Lucas, 23)</h4>
+                    <p>Estudante de Agronomia/Direito. Gosta de lugares lotados, paquera, e cerveja em quantidade. <em>Objetivo:</em> Beber bem pagando pouco, em um lugar com muita gente na calçada. <em>Como o Dom Henrique o atrai:</em> Open de Caipirinha na quinta, fluxo rápido no caixa, calçada cheia, Brahma 500ml gelada na mão.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="jornada">
+            <h2>A Experiência Ideal do Cliente (Customer Journey)</h2>
+            <p>O Design de Experiência (CX) foi mapeado minuto a minuto para garantir que a marca entregue sua promessa:</p>
+            <ul>
+                <li><strong>A Descoberta (Pré-bar):</strong> Vê um story de amigo no Instagram. A estética com luzes de neon contrastando com a parede rústica chama a atenção. Ele pensa: "Onde é isso?".</li>
+                <li><strong>A Chegada (Impacto):</strong> Ao virar a esquina da avenida movimentada, vê a calçada viva. O cantor está de frente para a rua. Não há portas fechadas, o limite entre o armazém e a rua não existe. A luz quente interna "vaza" para a calçada convidando a entrar.</li>
+                <li><strong>O Pedido (Autonomia):</strong> Entra sem pegar fila de hostess ou comanda. Vai direto ao balcão/caixa amplamente iluminado. Paga e retira a cerveja ou o balde instantaneamente. O pager/senha para o petisco é entregue. Duração: 2 minutos. Sensação: Liberdade.</li>
+                <li><strong>O Consumo (Socialização):</strong> Vai para a área externa. Usa os "apoiadores" de copo nos postes ou tambores espalhados pela calçada. O ambiente é sonoro mas permite conversa. A iluminação de baixo para cima valoriza o rosto das pessoas (fotogenia).</li>
+                <li><strong>O Clímax (Compartilhamento):</strong> Saca o celular espontaneamente. O neon com uma frase irreverente na parede de tijolos brutos implora por uma foto. Ele posta. O ciclo de descoberta recomeça para seus seguidores.</li>
+                <li><strong>A Saída (Retenção):</strong> Vai embora quando quer, sem precisar enfrentar fila para pagar comanda, pois tudo já foi pago. A última impressão é a música e a calçada ainda cheia.</li>
+            </ul>
+        </section>
+
+        <section id="regras">
+            <h2>O Que a Marca NUNCA Deve Ser</h2>
+            <div class="grid-2">
+                <ul>
+                    <li><strong>Nunca ser "Gourmet":</strong> A palavra gourmet afasta o jovem sem dinheiro. O lugar é bonito, mas a comida é raiz, farta e saborosa.</li>
+                    <li><strong>Nunca ser Burocrática:</strong> Comandas individuais, garçons anotando pedido, fila pra pagar. Tudo isso mata a vibração da Geração Z.</li>
+                </ul>
+                <ul>
+                    <li><strong>Nunca ser Estática:</strong> O bar não pode ter mesas pesadas difíceis de mover. As pessoas devem poder circular livremente com suas bebidas.</li>
+                    <li><strong>Nunca ser Escura Demais ou Clara Demais:</strong> Luz branca de farmácia mata o clima. Escuridão total impede as fotos. A luz deve ser focada, cênica (âmbar, vermelha, neon).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="manifesto">
+            <h2>Manifesto da Marca (Storytelling)</h2>
+            <div class="manifesto">
+                <p>"Eles disseram que para ter design, era preciso ter dinheiro.</p>
+                <p>Eles disseram que para ser bem atendido, era preciso esperar sentado.</p>
+                <p>Eles esqueceram de quem nós somos.</p>
+                <p>O Dom Henrique não é um título de nobreza. É a nossa realeza das ruas. Nascemos num antigo armazém, onde o tijolo bruto encontra a luz do neon. Onde a avenida cruza os nossos brindes. Não temos portas, não temos frescura, não temos tempo a perder em filas.</p>
+                <p>Aqui, a calçada é o nosso camarote. A noite é a nossa tela. E a sua liberdade é a nossa maior regra.</p>
+                <p>Dom Henrique. A rua com classe. A noite sem limites."</p>
+            </div>
+        </section>
+        
+    </div>
+
+</body>
+</html>
