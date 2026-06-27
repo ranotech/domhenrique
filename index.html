@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dom Henrique | Brand Experience</title>
+    <title>Dom Henrique | Arquitetura & Conceito</title>
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <style>
         /* ==========================================================================
@@ -87,6 +86,13 @@
             color: var(--color-white);
         }
 
+        .text-lead {
+            font-size: 1.2rem;
+            color: var(--color-gray);
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
         /* ==========================================================================
            ANIMATIONS
            ========================================================================== */
@@ -108,711 +114,648 @@
         }
 
         /* ==========================================================================
-           HERO SECTION
+           HERO & IMAGEM PRINCIPAL
            ========================================================================== */
-        .hero {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .arch-hero {
+            padding: 15vh 5vw 5vh 5vw;
             text-align: center;
-            overflow: hidden;
-            /* Bordas suaves na imagem principal */
-            border-bottom-left-radius: 40px;
-            border-bottom-right-radius: 40px;
         }
 
-        .hero-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            /* Parallax suave via JS */
-            transform: scale(1.05); 
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.35);
-            z-index: 2;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 3;
-            max-width: 900px;
-            padding: 0 5vw;
-        }
-
-        .hero-title {
+        .arch-hero-title {
             font-family: var(--font-display);
-            font-size: clamp(3rem, 7vw, 5.5rem);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.5);
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1.1rem, 2vw, 1.5rem);
-            color: var(--color-light-gray);
-            font-weight: 300;
-            margin-bottom: 3rem;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-        }
-
-        .btn-scroll {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 100px;
-            color: var(--color-white);
-            text-decoration: none;
-            font-family: var(--font-body);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
-            backdrop-filter: blur(10px);
-            background: rgba(255,255,255,0.05);
-            transition: var(--transition-smooth);
-            cursor: pointer;
-        }
-
-        .btn-scroll:hover {
-            background: var(--color-white);
-            color: var(--color-black);
-            transform: translateY(-3px);
-        }
-
-        /* ==========================================================================
-           A OPORTUNIDADE
-           ========================================================================== */
-        .opportunity-intro {
-            max-width: 800px;
-            margin-bottom: 4rem;
-        }
-
-        .opportunity-intro p {
-            font-size: 1.2rem;
-            color: var(--color-gray);
-            margin-bottom: 1.5rem;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .premium-card {
-            background-color: var(--color-surface);
-            border: 1px solid rgba(255,255,255,0.05);
-            padding: 3rem 2.5rem;
-            border-radius: 16px;
-            transition: var(--transition-smooth);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .premium-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
-            opacity: 0;
-            transition: var(--transition-smooth);
-        }
-
-        .premium-card:hover {
-            transform: translateY(-10px);
-            background-color: var(--color-surface-hover);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-
-        .premium-card:hover::before {
-            opacity: 1;
-        }
-
-        .card-icon {
-            font-size: 2rem;
-            color: var(--color-gold);
-            margin-bottom: 1.5rem;
-        }
-
-        .premium-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
+            font-size: clamp(3rem, 6vw, 5rem);
             margin-bottom: 1rem;
         }
 
-        .premium-card p {
-            color: var(--color-gray);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* ==========================================================================
-           O PROBLEMA (2 COLUNAS)
-           ========================================================================== */
-        .problem-section {
-            background-color: var(--color-dark);
-            border-radius: 30px;
-            padding: 8vw 5vw;
-            margin: 0 2vw;
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 5rem;
-            align-items: center;
-        }
-
-        .problem-text h2 {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 4vw, 3.5rem);
-            margin-bottom: 2rem;
-            line-height: 1.2;
-        }
-
-        .problem-text p {
+        .arch-hero-subtitle {
             font-size: 1.1rem;
             color: var(--color-gray);
-            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto 4rem auto;
         }
 
-        .problem-cards {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-
-        .problem-item {
-            background: var(--color-black);
-            padding: 2rem;
+        .main-image-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
             border-radius: 12px;
-            border-left: 1px solid #333;
-            transition: var(--transition-smooth);
+            overflow: hidden;
         }
 
-        .problem-item:hover {
-            border-left-color: var(--color-gold);
-            transform: translateX(5px);
+        .main-image {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.85) contrast(1.1);
         }
 
-        .problem-item h4 {
-            font-family: var(--font-display);
-            color: var(--color-white);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        /* ==========================================================================
-           NOSSA SOLUÇÃO
-           ========================================================================== */
-        .solution-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .solution-card {
-            padding: 2.5rem;
-            border-bottom: 1px solid #333;
-            transition: var(--transition-smooth);
-        }
-
-        .solution-card:hover {
-            background-color: var(--color-surface);
-            border-bottom-color: var(--color-gold);
-            border-radius: 12px 12px 0 0;
-        }
-
-        .solution-card .icon {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            opacity: 0.8;
-        }
-
-        .solution-card h4 {
+        .image-caption {
+            text-align: center;
             font-family: var(--font-body);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.85rem;
-            color: var(--color-gold);
-            margin-bottom: 1rem;
-        }
-
-        /* ==========================================================================
-           OS CINCO PILARES
-           ========================================================================== */
-        .pillars-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 1.5rem;
-        }
-
-        .pillar {
-            text-align: center;
-            padding: 3rem 1.5rem;
-            background: var(--color-surface);
-            border-radius: 100px 100px 12px 12px;
-            transition: var(--transition-smooth);
-            cursor: default;
-        }
-
-        .pillar:hover {
-            transform: translateY(-15px);
-            background: var(--color-surface-hover);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-        }
-
-        .pillar-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--color-black);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 2rem auto;
-            color: var(--color-gold);
-            font-size: 1.5rem;
-            border: 1px solid #333;
-        }
-
-        .pillar h3 {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .pillar p {
             font-size: 0.85rem;
             color: var(--color-gray);
-        }
-
-        /* ==========================================================================
-           TIMELINE
-           ========================================================================== */
-        .timeline-container {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .timeline-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50px;
-            width: 1px;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent, var(--color-gold), transparent);
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 120px;
-            margin-bottom: 4rem;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-time {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100px;
-            text-align: right;
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            color: var(--color-gold);
-            background: var(--color-black);
-            padding: 5px 0;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: 46px;
-            top: 12px;
-            width: 9px;
-            height: 9px;
-            background: var(--color-black);
-            border: 2px solid var(--color-gold);
-            border-radius: 50%;
-            z-index: 2;
-            transition: var(--transition-smooth);
-        }
-
-        .timeline-item:hover .timeline-dot {
-            background: var(--color-gold);
-            box-shadow: 0 0 15px var(--color-gold);
-        }
-
-        .timeline-content h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-content p {
-            color: var(--color-gray);
-            font-size: 0.95rem;
-        }
-
-        /* ==========================================================================
-           MANIFESTO & FOOTER
-           ========================================================================== */
-        .manifesto-section {
-            padding: 20vh 5vw;
-            text-align: center;
-            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
-        }
-
-        .manifesto-text {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 5vw, 4.5rem);
-            line-height: 1.3;
-            max-width: 1000px;
-            margin: 0 auto;
+            margin-top: 1.5rem;
+            letter-spacing: 1px;
             font-style: italic;
         }
 
-        .footer-next {
-            text-align: center;
-            padding: 10vh 0 15vh 0;
-            border-top: 1px solid #222;
+        /* ==========================================================================
+           O POTENCIAL ESCONDIDO
+           ========================================================================== */
+        .potential-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
         }
 
-        .footer-next span {
-            display: block;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--color-gray);
-            margin-bottom: 1rem;
+        .potential-text p {
+            margin-bottom: 1.5rem;
+            color: var(--color-light-gray);
+            font-size: 1.05rem;
         }
 
-        .footer-next a {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: var(--color-white);
-            text-decoration: none;
+        /* ==========================================================================
+           PRINCÍPIOS ARQUITETÔNICOS
+           ========================================================================== */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .principle-card {
+            background-color: var(--color-surface);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            border-top: 2px solid transparent;
             transition: var(--transition-smooth);
         }
 
-        .footer-next a:hover {
+        .principle-card:hover {
+            border-top-color: var(--color-gold);
+            transform: translateY(-5px);
+            background-color: var(--color-surface-hover);
+        }
+
+        .principle-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .principle-list {
+            list-style: none;
+        }
+
+        .principle-list li {
+            font-size: 0.9rem;
+            color: var(--color-gray);
+            margin-bottom: 0.8rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .principle-list li::before {
+            content: '•';
             color: var(--color-gold);
+            position: absolute;
+            left: 0;
+        }
+
+        /* ==========================================================================
+           O FLUXO IDEAL DO CLIENTE
+           ========================================================================== */
+        .flowchart-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .flow-node {
+            background: var(--color-surface);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 1.2rem 2rem;
+            border-radius: 50px;
+            text-align: center;
+            min-width: 250px;
+            font-family: var(--font-body);
+            font-weight: 500;
+            color: var(--color-white);
+            position: relative;
+            z-index: 2;
+            transition: var(--transition-smooth);
+        }
+
+        .flow-node:hover {
+            border-color: var(--color-gold);
+            color: var(--color-gold);
+            transform: scale(1.05);
+        }
+
+        .flow-arrow {
+            height: 40px;
+            width: 1px;
+            background: linear-gradient(to bottom, var(--color-gray), transparent);
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .flow-arrow::after {
+            content: '↓';
+            position: absolute;
+            bottom: -15px;
+            left: -4px;
+            color: var(--color-gray);
+            font-size: 1rem;
+        }
+
+        .flow-split {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .flow-split::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 50%;
+            height: 1px;
+            background: var(--color-gray);
+            transform: translateX(-50%);
+        }
+        
+        .flow-split-lines {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            top: -20px;
+        }
+
+        /* ==========================================================================
+           DISTRIBUIÇÃO DOS AMBIENTES
+           ========================================================================== */
+        .distribution-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .dist-item {
+            border-bottom: 1px solid #222;
+            padding-bottom: 1.5rem;
+        }
+
+        .dist-item h4 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--color-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .dist-item p {
+            font-size: 0.95rem;
+            color: var(--color-gray);
+        }
+
+        /* ==========================================================================
+           DIRETRIZES DA REFORMA (TABELA)
+           ========================================================================== */
+        .premium-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        .premium-table th {
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            font-size: 0.8rem;
             letter-spacing: 2px;
+            color: var(--color-gold);
+            padding: 1.5rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .premium-table td {
+            padding: 1.5rem;
+            border-bottom: 1px solid #222;
+            font-size: 0.95rem;
+            color: var(--color-light-gray);
+        }
+
+        .premium-table tr:hover td {
+            background-color: var(--color-surface);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge-alta { background: rgba(212, 175, 55, 0.2); color: var(--color-gold); }
+        .badge-media { background: rgba(255, 255, 255, 0.1); color: var(--color-light-gray); }
+        .badge-baixa { background: rgba(136, 136, 136, 0.1); color: var(--color-gray); }
+
+        /* ==========================================================================
+           CHECKLIST DA OBRA
+           ========================================================================== */
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .check-category h4 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            font-size: 0.9rem;
+            color: var(--color-gray);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .check-list li::before {
+            content: '□';
+            font-size: 1.2rem;
+            color: #444;
         }
 
         /* ==========================================================================
            RESPONSIVE DESIGN
            ========================================================================== */
-        @media (max-width: 1024px) {
-            .pillars-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .pillar {
-                border-radius: 12px;
-                padding: 2rem 1.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .problem-grid {
+        @media (max-width: 900px) {
+            .potential-grid, .distribution-grid {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                gap: 2rem;
             }
-            .problem-section {
-                padding: 10vw 5vw;
-                margin: 0;
-                border-radius: 0;
+            .premium-table, .premium-table tbody, .premium-table tr, .premium-table td, .premium-table th {
+                display: block;
             }
-            .pillars-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .premium-table tr {
+                margin-bottom: 2rem;
+                border: 1px solid #333;
+                border-radius: 8px;
             }
-        }
-
-        @media (max-width: 480px) {
-            .timeline-container::before {
-                left: 20px;
+            .premium-table td {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #222;
+                padding: 1rem;
             }
-            .timeline-item {
-                padding-left: 60px;
+            .premium-table td::before {
+                content: attr(data-label);
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                color: var(--color-gold);
+                margin-right: 1rem;
             }
-            .timeline-time {
-                position: relative;
-                text-align: left;
-                width: auto;
-                background: transparent;
-                margin-bottom: 0.5rem;
-                top: auto;
-            }
-            .timeline-dot {
-                left: 16px;
-                top: 50px;
-            }
-            .pillars-grid {
-                grid-template-columns: 1fr;
-            }
-            .problem-cards {
-                grid-template-columns: 1fr;
+            .premium-table thead {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <img src="https://i.imgur.com/aoWMzsL.jpeg" alt="Dom Henrique Brand Experience" class="hero-img" loading="lazy">
-        <div class="hero-overlay"></div>
+    <header class="arch-hero reveal-up">
+        <span class="section-tag" style="justify-content: center; display: flex;">Capítulo 03</span>
+        <h1 class="arch-hero-title">Arquitetura & <span class="gold-text">Conceito.</span></h1>
+        <p class="arch-hero-subtitle">Transformando R$ 10.000 de orçamento em percepção de alto valor, operando na simplicidade e focando no impacto visual da esquina.</p>
         
-        <div class="hero-content reveal-up">
-            <h1 class="hero-title">O Dom Henrique não nasceu para ser apenas mais um bar.</h1>
-            <p class="hero-subtitle">Estamos criando o novo ponto de encontro da juventude de Cassilândia.</p>
-            <a href="#oportunidade" class="btn-scroll">Conheça nossa estratégia</a>
+        <div class="container">
+            <div class="main-image-container reveal-up">
+                <img src="https://i.imgur.com/aoWMzsL.jpeg" alt="Fachada do antigo armazém" class="main-image" loading="lazy">
+            </div>
+            <p class="image-caption reveal-up">"Estado atual do imóvel antes da transformação."</p>
         </div>
     </header>
 
-    <!-- A OPORTUNIDADE -->
-    <section id="oportunidade" class="section-padding container">
-        <span class="section-tag reveal-left">Capítulo 01</span>
-        <h2 class="title-large reveal-up">A oportunidade</h2>
+    <section class="section-padding container">
+        <span class="section-tag reveal-left">A Visão</span>
+        <h2 class="title-large reveal-up">O potencial escondido.</h2>
         
-        <div class="opportunity-intro reveal-up">
-            <p>No interior, a grande maioria dos estabelecimentos noturnos concentra sua estratégia em uma única variável: o preço. Essa abordagem cria espaços funcionais, porém estéreis, desprovidos de identidade e magnetismo.</p>
-            <p>Acreditamos que experiências memoráveis são o verdadeiro motor da fidelização. O Dom Henrique une o melhor de dois mundos: a atmosfera estética de um bar premium da capital com a operação simplificada e o calor humano que o interior exige.</p>
-        </div>
-
-        <div class="cards-grid">
-            <div class="premium-card reveal-up">
-                <div class="card-icon">✧</div>
-                <h3>Fidelização Visual</h3>
-                <p>Ambientes projetados para serem fotografados espontaneamente geram mídia orgânica incalculável. A estética atrai, a experiência retém.</p>
+        <div class="potential-grid reveal-up">
+            <div class="potential-text">
+                <p>Prédios antigos não são obstáculos; eles possuem textura, história e uma "alma" arquitetônica que construções novas demoram anos para desenvolver. Em um projeto com orçamento entre R$ 5.000 e R$ 10.000 e mão de obra própria, a imperfeição da parede descascada deixa de ser um defeito e passa a ser o estilo <strong>Industrial-Chic</strong>.</p>
+                <p>A esquina é o maior ativo comercial do Dom Henrique. Ela naturalmente duplica a visibilidade e cria um ponto de convergência. Ao invés de lutar contra a estética crua do armazém, nós a abraçamos. O segredo da transformação não está em quebrar paredes ou aplicar revestimentos caros, mas sim em aplicar contraste estratégico: o escuro absoluto quebrado pela iluminação cenográfica.</p>
             </div>
-            <div class="premium-card reveal-up" style="transition-delay: 0.1s;">
-                <div class="card-icon">⚡</div>
-                <h3>Operação Enxuta</h3>
-                <p>Transferimos a margem gasta com garçons e processos burocráticos para investimento em design de luz, som e arquitetura sensorial.</p>
-            </div>
-            <div class="premium-card reveal-up" style="transition-delay: 0.2s;">
-                <div class="card-icon">◈</div>
-                <h3>Democratização</h3>
-                <p>Oferecemos o visual de um ticket médio altíssimo, mantendo preços compatíveis com a realidade do estudante universitário.</p>
+            <div class="potential-text">
+                <p>Com intervenções simples (tinta preta e luz quente), a percepção do imóvel muda radicalmente. Onde antes havia um armazém abandonado, passa a existir um lounge urbano misterioso e convidativo.</p>
+                <p>A regra de ouro desta obra é: <strong>se não tem função e não é bonito, pinte de preto.</strong> O preto camufla fios aparentes, tetos irregulares e canos, jogando toda a atenção visual do cliente para os focos de luz e para a decoração inserida intencionalmente.</p>
             </div>
         </div>
     </section>
 
-    <!-- O PROBLEMA -->
-    <section class="problem-section section-padding">
-        <div class="container problem-grid">
-            <div class="problem-text reveal-left">
-                <span class="section-tag">O Cenário Atual</span>
-                <h2>Por que a juventude busca alternativas fora da cidade?</h2>
-                <p>O jovem universitário consome cultura global através das redes sociais diariamente. Quando ele decide sair à noite, ele não quer apenas beber; ele quer vivenciar um cenário que reflita essa estética.</p>
-                <p>A carência de espaços conceituais gera uma fuga de capital e entretenimento.</p>
-            </div>
-            <div class="problem-cards reveal-up">
-                <div class="problem-item">
-                    <h4>Falta de Experiências</h4>
-                    <p style="color: var(--color-gray); font-size: 0.9rem;">Bares padronizados e sem curadoria conceitual.</p>
-                </div>
-                <div class="problem-item">
-                    <h4>Necessidade de Viajar</h4>
-                    <p style="color: var(--color-gray); font-size: 0.9rem;">Deslocamento para capitais em busca de inovação.</p>
-                </div>
-                <div class="problem-item">
-                    <h4>Pouco Fotogênicos</h4>
-                    <p style="color: var(--color-gray); font-size: 0.9rem;">Iluminação inadequada que desencoraja registros e compartilhamento.</p>
-                </div>
-                <div class="problem-item">
-                    <h4>Operação Lenta</h4>
-                    <p style="color: var(--color-gray); font-size: 0.9rem;">Filas extensas para pagamento e atendimento engessado por garçons.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NOSSA SOLUÇÃO -->
-    <section class="section-padding container">
-        <span class="section-tag reveal-left">A Resposta</span>
-        <h2 class="title-large reveal-up">Nossa Solução</h2>
+    <section class="section-padding container" style="background-color: var(--color-dark); padding: 10vh 5vw; border-radius: 20px;">
+        <span class="section-tag reveal-left">Diretrizes Visuais</span>
+        <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Princípios Arquitetônicos.</h2>
         
-        <div class="solution-grid">
-            <div class="solution-card reveal-up">
-                <div class="icon">👁️</div>
-                <h4>Experiência Sensorial</h4>
-                <p style="color: var(--color-gray); font-size: 0.95rem;">Um ambiente desenhado para engajar visão, audição e tato simultaneamente.</p>
+        <div class="principles-grid">
+            <div class="principle-card reveal-up">
+                <h3>💡 Luz quente</h3>
+                <ul class="principle-list">
+                    <li><strong>Motivo:</strong> Cria aconchego imediato.</li>
+                    <li><strong>Psicológico:</strong> Diminui a percepção temporal, cliente relaxa e bebe mais.</li>
+                    <li><strong>Impacto:</strong> Oculta sujeira e defeitos da parede.</li>
+                    <li><strong>Execução:</strong> Lâmpadas filamento/LED 2700K a 3000K.</li>
+                </ul>
             </div>
-            <div class="solution-card reveal-up" style="transition-delay: 0.05s;">
-                <div class="icon">💡</div>
-                <h4>Iluminação</h4>
-                <p style="color: var(--color-gray); font-size: 0.95rem;">Focos quentes, neons estratégicos e penumbra controlada para conforto e estética.</p>
+            <div class="principle-card reveal-up" style="transition-delay: 0.1s;">
+                <h3>🧱 Concreto aparente</h3>
+                <ul class="principle-list">
+                    <li><strong>Motivo:</strong> Aproveitar a estrutura do armazém.</li>
+                    <li><strong>Psicológico:</strong> Transmite estética urbana e jovem.</li>
+                    <li><strong>Impacto:</strong> Contraste brutalista essencial.</li>
+                    <li><strong>Execução:</strong> Cimento queimado líquido (baixo custo) ou raspar o reboco.</li>
+                </ul>
             </div>
-            <div class="solution-card reveal-up" style="transition-delay: 0.1s;">
-                <div class="icon">🎵</div>
-                <h4>Música</h4>
-                <p style="color: var(--color-gray); font-size: 0.95rem;">Acústica voltada para a rua, criando uma transição fluida entre a calçada e o bar.</p>
+            <div class="principle-card reveal-up" style="transition-delay: 0.2s;">
+                <h3>⬛ Metal preto</h3>
+                <ul class="principle-list">
+                    <li><strong>Motivo:</strong> Estruturação resistente e barata.</li>
+                    <li><strong>Psicológico:</strong> Sensação de solidez e modernidade.</li>
+                    <li><strong>Impacto:</strong> Uniformiza o ambiente quando pintado de fosco.</li>
+                    <li><strong>Execução:</strong> Tambores, grades e suportes pintados com spray.</li>
+                </ul>
             </div>
-            <div class="solution-card reveal-up" style="transition-delay: 0.15s;">
-                <div class="icon">⏱️</div>
-                <h4>Rapidez</h4>
-                <p style="color: var(--color-gray); font-size: 0.95rem;">Caixa dinâmico, retirada no balcão e zero filas para ir embora no fim da noite.</p>
+            <div class="principle-card reveal-up" style="transition-delay: 0.3s;">
+                <h3>🪵 Madeira</h3>
+                <ul class="principle-list">
+                    <li><strong>Motivo:</strong> Aquecer a frieza do concreto e preto.</li>
+                    <li><strong>Psicológico:</strong> Remete ao bar tradicional e à hospitalidade.</li>
+                    <li><strong>Impacto:</strong> Textura orgânica nos topos de balcão e mesas.</li>
+                    <li><strong>Execução:</strong> Compensado naval ou pinus com verniz escuro.</li>
+                </ul>
             </div>
-            <div class="solution-card reveal-up" style="transition-delay: 0.2s;">
-                <div class="icon">📸</div>
-                <h4>Instagramável</h4>
-                <p style="color: var(--color-gray); font-size: 0.95rem;">Cada ângulo é um cenário em potencial, incentivando o check-in e as fotos.</p>
+            <div class="principle-card reveal-up">
+                <h3>🌿 Vegetação</h3>
+                <ul class="principle-list">
+                    <li><strong>Motivo:</strong> Quebrar a dureza do espaço.</li>
+                    <li><strong>Psicológico:</strong> Traz "vida" e frescor ao ambiente fechado.</li>
+                    <li><strong>Impacto:</strong> Ponto focal vivo, excelente para fotos.</li>
+                    <li><strong>Execução:</strong> Vasos suspensos com jiboias (fáceis de cuidar).</li>
+                </ul>
             </div>
-            <div class="solution-card reveal-up" style="transition-delay: 0.25s;">
-                <div class="icon">🏷️</div>
-                <h4>Preços Acessíveis</h4>
-                <p style="color: var(--color-gray); font-size: 0.95rem;">A estética impressiona, o cardápio tranquiliza. Democrático na essência.</p>
+            <div class="principle-card reveal-up" style="transition-delay: 0.1s;">
+                <h3>⚡ Neon elegante</h3>
+                <ul class="principle-list">
+                    <li><strong>Motivo:</strong> O "íman" de fotos do Instagram.</li>
+                    <li><strong>Psicológico:</strong> Sinalização clara de "ponto moderno".</li>
+                    <li><strong>Impacto:</strong> Altíssimo engajamento social.</li>
+                    <li><strong>Execução:</strong> Fita LED neon flexível moldada em frase de impacto.</li>
+                </ul>
             </div>
-            <div class="solution-card reveal-up" style="transition-delay: 0.3s;">
-                <div class="icon">🎓</div>
-                <h4>Atmosfera Universitária</h4>
-                <p style="color: var(--color-gray); font-size: 0.95rem;">Energia de república, encontros orgânicos e sensação constante de pertencimento.</p>
+            <div class="principle-card reveal-up" style="transition-delay: 0.2s;">
+                <h3>🔦 Iluminação indireta</h3>
+                <ul class="principle-list">
+                    <li><strong>Motivo:</strong> Não ofuscar o cliente.</li>
+                    <li><strong>Psicológico:</strong> Sensação de sofisticação e conforto ocular.</li>
+                    <li><strong>Impacto:</strong> Cria profundidade e "banha" as texturas das paredes.</li>
+                    <li><strong>Execução:</strong> Fitas LED atrás de espelhos e balcões.</li>
+                </ul>
+            </div>
+            <div class="principle-card reveal-up" style="transition-delay: 0.3s;">
+                <h3>🏢 Fachada limpa</h3>
+                <ul class="principle-list">
+                    <li><strong>Motivo:</strong> Destacar-se da poluição visual da cidade.</li>
+                    <li><strong>Psicológico:</strong> "Menos é mais", percepção de local premium.</li>
+                    <li><strong>Impacto:</strong> O próprio prédio escuro iluminado vira o letreiro.</li>
+                    <li><strong>Execução:</strong> Tinta preta fosca, logotipo em metal dourado e iluminação direcional.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- OS CINCO PILARES -->
     <section class="section-padding container">
-        <div style="text-align: center; margin-bottom: 5rem;" class="reveal-up">
-            <span class="section-tag" style="justify-content: center;">A Base do Projeto</span>
-            <h2 class="title-large">Os cinco pilares</h2>
-        </div>
-
-        <div class="pillars-grid">
-            <div class="pillar reveal-up">
-                <div class="pillar-icon">✦</div>
-                <h3>Ambiente</h3>
-                <p>Estética imersiva que substitui o trivial pelo extraordinário.</p>
+        <span class="section-tag reveal-left">Engenharia de Movimento</span>
+        <h2 class="title-large reveal-up" style="text-align: center; margin-bottom: 4rem;">O fluxo ideal do cliente.</h2>
+        
+        <div class="flowchart-wrapper reveal-up">
+            <div class="flow-node">Cliente chega na avenida</div>
+            <div class="flow-arrow"></div>
+            <div class="flow-node">Enxerga movimento na calçada</div>
+            <div class="flow-arrow"></div>
+            <div class="flow-node">Escuta a música ao vivo</div>
+            <div class="flow-arrow"></div>
+            <div class="flow-node">Entra fluidamente (sem catraca)</div>
+            <div class="flow-arrow"></div>
+            <div class="flow-node">Visualiza rapidamente o caixa iluminado</div>
+            <div class="flow-arrow"></div>
+            <div class="flow-node">Compra a bebida (Pix/Cartão)</div>
+            <div class="flow-arrow"></div>
+            <div class="flow-node">Retira imediatamente no balcão</div>
+            <div class="flow-arrow"></div>
+            
+            <div style="width: 100%; max-width: 400px; text-align: center;">Escolhe o destino:</div>
+            <div class="flow-split">
+                <div class="flow-node" style="min-width: 150px;">Mesas Internas</div>
+                <div class="flow-node" style="min-width: 150px;">Área Externa (Calçada)</div>
             </div>
-            <div class="pillar reveal-up" style="transition-delay: 0.1s;">
-                <div class="pillar-icon">≈</div>
-                <h3>Movimento</h3>
-                <p>A calçada ativa. Onde ver e ser visto faz parte do roteiro da noite.</p>
-            </div>
-            <div class="pillar reveal-up" style="transition-delay: 0.2s;">
-                <div class="pillar-icon">⚡</div>
-                <h3>Rapidez</h3>
-                <p>Zero atrito. O cliente no controle do seu próprio tempo de consumo.</p>
-            </div>
-            <div class="pillar reveal-up" style="transition-delay: 0.3s;">
-                <div class="pillar-icon">✺</div>
-                <h3>Convivência</h3>
-                <p>Arquitetura que favorece a integração de mesas e rodas de conversa.</p>
-            </div>
-            <div class="pillar reveal-up" style="transition-delay: 0.4s;">
-                <div class="pillar-icon">⚲</div>
-                <h3>Compartilhamento</h3>
-                <p>Do balde de cerveja à foto no espelho, tudo é desenhado para o coletivo.</p>
-            </div>
+            
+            <div class="flow-arrow" style="margin-top: 2rem;"></div>
+            <div class="flow-node">Permanece, tira fotos e socializa</div>
+            <div class="flow-arrow"></div>
+            <div class="flow-node">Retorna ao balcão para mais consumo</div>
+            <div class="flow-arrow"></div>
+            <div class="flow-node">Sai livremente, satisfeito.</div>
         </div>
     </section>
 
-    <!-- TIMELINE -->
     <section class="section-padding container">
-        <span class="section-tag reveal-left">A Jornada</span>
-        <h2 class="title-large reveal-up" style="margin-bottom: 5rem;">Como nasce uma noite perfeita.</h2>
+        <span class="section-tag reveal-left">Planta Baixa (Conceitual)</span>
+        <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Distribuição dos ambientes.</h2>
 
-        <div class="timeline-container">
-            <div class="timeline-item reveal-up">
-                <div class="timeline-time">18h</div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>Primeiros clientes</h4>
-                    <p>O sol se põe. As luzes de neon e filamento aquecem a esquina. O happy hour universitário começa a se formar de forma descontraída.</p>
-                </div>
+        <div class="distribution-grid">
+            <div class="dist-item reveal-up">
+                <h4>Entrada</h4>
+                <p>Ampla e desobstruída. Sem portas pesadas durante a operação. A transição da rua para dentro deve ser praticamente imperceptível, convidando quem passa.</p>
             </div>
-            <div class="timeline-item reveal-up">
-                <div class="timeline-time">19h</div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>Ambiente ganha movimento</h4>
-                    <p>Turmas chegam direto da faculdade ou do trabalho. Os baldes de cerveja começam a circular pelo salão e pelas calçadas.</p>
-                </div>
+            <div class="dist-item reveal-up">
+                <h4>Caixa</h4>
+                <p>O ponto mais iluminado e claro do bar para chamar a atenção imediata de quem entra. Estratégico para faturamento antecipado. Deve suportar alto fluxo de filas rápidas.</p>
             </div>
-            <div class="timeline-item reveal-up">
-                <div class="timeline-time">20h</div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>A música começa</h4>
-                    <p>O violão soa. Voltado para a rua, o som atrai quem passa de carro e consolida a energia vibrante do lounge.</p>
-                </div>
+            <div class="dist-item reveal-up">
+                <h4>Geladeiras / Freezers</h4>
+                <p>Visíveis atrás do balcão, porém com iluminação interna controlada ou adesivadas de preto/dourado para não quebrarem a estética escura com luzes brancas frias.</p>
             </div>
-            <div class="timeline-item reveal-up">
-                <div class="timeline-time">22h</div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>Calçada cheia</h4>
-                    <p>A barreira entre o bar e a cidade desaparece. A esquina pulsa, as mesas se juntam, e o fluxo no balcão é contínuo e ágil.</p>
-                </div>
+            <div class="dist-item reveal-up">
+                <h4>Cozinha</h4>
+                <p>Pequena, funcional e totalmente isolada da visão do cliente. Focada apenas na rápida expedição de petiscos. Exaustão potente para não deixar o bar com cheiro de fritura.</p>
             </div>
-            <div class="timeline-item reveal-up">
-                <div class="timeline-time">00h</div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>Momento máximo</h4>
-                    <p>A imersão estética atinge o ápice. Fotos, brindes e a certeza de que o Dom Henrique é o destino principal da noite.</p>
-                </div>
+            <div class="dist-item reveal-up">
+                <h4>Banheiros</h4>
+                <p>Limpeza impecável. Espelhos grandes e bem iluminados (luz frontal no rosto). O banheiro é um dos locais onde mais se tira fotos em bares. Pintura escura, louça branca.</p>
             </div>
-            <div class="timeline-item reveal-up">
-                <div class="timeline-time">02h</div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>Encerramento fluido</h4>
-                    <p>Sem filas para fechar conta. O cliente apenas se levanta e vai embora, levando consigo a vontade de retornar na próxima semana.</p>
-                </div>
+            <div class="dist-item reveal-up">
+                <h4>Área Instagramável</h4>
+                <p>Geralmente o canto do armazém mais visível da entrada. Uma parede de tijolos (ou preta) com o Neon exclusivo do Dom Henrique e iluminação indireta. Espaço para circulação em volta.</p>
+            </div>
+            <div class="dist-item reveal-up">
+                <h4>Área do Cantor</h4>
+                <p>Perto da entrada/janelão de esquina, voltado 60% para a rua e 40% para dentro. O som precisa ecoar na calçada para funcionar como "ímã" de clientes (prova social).</p>
+            </div>
+            <div class="dist-item reveal-up">
+                <h4>Mesas & Circulação</h4>
+                <p>Mesas baixas de madeira no centro, tambores/bistrôs altos nas bordas e calçada. Corredor central largo para garantir que o cliente vá ao balcão sem esbarrar nas pessoas.</p>
             </div>
         </div>
     </section>
 
-    <!-- MANIFESTO -->
-    <section class="manifesto-section">
-        <p class="manifesto-text reveal-up">
-            "Não estamos apenas servindo bebidas.<br>
-            <span class="gold-text">Estamos construindo a memória visual de uma geração inteira.</span>"
+    <section class="section-padding container">
+        <span class="section-tag reveal-left">Gestão de Orçamento</span>
+        <h2 class="title-large reveal-up">Diretrizes da reforma.</h2>
+        <p class="text-lead reveal-up">O que fazer com os R$ 10.000, considerando a mão de obra própria. Foco absoluto no que gera impacto visual e operacional.</p>
+
+        <table class="premium-table reveal-up">
+            <thead>
+                <tr>
+                    <th>Etapa / Intervenção</th>
+                    <th>Prioridade</th>
+                    <th>Investimento (Custo Mat.)</th>
+                    <th>Impacto Visual</th>
+                    <th>Impacto Operacional</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Etapa">Pintura Total (Preto Fosco)</td>
+                    <td data-label="Prioridade"><span class="badge badge-alta">Imediata</span></td>
+                    <td data-label="Investimento">Médio (Tintas)</td>
+                    <td data-label="Visual"><span class="badge badge-alta">Alto</span></td>
+                    <td data-label="Operacional"><span class="badge badge-baixa">Baixo</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Etapa">Iluminação Cenográfica</td>
+                    <td data-label="Prioridade"><span class="badge badge-alta">Imediata</span></td>
+                    <td data-label="Investimento">Médio (LEDs, Trilhos)</td>
+                    <td data-label="Visual"><span class="badge badge-alta">Alto</span></td>
+                    <td data-label="Operacional"><span class="badge badge-media">Médio</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Etapa">Balcão de Atendimento</td>
+                    <td data-label="Prioridade"><span class="badge badge-alta">Imediata</span></td>
+                    <td data-label="Investimento">Baixo (Alvenaria/Madeira DIY)</td>
+                    <td data-label="Visual"><span class="badge badge-media">Médio</span></td>
+                    <td data-label="Operacional"><span class="badge badge-alta">Alto</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Etapa">Revisão de Banheiros</td>
+                    <td data-label="Prioridade"><span class="badge badge-alta">Imediata</span></td>
+                    <td data-label="Investimento">Baixo (Pintura/Espelhos)</td>
+                    <td data-label="Visual"><span class="badge badge-media">Médio</span></td>
+                    <td data-label="Operacional"><span class="badge badge-alta">Alto</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Etapa">Mobiliário e Tambores</td>
+                    <td data-label="Prioridade"><span class="badge badge-media">Secundária</span></td>
+                    <td data-label="Investimento">Baixo (Reciclagem/Pintura)</td>
+                    <td data-label="Visual"><span class="badge badge-alta">Alto</span></td>
+                    <td data-label="Operacional"><span class="badge badge-alta">Alto</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Etapa">Revestimentos Caros (Porcelanatos, etc)</td>
+                    <td data-label="Prioridade"><span class="badge badge-baixa">Não Fazer</span></td>
+                    <td data-label="Investimento">Alto</td>
+                    <td data-label="Visual"><span class="badge badge-media">Médio</span></td>
+                    <td data-label="Operacional"><span class="badge badge-baixa">Baixo</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="section-padding container" style="background-color: var(--color-dark); padding: 10vh 5vw; border-radius: 20px; margin-bottom: 10vh;">
+        <span class="section-tag reveal-left">Mão na Massa</span>
+        <h2 class="title-large reveal-up" style="margin-bottom: 3rem;">Checklist da obra.</h2>
+        
+        <div class="checklist-grid reveal-up">
+            <div class="check-category">
+                <h4>Pintura & Estrutura</h4>
+                <ul class="check-list">
+                    <li>Raspar partes soltas das paredes</li>
+                    <li>Pintura do teto (preto fosco)</li>
+                    <li>Pintura das paredes internas (preto/cinza)</li>
+                    <li>Pintura da fachada externa</li>
+                    <li>Tratamento de cimento queimado/piso</li>
+                </ul>
+            </div>
+            
+            <div class="check-category">
+                <h4>Iluminação & Elétrica</h4>
+                <ul class="check-list">
+                    <li>Revisão do quadro de força geral</li>
+                    <li>Instalação de trilhos eletrificados</li>
+                    <li>Instalação de pendentes quentes (balcão)</li>
+                    <li>Fita LED neon (letreiro/Instagram)</li>
+                    <li>Tomadas estratégicas (caixa/cantor)</li>
+                </ul>
+            </div>
+            
+            <div class="check-category">
+                <h4>Hidráulica & Banheiros</h4>
+                <ul class="check-list">
+                    <li>Revisão de pias e descargas</li>
+                    <li>Pintura escura das paredes (banheiro)</li>
+                    <li>Instalação de espelhos grandes</li>
+                    <li>Luz quente frontal no espelho</li>
+                    <li>Instalação de pia da cozinha/balcão</li>
+                </ul>
+            </div>
+            
+            <div class="check-category">
+                <h4>Mobiliário & Decoração</h4>
+                <ul class="check-list">
+                    <li>Lixar e pintar tambores de metal</li>
+                    <li>Montagem do balcão de auto-serviço</li>
+                    <li>Distribuição das mesas baixas</li>
+                    <li>Posicionamento de plantas/jiboias</li>
+                    <li>Identidade visual (placa de fachada)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding container" style="text-align: center; border-top: 1px solid #222; padding-bottom: 15vh;">
+        <p class="text-lead reveal-up" style="margin: 0 auto; font-size: 1.5rem; font-family: var(--font-display); color: var(--color-gold);">
+            "A arquitetura do Dom Henrique não é feita de luxo, é feita de inteligência. Cada lata de tinta preta e cada lâmpada quente escolhida trabalha a favor da nossa estratégia principal: criar percepção de alto valor cobrando um preço justo."
         </p>
     </section>
 
-    <!-- FOOTER / NEXT -->
-    <footer class="footer-next reveal-up">
-        <span>Próxima Etapa ↓</span>
-        <a href="#identidade-visual">Identidade Visual</a>
-    </footer>
-
-    <!-- JAVASCRIPT -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Efeito Parallax Suave na Hero
-            const heroImg = document.querySelector('.hero-img');
-            window.addEventListener('scroll', () => {
-                let scrollPos = window.pageYOffset;
-                if(heroImg && scrollPos < window.innerHeight) {
-                    heroImg.style.transform = `translateY(${scrollPos * 0.3}px) scale(1.05)`;
-                }
-            });
-
-            // Intersection Observer para animações Reveal (Fade Up e Fade Left)
+            // Intersection Observer para animações Reveal
             const revealElements = document.querySelectorAll('.reveal-up, .reveal-left');
             
             const observerOptions = {
@@ -834,10 +777,10 @@
                 observer.observe(el);
             });
             
-            // Força a visibilidade imediata dos elementos da Hero
+            // Força a visibilidade inicial no load
             setTimeout(() => {
-                const heroElements = document.querySelectorAll('.hero .reveal-up');
-                heroElements.forEach(el => el.classList.add('reveal-visible'));
+                const initElements = document.querySelectorAll('.arch-hero .reveal-up');
+                initElements.forEach(el => el.classList.add('reveal-visible'));
             }, 100);
         });
     </script>
