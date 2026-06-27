@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand Strategy | Dom Henrique</title>
+    <title>Dom Henrique | Brand Book Oficial</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
     <style>
+        /* CSS Reset & Variables */
         :root {
-            --bg-color: #0d0d0d;
-            --text-main: #f5f5f5;
-            --text-muted: #a0a0a0;
-            --accent-gold: #D4AF37;
-            --accent-red: #8B0000;
-            --surface: #1a1a1a;
-            --surface-hover: #262626;
+            --color-black: #000000;
+            --color-dark: #0a0a0a;
+            --color-white: #ffffff;
+            --color-gold: #D4AF37;
+            --color-gray: #888888;
+            
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --spacing-section: 15vh;
         }
 
         * {
@@ -25,353 +31,403 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
+            background-color: var(--color-black);
+            color: var(--color-white);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            color: var(--accent-gold);
-        }
-
-        /* Layout & Container */
+        /* Util Classes & Animations */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 5vw;
         }
 
-        header {
+        .fade-in-element {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                        transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .fade-in-element.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gold-text {
+            color: var(--color-gold);
+            font-style: italic;
+        }
+
+        .image-placeholder {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gray);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            width: 100%;
+        }
+
+        /* 1. Hero Section */
+        .hero {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             position: relative;
+            padding: 0 5vw;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), var(--color-dark);
+            /* Aqui entrará o background da [IMAGEM HERO - FACHADA NOTURNA DESFOCADA] */
         }
 
-        .header-subtitle {
-            font-size: 1rem;
-            text-transform: uppercase;
+        .hero-pre-title {
+            font-family: var(--font-body);
+            color: var(--color-gold);
             letter-spacing: 4px;
-            color: var(--accent-red);
-            margin-bottom: 1rem;
-        }
-
-        header h1 {
-            font-size: 5rem;
-            line-height: 1.1;
+            text-transform: uppercase;
+            font-size: 0.85rem;
             margin-bottom: 2rem;
+            display: block;
         }
 
-        header p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 8vw, 7rem);
+            line-height: 1.1;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            max-width: 1000px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            color: var(--color-gray);
+            font-weight: 300;
             max-width: 600px;
         }
 
-        section {
-            padding: 6rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        /* 2. Institucional */
+        .institutional {
+            padding: var(--spacing-section) 0;
+            text-align: center;
         }
 
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            position: relative;
-            display: inline-block;
+        .institutional p {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            line-height: 1.4;
+            max-width: 900px;
+            margin: 0 auto;
+            color: var(--color-white);
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50%;
-            height: 2px;
-            background-color: var(--accent-red);
+        /* 3. Manifesto Resumido */
+        .manifesto {
+            padding: var(--spacing-section) 0;
+            background-color: var(--color-dark);
         }
 
-        /* Grid Systems */
-        .grid-2 {
+        .manifesto-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
+            align-items: center;
         }
 
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+        .manifesto .image-placeholder {
+            height: 70vh;
         }
 
-        /* Cards */
-        .card {
-            background-color: var(--surface);
-            padding: 2.5rem;
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 4px solid var(--accent-gold);
+        .manifesto-content h2 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            background-color: var(--surface-hover);
+        .manifesto-content p {
+            font-size: 1.1rem;
+            color: var(--color-gray);
+            margin-bottom: 1.5rem;
         }
 
-        .card h3 {
-            font-size: 1.5rem;
+        /* 4. O que é o Dom Henrique? */
+        .what-is {
+            padding: var(--spacing-section) 0;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .section-header h3 {
+            font-family: var(--font-body);
+            color: var(--color-gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
             margin-bottom: 1rem;
         }
 
-        .card p {
-            color: var(--text-muted);
+        .what-is-text {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            line-height: 1.3;
+            max-width: 800px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .feature-item {
+            border-top: 1px solid #333;
+            padding-top: 2rem;
+        }
+
+        .feature-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .feature-item p {
+            color: var(--color-gray);
             font-size: 0.95rem;
         }
 
-        .strategy-note {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px dashed rgba(255,255,255,0.1);
+        /* 5. Por que essa marca existe? */
+        .why-exists {
+            padding: var(--spacing-section) 0;
+            background-color: var(--color-dark);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            gap: 5rem;
+        }
+
+        .why-statement {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            line-height: 1.2;
+        }
+
+        .why-description p {
+            font-size: 1.1rem;
+            color: var(--color-gray);
+            margin-bottom: 2rem;
+        }
+
+        .why-description .image-placeholder {
+            height: 400px;
+            margin-top: 3rem;
+        }
+
+        /* 6. O que queremos transformar? */
+        .transformation {
+            padding: var(--spacing-section) 0;
+            text-align: center;
+        }
+
+        .transformation-title {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .transformation .image-placeholder {
+            height: 60vh;
+            margin-bottom: 4rem;
+        }
+
+        /* 7. Destaque Final */
+        .highlight-phrase {
+            padding: 10vh 0;
+            text-align: center;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+
+        .highlight-phrase h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 4.5rem);
+            color: var(--color-gold);
+            font-weight: 400;
+        }
+
+        /* 8. Call to Action / Footer */
+        .cta-next {
+            padding: 20vh 0;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--color-black), var(--color-dark));
+        }
+
+        .cta-next p {
+            color: var(--color-gray);
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             font-size: 0.85rem;
-            color: var(--accent-gold);
-            font-style: italic;
         }
 
-        /* Golden Circle */
-        .golden-circle {
-            text-align: center;
-            padding: 4rem;
-            background: radial-gradient(circle, var(--surface) 0%, var(--bg-color) 100%);
-            border-radius: 50%;
-            width: 500px;
-            height: 500px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border: 2px solid var(--accent-gold);
+        .btn-primary {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            border: 1px solid var(--color-gold);
+            color: var(--color-gold);
+            text-decoration: none;
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            transition: all 0.4s ease;
+            cursor: pointer;
         }
 
-        .golden-circle h3 {
-            margin-top: 1.5rem;
-            color: var(--text-main);
+        .btn-primary:hover {
+            background-color: var(--color-gold);
+            color: var(--color-black);
         }
 
-        /* Manifesto */
-        .manifesto-box {
-            background-image: linear-gradient(135deg, var(--surface) 0%, #000000 100%);
-            padding: 4rem;
-            border-right: 4px solid var(--accent-red);
-            font-size: 1.4rem;
-            line-height: 1.8;
-            font-style: italic;
-            text-align: center;
-        }
-
-        /* Responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .grid-2, .grid-3 {
+            .manifesto-grid, .why-grid, .features-grid {
                 grid-template-columns: 1fr;
+                gap: 3rem;
             }
-            header h1 {
-                font-size: 3rem;
+            .why-statement {
+                font-size: 2rem;
             }
-            .golden-circle {
-                width: 100%;
-                height: auto;
-                border-radius: 8px;
-                padding: 2rem;
+            .manifesto-content h2, .what-is-text {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <header class="container">
-        <div class="header-subtitle">Brand Strategy Document</div>
-        <h1>Dom Henrique</h1>
-        <p>Desenvolvido pelo consórcio estratégico: Interbrand, Pentagram e especialistas em Neuromarketing, CX e Arquitetura de Hospitalidade. Uma visão imersiva para o novo epicentro universitário de Cassilândia.</p>
+    <header class="hero">
+        <div class="fade-in-element">
+            <span class="hero-pre-title">Brand Book Visual</span>
+            <h1 class="hero-title">A Esquina.<br><span class="gold-text">Redefinida.</span></h1>
+            <p class="hero-subtitle">O novo epicentro da cultura universitária em Cassilândia. Um projeto desenhado para transcender o óbvio.</p>
+        </div>
     </header>
 
-    <main class="container">
-        <!-- Fundamentos da Marca -->
-        <section id="fundamentos">
-            <h2 class="section-title">Fundamentos da Marca</h2>
-            <div class="grid-2">
-                <div>
-                    <h3>Propósito</h3>
-                    <p>Democratizar a estética e a vivência de alto padrão para a juventude, provando que o acesso à hospitalidade premium não precisa ser um privilégio financeiro.</p>
-                    <div class="strategy-note">Estratégia: O universitário vive com restrições financeiras. O propósito ataca a dor da exclusão. Entregar "luxo perceptivo" gera uma dívida de gratidão emocional e lealdade instantânea.</div>
-                </div>
-                <div>
-                    <h3>Missão</h3>
-                    <p>Transformar a esquina mais tradicional da cidade em um ecossistema noturno vibrante, fluido e fotogênico, onde a comunidade universitária se encontra sem atritos.</p>
-                    <div class="strategy-note">Estratégia: A palavra "fluido" remete à ausência de garçons e filas. O foco na "esquina" e no "ecossistema" utiliza o conceito de Placemaking (criar lugares de significado).</div>
-                </div>
-            </div>
-            <div class="grid-2" style="margin-top: 3rem;">
-                <div>
-                    <h3>Visão</h3>
-                    <p>Ser a principal referência de entretenimento jovem da região, o "Third Place" (Terceiro Lugar, além da casa e da universidade) definitivo de Cassilândia.</p>
-                </div>
-                <div>
-                    <h3>Valores</h3>
-                    <ul style="list-style-position: inside; color: var(--text-muted);">
-                        <li><strong>Estética com Propósito:</strong> Cada canto é pensado.</li>
-                        <li><strong>Agilidade Extrema:</strong> O tempo do cliente é sagrado.</li>
-                        <li><strong>Comunidade Aberta:</strong> A rua é nossa extensão.</li>
-                        <li><strong>Acessibilidade Oculta:</strong> Parece caro, mas todos podem pagar.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <section class="institutional container fade-in-element">
+        <p>Dom Henrique não é apenas um endereço. É um marco arquitetônico e comportamental projetado para democratizar a estética de alto padrão.</p>
+    </section>
 
-        <!-- Posicionamento & PUV -->
-        <section id="posicionamento">
-            <h2 class="section-title">Posicionamento & PUV</h2>
-            <div class="card">
-                <h3>Posicionamento Estratégico</h3>
-                <p>O Dom Henrique não é um boteco, nem uma boate. É um "Lounge Universitário de Auto-Serviço". Ele se posiciona exatamente na lacuna entre os bares tradicionais (que têm preço bom, mas estética precária) e os locais de luxo (bonitos, mas inacessíveis e elitistas).</p>
-                <div class="strategy-note">Estratégia: Ao eliminar os garçons e o custo de entrada, transferimos essa margem financeira para o investimento em iluminação arquitetônica e design de interiores (tijolos aparentes, neon quente, cimento queimado). O cliente "paga" com o trabalho de ir ao balcão, mas é recompensado com um ambiente de altíssimo nível.</div>
+    <section class="manifesto">
+        <div class="container manifesto-grid">
+            <div class="image-placeholder fade-in-element">
+                [IMAGEM 01 — FACHADA CONCEITUAL]
             </div>
+            <div class="manifesto-content fade-in-element">
+                <h2>O luxo está na <span class="gold-text">experiência</span>, não no preço.</h2>
+                <p>Acreditamos que todo estudante merece vivenciar ambientes memoráveis. Criamos um ecossistema onde a energia vibrante de uma república universitária encontra o design imersivo dos bares mais desejados das grandes capitais.</p>
+                <p>Removemos o atrito. Eliminamos as taxas abusivas. Mantivemos apenas o essencial: a beleza brutalista do armazém, o dourado da cerveja gelada e a música que invade a rua.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="what-is container">
+        <div class="section-header fade-in-element">
+            <h3>Definição de Marca</h3>
+            <h2 class="what-is-text">Um Lounge Universitário de Auto-Serviço. Onde a agilidade do fast-casual colide com a sofisticação visual.</h2>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-item fade-in-element">
+                <h4>Dinâmica de Rua</h4>
+                <p>A calçada é a nossa principal vitrine. Sem muros, sem barreiras. O músico toca voltado para o fluxo, integrando a cidade à experiência.</p>
+            </div>
+            <div class="feature-item fade-in-element" style="transition-delay: 0.1s;">
+                <h4>Operação Zero-Atrito</h4>
+                <p>Sem garçons, sem espera. O cliente controla seu tempo. Compra no balcão, retira e movimenta-se livremente pelo ambiente.</p>
+            </div>
+            <div class="feature-item fade-in-element" style="transition-delay: 0.2s;">
+                <h4>Estética Imersiva</h4>
+                <p>Design de iluminação pensado frame a frame. Cada ângulo é intencionalmente desenhado para ser instagramável e elevar a percepção de valor.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-exists">
+        <div class="container why-grid">
+            <div class="why-statement fade-in-element">
+                Para preencher o <span class="gold-text">abismo</span> entre o boteco comum e o luxo inacessível.
+            </div>
+            <div class="why-description fade-in-element">
+                <p>Observamos uma lacuna clara no mercado de Cassilândia: o público jovem é forçado a escolher entre ambientes baratos com estética precária, ou lugares visualmente atraentes com preços e regras de entrada punitivas.</p>
+                <p>O Dom Henrique existe para provar que a beleza não precisa custar caro. Transferimos o custo operacional de garçons e logística clássica para investir pesadamente em arquitetura, som e luz.</p>
+                <div class="image-placeholder">
+                    [IMAGEM 02 — MOODBOARD DE ILUMINAÇÃO INTERNA]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="transformation container">
+        <h2 class="transformation-title fade-in-element">Transformar uma esquina de passagem <span class="gold-text">no destino principal.</span></h2>
+        <div class="image-placeholder fade-in-element">
+            [IMAGEM 03 — PÚBLICO E MOVIMENTO NA CALÇADA]
+        </div>
+        <p class="hero-subtitle fade-in-element" style="margin: 0 auto; text-align: center;">Não vendemos apenas bebida. Vendemos pertencimento, cenografia e a garantia de encontrar a melhor energia da cidade.</p>
+    </section>
+
+    <section class="highlight-phrase fade-in-element">
+        <div class="container">
+            <h2>A estética da capital.<br>A alma de Cassilândia.</h2>
+        </div>
+    </section>
+
+    <footer class="cta-next fade-in-element">
+        <p>Capítulo 01 Concluído</p>
+        <a href="#proxima-pagina" class="btn-primary">Explorar Estratégia de Marca</a>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15 // Dispara quando 15% do elemento estiver visível
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Para a animação não repetir ao subir a tela
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-in-element');
+            fadeElements.forEach(el => observer.observe(el));
             
-            <div class="card" style="margin-top: 2rem;">
-                <h3>Proposta Única de Valor (PUV)</h3>
-                <p><strong>"A experiência de um bar premium da capital, com a energia de uma festa universitária e o preço que cabe no seu bolso."</strong></p>
-            </div>
-        </section>
-
-        <!-- Golden Circle -->
-        <section id="golden-circle">
-            <h2 class="section-title">The Golden Circle</h2>
-            <div class="golden-circle">
-                <h3 style="color: var(--accent-gold);">WHY (Por quê?)</h3>
-                <p>Acreditamos que todo jovem merece se sentir importante, vivenciar momentos memoráveis e estar em um lugar que sinta orgulho de compartilhar.</p>
-                
-                <h3 style="color: var(--accent-gold);">HOW (Como?)</h3>
-                <p>Através de um design de interiores cenográfico (iluminação penumbra, neons, texturas cruas), um modelo de operação ágil (auto-serviço) e integração total entre o interior do armazém e a calçada.</p>
-                
-                <h3 style="color: var(--accent-gold);">WHAT (O quê?)</h3>
-                <p>Um bar de alto impacto visual, sem taxa de entrada, com bebidas democráticas (Brahma 500ml, Caipirinha) e música ao vivo voltada para a rua.</p>
-            </div>
-        </section>
-
-        <!-- Arquétipos e Personalidade -->
-        <section id="arquitetura-marca">
-            <h2 class="section-title">Personalidade da Marca</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>Arquétipos</h3>
-                    <p><strong>Primário: O Mago (The Magician).</strong> Transforma a realidade. Pega um armazém antigo e simples, foca na iluminação e na música, e cria uma atmosfera mágica e sofisticada. Traz o efeito "Uau".</p>
-                    <p><strong>Secundário: O Cara Comum (The Regular Guy).</strong> Mantém a marca pé no chão. Cerveja na garrafa, sem frescuras, amigável, onde todo mundo se conhece. Sem códigos de vestimenta rígidos.</p>
-                </div>
-                <div class="card">
-                    <h3>Tom de Voz</h3>
-                    <p><strong>Magnético, despretensioso, noturno e direto.</strong><br>
-                    O Dom Henrique não usa gírias infantis, nem linguagem rebuscada. Fala como aquele veterano de faculdade que todos admiram: sabe curtir a vida, tem bom gosto, mas te paga uma cerveja no balcão de igual pra igual.</p>
-                    <div class="strategy-note">Estratégia: Evitar parecer um bar "gourmetizado" chato. A comunicação deve focar na energia e no convite à rua. "A esquina é nossa" ao invés de "Venha conhecer nosso requinte".</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Público, Personas e Psicologia -->
-        <section id="publico-psicologia">
-            <h2 class="section-title">Psicologia do Consumo & Personas</h2>
-            
-            <div class="card" style="margin-bottom: 2rem;">
-                <h3>O Público Alvo Detalhado</h3>
-                <p>Jovens de 18 a 30 anos, prioritariamente estudantes universitários (ex: Direito, Agronomia, etc., de faculdades locais como a UEMS). Valorizam a socialização intensa característica de repúblicas e atléticas, mas buscam um upgrade de cenário. Estão altamente conectados ao Instagram/TikTok e usam os locais que frequentam como extensão de suas próprias identidades (moeda social).</p>
-            </div>
-
-            <div class="grid-2">
-                <div class="card">
-                    <h3>Persona: "O Social Hub"</h3>
-                    <p><strong>Perfil:</strong> Estudante de 21 anos, ativo nos eventos da faculdade. Sai de casa quinta, sexta e sábado.<br>
-                    <strong>Dores:</strong> Bares da cidade são feios, ou os que são bonitos custam uma fortuna só para entrar.<br>
-                    <strong>O que busca:</strong> Um lugar onde ele tem a certeza de que vai encontrar a turma dele. Quer sentar na calçada, beber sua Brahma 500ml e ver o movimento.<br>
-                    <strong>Gatilho de Marca:</strong> Prova Social. Ele vai onde a rua está cheia.</p>
-                </div>
-                
-                <div class="card">
-                    <h3>Persona: "A Caçadora de Estética"</h3>
-                    <p><strong>Perfil:</strong> Jovem de 20 anos, não sai se não for para tirar pelo menos uma foto pro story.<br>
-                    <strong>Dores:</strong> Iluminação péssima nos barzinhos, ambiente sem graça, banheiro feio.<br>
-                    <strong>O que busca:</strong> Cenário. O "Cantinho instagramável" com neon. Vai nas quintas pelo Open de Caipirinha.<br>
-                    <strong>Gatilho de Marca:</strong> Estética e Exclusividade Percebida. Ela marca a localização e gera Efeito Halo para o bar.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Neuromarketing e CX -->
-        <section id="neuromarketing">
-            <h2 class="section-title">Neuromarketing & Experiência do Cliente (CX)</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Gatilhos Mentais</h3>
-                    <p><strong>Escassez (Temporal):</strong> "Open de Caipirinha por apenas 2 horas na Quinta". Cria pico de fluxo imediato às 18h.<br>
-                    <strong>Prova Social e Efeito Manada:</strong> A ausência de muros/vitrines opacas e o músico tocando virado para a calçada fazem com que quem passa de carro veja uma massa de pessoas se divertindo. "Se está cheio, é bom".</p>
-                </div>
-                <div class="card">
-                    <h3>Iluminação & Som (Efeito Halo)</h3>
-                    <p>Cores escuras (preto, concreto) com luzes quentes (âmbar) e toques vermelhos/dourados diminuem a percepção de tempo e aumentam o conforto. A estética eleva a percepção de qualidade do produto: a mesma Brahma parece gelar mais e descer melhor num ambiente premium.</p>
-                </div>
-                <div class="card">
-                    <h3>O que a marca NUNCA deve ser</h3>
-                    <p>• <strong>Gourmet Intimidadora:</strong> A estética não pode gerar a dúvida "será que eu tenho dinheiro para estar aqui?".<br>
-                    • <strong>Burocrática:</strong> Filas longas, comandas de papel e garçons desatentos estão fora. A marca é sinônimo de agilidade (Fast-Casual Bar).</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Jornada do Cliente -->
-        <section id="jornada">
-            <h2 class="section-title">Jornada da Experiência Ideal</h2>
-            <div class="card">
-                <p><strong>1. A Atração (Rua):</strong> O cliente se aproxima pela avenida. Vê o antigo armazém iluminado cenograficamente de fora. A calçada está viva, tomada por pessoas. O som do violão ou da música ambiente ecoa para a rua. Não há "porta fechada" ou segurança cobrando entrada. A transição da rua para o bar é imperceptível.</p>
-                
-                <p><strong>2. O Ponto de Contato (Transação Zero Atrito):</strong> Ele entra, impactado pelo pé direito do armazém e pela decoração inteligente (foco no teto, luzes pendentes, paredes com texturas rústicas). Vai direto a um caixa (ou terminal/totem) iluminado. Compra sua ficha de Brahma e balde de caipirinha rapidamente. Paga com Pix/NFC.</p>
-
-                <p><strong>3. O Balcão de Retirada (Show do Bartender):</strong> Com a ficha, ele dá 3 passos até o grande balcão (o "palco" interno). A equipe, treinada para alto giro de eventos universitários, entrega o produto gelado instantaneamente. Se for comida, ele recebe um pager brilhante.</p>
-
-                <p><strong>4. A Permanência (Rito de Pertencimento):</strong> Ele vai para a mesa (ou fica em pé, apoiado em tambores decorativos na área externa). O ambiente incentiva a circulação. Ele tira fotos com o letreiro neon ao fundo. Como pagou barato pela cerveja, o dinheiro sobra e o ciclo de ir ao balcão e voltar se repete várias vezes na noite.</p>
-
-                <p><strong>5. A Saída (Sem dores de cabeça):</strong> Como não há comanda aberta, não há fila para pagar. Ele decide ir embora, apenas levanta e sai pela calçada. A última memória é a música e a vontade de voltar na próxima semana.</p>
-                
-                <div class="strategy-note">Motivo Estratégico do CX: Em eventos universitários, a gestão de fluxo é o principal gargalo de lucro. Ao forçar o modelo de pagamento antecipado no caixa e retirada no balcão (semelhante ao sistema de grandes festas ou do Starbucks), eliminamos custos de folha de pagamento (garçons), eliminamos calotes, e removemos a "dor de pagar" no final da noite. O cliente consome mais porque as micro-transações parecem menos pesadas.</div>
-            </div>
-        </section>
-
-        <!-- Diferenciais e Manifesto -->
-        <section id="manifesto">
-            <h2 class="section-title">Diferenciais Competitivos & Manifesto</h2>
-            <div class="grid-2">
-                <div>
-                    <h3>O Fosso Competitivo (Moat)</h3>
-                    <ul style="list-style-position: inside; color: var(--text-muted); margin-bottom: 2rem;">
-                        <li><strong>Arquitetura de Front-End:</strong> O bar opera na rua. A calçada não é espaço perdido, é a principal vitrine viva da operação.</li>
-                        <li><strong>Economia Unitária (Unit Economics):</strong> Operação enxuta permite preço de boteco em estrutura de Lounge. Ninguém na região consegue competir com a relação "Beleza / Preço".</li>
-                        <li><strong>Foco em "Fotogenicidade":</strong> A iluminação não é para clarear, é para fazer com que os rostos das pessoas fiquem bonitos nas fotos de celular à noite (Key light e Fill light arquitetônicos). Marketing espontâneo.</li>
-                    </ul>
-                </div>
-                <div class="manifesto-box">
-                    "A esquina é de quem ocupa.<br>
-                    Nós transformamos tijolo antigo em cultura nova.<br>
-                    Onde a catraca não existe, a energia flui.<br>
-                    Aqui a estética é de primeira, mas a nossa essência é de rua.<br>
-                    Cerveja trincando, música pulsando, e a sua galera reunida.<br>
-                    Dom Henrique.<br>
-                    Onde o simples se torna inesquecível."
-                </div>
-            </div>
-        </section>
-
-    </main>
+            // Força a exibição dos elementos que já estão no topo no carregamento inicial
+            setTimeout(() => {
+                const topElements = document.querySelectorAll('.hero .fade-in-element');
+                topElements.forEach(el => el.classList.add('visible'));
+            }, 100);
+        });
+    </script>
 </body>
 </html>
