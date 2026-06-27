@@ -530,7 +530,7 @@
             .timeline-item { padding-left: 60px; }
             .timeline-time { position: relative; text-align: left; width: auto; background: transparent; margin-bottom: 0.5rem; top: auto; }
             .timeline-dot { left: 16px; top: 50px; }
-            .pillars-grid, .problem-cards { grid-template-columns: 1fr; }
+            .pillars-grid, .problem-cards, .error-cards-grid { grid-template-columns: 1fr; }
             .moodboard-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
             .mb-large, .mb-wide { grid-column: span 1; grid-row: span 1; }
         }
@@ -544,8 +544,9 @@
             <a href="#home" class="nav-item">Home</a>
             <a href="#experiencia" class="nav-item">Experiência</a>
             <a href="#arquitetura" class="nav-item">Arquitetura</a>
-            <a href="#identidade" class="nav-item">Identidade Visual</a>
+            <a href="#identidade" class="nav-item">Identidade</a>
             <a href="#fachada" class="nav-item">Fachada</a>
+            <a href="#interior" class="nav-item">Interior</a>
         </div>
     </nav>
 
@@ -1713,22 +1714,395 @@
         </div>
     </section>
 
+    <section id="interior">
+        <header class="exp-hero">
+            <div class="image-placeholder reveal-up" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+                [IMAGEM 3D DO INTERIOR DO BAR]
+            </div>
+            <div class="exp-hero-overlay" style="background: rgba(0, 0, 0, 0.6); z-index: 2;"></div>
+            
+            <div class="exp-hero-content reveal-up" style="z-index: 3;">
+                <span class="section-tag" style="justify-content: center; display: flex;">Capítulo 06</span>
+                <h1 class="home-hero-title" style="text-shadow: 0 4px 20px rgba(0,0,0,0.8); font-size: clamp(2.5rem, 6vw, 5rem);">O ambiente é o verdadeiro produto.</h1>
+                <p class="home-hero-subtitle" style="margin: 0 auto; text-shadow: 0 2px 10px rgba(0,0,0,0.8); color: var(--color-light-gray);">As bebidas aproximam as pessoas. O ambiente faz elas permanecerem.</p>
+            </div>
+            
+            <a href="#conceito-geral" class="scroll-indicator" style="text-decoration: none; z-index: 4;">↓</a>
+        </header>
+
+        <div id="conceito-geral" class="section-padding container">
+            <span class="section-tag reveal-left">O DNA do Espaço</span>
+            <h2 class="title-large reveal-up">Conceito Geral</h2>
+            <div class="text-lead reveal-up" style="max-width: 900px;">
+                <p>O Dom Henrique foi projetado sobre uma linha tênue. Para alcançar nosso público e garantir a rotatividade e permanência desejadas, a arquitetura interna rejeita rótulos tradicionais.</p>
+            </div>
+
+            <div class="problem-grid" style="margin-top: 4rem;">
+                <div class="reveal-left">
+                    <h4 style="color: var(--color-red); font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1.5rem;">O que NÃO somos:</h4>
+                    <ul class="check-list" style="color: var(--color-gray);">
+                        <li>❌ <strong>Restaurante:</strong> Não teremos mesas formais longas, toalhas ou silêncio.</li>
+                        <li>❌ <strong>Balada:</strong> Não teremos pista de dança fechada, escura e com ingresso na porta.</li>
+                        <li>❌ <strong>Boteco Tradicional:</strong> Fuga absoluta da iluminação branca, cadeiras de plástico e poluição visual.</li>
+                        <li>❌ <strong>Pub Inglês:</strong> Sem estofados pesados, carpetes ou ar de exclusividade sisuda.</li>
+                        <li>❌ <strong>Conveniência:</strong> O cliente não compra e sai; ele vive o espaço.</li>
+                    </ul>
+                </div>
+                <div class="reveal-up" style="background: var(--color-surface); padding: 3rem; border-radius: 12px; border-left: 2px solid var(--color-gold);">
+                    <h4 style="color: var(--color-gold); font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1.5rem;">O que SOMOS:</h4>
+                    <p style="color: var(--color-white); font-size: 1.1rem; line-height: 1.7;">
+                        Uma mistura cuidadosamente equilibrada. O <strong>Dom Henrique é um lounge universitário e bar urbano</strong>. É um ambiente premium, porém acessível. É o cenário perfeito para grandes rodas de amigos, desenhado com corredores largos para encontros em pé, iluminação cenográfica e transição invisível entre a rua e o interior.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container" style="background-color: var(--color-dark); padding: 10vh 5vw; border-radius: 20px;">
+            <span class="section-tag reveal-left">A Jornada Interna</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 5rem;">Mapa da Experiência</h2>
+
+            <div class="timeline-container">
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; color: var(--color-gold);">Cliente chega</div>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Impactado pela fachada escura e pontos de luz quente.</p>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; color: var(--color-white);">Escuta a música & Visualiza o movimento</div>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">A acústica atrai a atenção e a calçada cheia ativa o gatilho da prova social.</p>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; color: var(--color-white);">Entra e visualiza o caixa</div>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Transição fluida (sem portas fechadas). O caixa iluminado é o destino intuitivo.</p>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; color: var(--color-white);">Compra e recebe rapidamente</div>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Operação de auto-serviço (Fast-Casual Bar). Sem garçom, atrito zero na venda.</p>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; color: var(--color-white);">Escolhe onde ficar</div>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Liberdade entre mesas de madeira, tambores na calçada ou apenas ficar em pé no corredor.</p>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; color: var(--color-white);">Tira fotos e Consome novamente</div>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">A iluminação neon convida ao clique. Como não há comanda pesando, o ciclo de ir ao caixa se repete.</p>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; color: var(--color-gold);">Vai embora & Retorna na semana seguinte</div>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Sem fila de fechamento de conta, a última memória é positiva, garantindo a fidelização.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">Design de Fluxo</span>
+            <h2 class="title-large reveal-up" style="text-align: center; margin-bottom: 4rem;">Setorização do Ambiente</h2>
+            
+            <div class="flowchart-wrapper reveal-up" style="max-width: 800px;">
+                <div class="flow-node" style="border-color: var(--color-gold);">Entrada (Ampla, sem barreiras)</div>
+                <div class="flow-arrow"></div>
+                <div class="flow-node">Caixa (Ponto focal iluminado para atrair fluxo imediato)</div>
+                <div class="flow-arrow"></div>
+                
+                <div class="flow-split">
+                    <div class="flow-node" style="min-width: 200px;">Geladeiras & Freezers<br><span style="font-size: 0.8rem; font-weight: 300; color: var(--color-gray);">Fundo de bar, escurecidos</span></div>
+                    <div class="flow-node" style="min-width: 200px;">Área de Retirada<br><span style="font-size: 0.8rem; font-weight: 300; color: var(--color-gray);">Ao lado do caixa, giro alto</span></div>
+                </div>
+                
+                <div class="flow-arrow" style="margin-top: 2rem;"></div>
+                <div class="flow-node" style="border-color: #333;">Fluxo Principal (Corredores largos para quem está em pé)</div>
+                <div class="flow-arrow"></div>
+                
+                <div class="flow-split">
+                    <div class="flow-node" style="min-width: 180px;">Área do Cantor<br><span style="font-size: 0.8rem; font-weight: 300; color: var(--color-gray);">Voltado rua/dentro</span></div>
+                    <div class="flow-node" style="min-width: 180px;">Mesas (Centro)<br><span style="font-size: 0.8rem; font-weight: 300; color: var(--color-gray);">Móveis baixos</span></div>
+                    <div class="flow-node" style="min-width: 180px;">Área Instagramável<br><span style="font-size: 0.8rem; font-weight: 300; color: var(--color-gray);">Canto com Neon</span></div>
+                </div>
+
+                <div class="flow-arrow" style="margin-top: 2rem;"></div>
+                <div class="flow-split">
+                    <div class="flow-node" style="min-width: 250px; background: #000; border-color: #222;">Cozinha<br><span style="font-size: 0.8rem; font-weight: 300; color: var(--color-gray);">Isolada visualmente e acusticamente</span></div>
+                    <div class="flow-node" style="min-width: 250px; background: #000; border-color: #222;">Banheiros<br><span style="font-size: 0.8rem; font-weight: 300; color: var(--color-gray);">Fundo estratégico, espelhos iluminados</span></div>
+                </div>
+            </div>
+            <p class="text-lead reveal-up" style="text-align: center; margin-top: 3rem; font-size: 0.95rem;">
+                <em>Motivo estratégico: O caminho do cliente até a bebida deve ser o mais curto possível. Banheiros ficam ao fundo para forçar a circulação pela área de mesas, gerando encontros e colisões sociais.</em>
+            </p>
+        </div>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">Luminotécnica Interna</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Iluminação</h2>
+
+            <div class="distribution-grid">
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-gold);">Temperatura Ideal & Intensidade</h4>
+                    <p>Rigidamente entre <strong>2700K e 3000K</strong> (Branco Quente/Âmbar). A intensidade deve ser controlada (penumbra) para esconder fios e defeitos estruturais do teto, criando uma atmosfera de "esconderijo urbano".</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-gold);">Onde utilizar Perfis e Fitas LED</h4>
+                    <p>Atrás do balcão principal (criando profundidade), contornando os espelhos do banheiro (luz de camarim para selfies) e sob prateleiras do bar para destacar as garrafas sem ofuscar o cliente.</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-gold);">Onde utilizar Spots e Pendentes</h4>
+                    <p>Spots em trilhos pretos devem focar diretamente no centro das mesas (destacando a bebida e a comida). Pendentes quentes (estilo industrial) são usados estritamente sobre o caixa e o balcão de retirada.</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-red);">Onde NÃO utilizar luz branca (6000K)</h4>
+                    <p><strong>Em lugar nenhum da área de clientes.</strong> Luz branca clínica destrói o aconchego, deixa as pessoas pálidas e tira todo o aspecto premium do bar. Permitida apenas na área de serviço (cozinha).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container" style="background-color: var(--color-dark); padding: 10vh 5vw; border-radius: 20px;">
+            <span class="section-tag reveal-left">A Construção da Textura</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Materiais</h2>
+            
+            <div class="principles-grid">
+                <div class="principle-card reveal-up">
+                    <h3>🧱 Concreto aparente</h3>
+                    <p style="color: var(--color-gray); font-size: 0.9rem; margin-bottom: 0.5rem;">Piso e paredes selecionadas.</p>
+                    <ul class="principle-list">
+                        <li><strong>Visual:</strong> Brutalista, urbano.</li>
+                        <li><strong>Psicológico:</strong> "Descolado" e moderno.</li>
+                        <li><strong>Custo/Manutenção:</strong> Baixo custo, limpeza fácil.</li>
+                    </ul>
+                </div>
+                <div class="principle-card reveal-up" style="transition-delay: 0.1s;">
+                    <h3>🪵 Madeira</h3>
+                    <p style="color: var(--color-gray); font-size: 0.9rem; margin-bottom: 0.5rem;">Tampos de mesa e balcão principal.</p>
+                    <ul class="principle-list">
+                        <li><strong>Visual:</strong> Orgânico, contrasta o cinza.</li>
+                        <li><strong>Psicológico:</strong> Acolhimento, calor.</li>
+                        <li><strong>Custo/Manutenção:</strong> Médio (exige verniz fosco resistente).</li>
+                    </ul>
+                </div>
+                <div class="principle-card reveal-up" style="transition-delay: 0.2s;">
+                    <h3>⬛ Metal preto</h3>
+                    <p style="color: var(--color-gray); font-size: 0.9rem; margin-bottom: 0.5rem;">Serralheria, pés de mesas, tambores.</p>
+                    <ul class="principle-list">
+                        <li><strong>Visual:</strong> Estrutura limpa (Industrial-chic).</li>
+                        <li><strong>Psicológico:</strong> Segurança e sobriedade.</li>
+                        <li><strong>Custo/Manutenção:</strong> Baixo, fácil retoque com spray.</li>
+                    </ul>
+                </div>
+                <div class="principle-card reveal-up" style="transition-delay: 0.3s;">
+                    <h3>🕸️ Tela Metálica</h3>
+                    <p style="color: var(--color-gray); font-size: 0.9rem; margin-bottom: 0.5rem;">Divisórias, fundos de balcão.</p>
+                    <ul class="principle-list">
+                        <li><strong>Visual:</strong> Textura translúcida e rústica.</li>
+                        <li><strong>Psicológico:</strong> Ambientes undergrounds de capitais.</li>
+                        <li><strong>Custo/Manutenção:</strong> Muito baixo.</li>
+                    </ul>
+                </div>
+                <div class="principle-card reveal-up">
+                    <h3>🪞 Vidro & Espelhos</h3>
+                    <p style="color: var(--color-gray); font-size: 0.9rem; margin-bottom: 0.5rem;">Copos padronizados e banheiros.</p>
+                    <ul class="principle-list">
+                        <li><strong>Visual:</strong> Amplia o espaço, reflete neons.</li>
+                        <li><strong>Psicológico:</strong> Reflete a "tribo" e o movimento.</li>
+                        <li><strong>Custo/Manutenção:</strong> Médio (limpeza constante).</li>
+                    </ul>
+                </div>
+                <div class="principle-card reveal-up" style="transition-delay: 0.1s;">
+                    <h3>🌿 Vegetação</h3>
+                    <p style="color: var(--color-gray); font-size: 0.9rem; margin-bottom: 0.5rem;">Vasos aéreos, calçada.</p>
+                    <ul class="principle-list">
+                        <li><strong>Visual:</strong> Ponto de cor viva (verde).</li>
+                        <li><strong>Psicológico:</strong> Quebra o peso do metal/preto.</li>
+                        <li><strong>Custo/Manutenção:</strong> Baixo (usar jiboias/ficus).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">Neuroarquitetura</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 2rem;">Experiência Sensorial</h2>
+            
+            <table class="premium-table reveal-up">
+                <thead>
+                    <tr>
+                        <th>Sentido</th>
+                        <th>Ação Sensorial no Dom Henrique</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Sentido" style="color: var(--color-gold); font-family: var(--font-display); font-size: 1.2rem;">👁️ Visão</td>
+                        <td data-label="Ação Sensorial">O contraste do claro-escuro. A luz quente incidindo sobre a madeira e o reflexo do letreiro Neon dourado no espelho ou no vidro. O cliente vê um ambiente coeso, sem poluição de placas de patrocínio.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Sentido" style="color: var(--color-gold); font-family: var(--font-display); font-size: 1.2rem;">👂 Audição</td>
+                        <td data-label="Ação Sensorial">Acústica vibrante mas não ensurdecedora. O som do violão ou da playlist bem equalizada mistura-se com o burburinho de conversas altas, gerando a "frequência de bar cheio" que atrai pessoas.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Sentido" style="color: var(--color-gold); font-family: var(--font-display); font-size: 1.2rem;">👃 Olfato</td>
+                        <td data-label="Ação Sensorial">Exaustão cirúrgica: o salão <strong>nunca</strong> deve cheirar a fritura da cozinha. O aroma dominante deve ser o frescor cítrico do limão da caipirinha e o cheiro neutro do ambiente limpo.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Sentido" style="color: var(--color-gold); font-family: var(--font-display); font-size: 1.2rem;">🖐️ Tato</td>
+                        <td data-label="Ação Sensorial">A textura da mesa de madeira fosca, o frio intenso da garrafa trincando ou do copo de vidro grosso, o toque rústico do tambor de metal na área externa.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Sentido" style="color: var(--color-gold); font-family: var(--font-display); font-size: 1.2rem;">👅 Paladar</td>
+                        <td data-label="Ação Sensorial">A cerveja servida em temperatura abaixo de zero e a caipirinha perfeitamente balanceada são recompensas diretas pelo auto-serviço no balcão.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">Estratégia Oculta</span>
+            <h2 class="title-large reveal-up">Permanência</h2>
+            <div class="text-lead reveal-up" style="max-width: 900px;">
+                <p>Como aumentar naturalmente o tempo que o cliente passa no bar sem parecer forçado?</p>
+            </div>
+            
+            <div class="distribution-grid" style="margin-top: 3rem;">
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-white);">Luz e Percepção do Tempo</h4>
+                    <p>O cérebro reage à luz fria como "dia/hora de produzir ou sair", e à luz quente/penumbra como "fim de tarde/hora de relaxar". O teto escuro e a luz amarelada desorientam a noção temporal: o cliente perde a hora de ir embora (efeito cassino).</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-white);">Layout de "Colisão"</h4>
+                    <p>Os corredores são intencionalmente desenhados para que o cliente cruze com outras mesas ao ir buscar bebida. A interação espontânea ("Encontrar conhecidos") é o maior motor de permanência de um bar universitário.</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-white);">Ritmo Musical</h4>
+                    <p>O som ao vivo ou playlist evolui. Começa calmo (18h) incentivando o papo, ganha ritmo (20h) para criar energia e atinge o ápice (22h-00h). O BPM (Batidas por minuto) da música dita a velocidade do consumo.</p>
+                </div>
+                <div class="dist-item reveal-up">
+                    <h4 style="color: var(--color-white);">Dinâmica do Balde</h4>
+                    <p>O compartilhamento (baldes de 600ml ou jarras de caipirinha) âncora a mesa. Um grupo não vai embora enquanto ainda houver bebida gelada no balde do centro da mesa. A roda se sustenta.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container">
+            <span class="section-tag reveal-left">Visão Pragmática</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 2rem;">Checklist Executivo</h2>
+            
+            <table class="premium-table reveal-up">
+                <thead>
+                    <tr>
+                        <th>Elemento</th>
+                        <th>Prioridade</th>
+                        <th>Impacto Visual</th>
+                        <th>Impacto Comercial</th>
+                        <th>Execução</th>
+                        <th>Custo Aprox.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Elemento"><strong>Teto e Paredes Preto Fosco</strong></td>
+                        <td data-label="Prioridade"><span class="badge badge-alta">Alta</span></td>
+                        <td data-label="Impacto Visual">Máximo</td>
+                        <td data-label="Impacto Com.">Baixo</td>
+                        <td data-label="Execução">Fácil</td>
+                        <td data-label="Custo">Baixo</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Elemento"><strong>Iluminação em Trilhos (Spots Quentes)</strong></td>
+                        <td data-label="Prioridade"><span class="badge badge-alta">Alta</span></td>
+                        <td data-label="Impacto Visual">Máximo</td>
+                        <td data-label="Impacto Com.">Alto (Ambientação)</td>
+                        <td data-label="Execução">Fácil</td>
+                        <td data-label="Custo">Médio</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Elemento"><strong>Letreiro Neon Interno</strong></td>
+                        <td data-label="Prioridade"><span class="badge badge-alta">Alta</span></td>
+                        <td data-label="Impacto Visual">Alto (Fotos)</td>
+                        <td data-label="Impacto Com.">Máximo (Mídia orgânica)</td>
+                        <td data-label="Execução">Média</td>
+                        <td data-label="Custo">Médio</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Elemento"><strong>Balcão Caixas / Retirada (Madeira/Metal)</strong></td>
+                        <td data-label="Prioridade"><span class="badge badge-alta">Máxima</span></td>
+                        <td data-label="Impacto Visual">Médio</td>
+                        <td data-label="Impacto Com.">Máximo (Faturamento)</td>
+                        <td data-label="Execução">Difícil</td>
+                        <td data-label="Custo">Médio/Alto</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Elemento"><strong>Espelhos e Luz Camarin no Banheiro</strong></td>
+                        <td data-label="Prioridade"><span class="badge badge-media">Média</span></td>
+                        <td data-label="Impacto Visual">Alto (Fotos)</td>
+                        <td data-label="Impacto Com.">Baixo</td>
+                        <td data-label="Execução">Fácil</td>
+                        <td data-label="Custo">Baixo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section-padding container" style="background-color: var(--color-dark); padding: 10vh 5vw; border-radius: 20px;">
+            <span class="section-tag reveal-left">O que matar no projeto</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Erros que nunca devemos cometer.</h2>
+
+            <div class="error-cards-grid">
+                <div class="error-card reveal-up">
+                    <h4><span style="color: var(--color-red);">❌</span> Iluminação branca</h4>
+                    <p>Destrói qualquer aspecto premium. O bar se transforma num refeitório frio e desinteressante, desestimulando a permanência e as fotografias.</p>
+                </div>
+                <div class="error-card reveal-up" style="transition-delay: 0.1s;">
+                    <h4><span style="color: var(--color-red);">❌</span> Excesso de mesas</h4>
+                    <p>Encher o bar com dezenas de mesas quadradas mata a essência "Lounge". Precisamos de espaço negativo, corredores largos e fluidez de pessoas caminhando em pé.</p>
+                </div>
+                <div class="error-card reveal-up" style="transition-delay: 0.2s;">
+                    <h4><span style="color: var(--color-red);">❌</span> Corredores estreitos</h4>
+                    <p>Se o cliente precisar esbarrar em várias cadeiras para ir buscar bebida no balcão de auto-serviço, isso gera atrito. O caminho até a compra deve ser livre.</p>
+                </div>
+                <div class="error-card reveal-up">
+                    <h4><span style="color: var(--color-red);">❌</span> Som ensurdecedor</h4>
+                    <p>Se não for possível conversar, o bar vira boate. Universitários buscam socialização e paquera. A música deve embalar, não silenciar as mesas.</p>
+                </div>
+                <div class="error-card reveal-up" style="transition-delay: 0.1s;">
+                    <h4><span style="color: var(--color-red);">❌</span> Fila cruzando circulação</h4>
+                    <p>A fila do caixa não pode, sob hipótese alguma, travar a porta do banheiro ou o trânsito livre de quem já comprou e tenta voltar para a mesa.</p>
+                </div>
+                <div class="error-card reveal-up" style="transition-delay: 0.2s;">
+                    <h4><span style="color: var(--color-red);">❌</span> Patrocinadores dominando</h4>
+                    <p>Pintar paredes com logotipos de cerveja barateia a marca. Nós vendemos a cerveja, mas o cliente está lá pelo Dom Henrique. A nossa marca prevalece.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding container" style="text-align: center; padding-bottom: 15vh;">
+            <div class="executive-summary reveal-up" style="background: none; border: none; border-top: 1px solid #333; border-radius: 0; padding: 5rem 0 0 0;">
+                <h2 class="title-large" style="margin-bottom: 2rem;">A Conclusão do Espaço</h2>
+                <p style="color: var(--color-gray); font-size: 1.3rem; max-width: 900px; margin: 0 auto; line-height: 1.8; font-family: var(--font-display); font-style: italic;">
+                    "Todo o interior do Dom Henrique foi milimetricamente pensado para gerar um descolamento de realidade. O cliente entra no antigo armazém de esquina e, por causa do escuro intencional, da luz cênica e da música vibrante, ele esquece que está em uma cidade do interior. Ele se sente num lounge cosmopolita, pagando o preço justo da sua realidade local. Não parece artificial. Não parece inatingível. Parece apenas incrivelmente bem planejado."
+                </p>
+            </div>
+        </div>
+    </section>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             
-            // 1. Efeito Parallax Suave para Hero Images (Home/Exp/Fachada)
+            // 1. Efeito Parallax Suave para Hero Images
             const heroImgs = document.querySelectorAll('.exp-hero-img, .main-image');
             window.addEventListener('scroll', () => {
                 let scrollPos = window.pageYOffset;
                 heroImgs.forEach(img => {
-                    // Só aplica parallax se a imagem estiver visível para otimizar performance
+                    // Só aplica parallax se a imagem estiver visível
                     if(img.getBoundingClientRect().top < window.innerHeight && img.getBoundingClientRect().bottom > 0) {
                         img.style.transform = `translateY(${scrollPos * 0.2}px) scale(1.05)`;
                     }
                 });
             });
 
-            // 2. Intersection Observer para animações Reveal (Fade Up / Fade Left)
+            // 2. Intersection Observer para animações Reveal
             const revealElements = document.querySelectorAll('.reveal-up, .reveal-left');
             const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
 
@@ -1743,13 +2117,13 @@
 
             revealElements.forEach(el => observer.observe(el));
             
-            // 3. Forçar visibilidade no load das seções iniciais
+            // 3. Forçar visibilidade no load
             setTimeout(() => {
                 const initElements = document.querySelectorAll('#home .reveal-up');
                 initElements.forEach(el => el.classList.add('reveal-visible'));
             }, 100);
 
-            // 4. Lógica de navegação SPA (Active State no Menu)
+            // 4. Lógica de navegação SPA
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-links .nav-item');
 
@@ -1757,7 +2131,6 @@
                 let current = '';
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
-                    // Ajuste de offset para o menu fixo
                     if (window.scrollY >= sectionTop - 150) {
                         current = section.getAttribute('id');
                     }
