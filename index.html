@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom Henrique | Brand Experience Book</title>
-    <meta name="description" content="Brand Experience Book oficial do Dom Henrique. Um projeto de hospitalidade, branding e arquitetura para Cassilândia-MS.">
+    <meta name="description" content="Brand Experience Book oficial do Dom Henrique. Hospitalidade, branding e arquitetura para Cassilândia-MS.">
     
-    <!-- Open Graph -->
     <meta property="og:title" content="Dom Henrique | Brand Experience">
     <meta property="og:description" content="O novo epicentro da cultura universitária em Cassilândia.">
     <meta property="og:type" content="website">
     
-    <!-- Preload Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -34,7 +32,7 @@
             --font-display: 'Playfair Display', serif;
             --font-body: 'Inter', sans-serif;
             
-            --spacing-section: 18vh;
+            --spacing-section: 15vh;
             --transition-smooth: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             --transition-fast: all 0.3s ease;
         }
@@ -42,17 +40,8 @@
         /* ==========================================================================
            2. RESET & GLOBAL
            ========================================================================== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
         body {
             background-color: var(--color-black);
             color: var(--color-white);
@@ -62,82 +51,28 @@
             overflow-x: hidden;
             line-height: 1.6;
         }
-
-        ::selection {
-            background-color: var(--color-gold);
-            color: var(--color-black);
-        }
+        ::selection { background-color: var(--color-gold); color: var(--color-black); }
 
         /* ==========================================================================
-           3. TYPOGRAPHY & TEXT UTILITIES
+           3. TYPOGRAPHY
            ========================================================================== */
-        .title-display {
-            font-family: var(--font-display);
-            font-size: clamp(3.5rem, 8vw, 8rem);
-            line-height: 1.05;
-            font-weight: 400;
-            letter-spacing: -0.02em;
-        }
-
-        .title-large {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            color: var(--color-white);
-            font-weight: 400;
-        }
-
-        .title-medium {
-            font-family: var(--font-display);
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            margin-bottom: 1rem;
-            font-weight: 400;
-        }
-
-        .text-lead {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            color: var(--color-light-gray);
-            margin-bottom: 1.5rem;
-            max-width: 800px;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-
-        .text-body {
-            font-size: 1rem;
-            color: var(--color-gray);
-            line-height: 1.7;
-        }
-
-        .gold-text { color: var(--color-gold); font-style: italic; }
+        .title-display { font-family: var(--font-display); font-size: clamp(3rem, 8vw, 7rem); line-height: 1.05; font-weight: 400; letter-spacing: -0.02em; }
+        .title-large { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem; color: var(--color-white); font-weight: 400; }
+        .title-medium { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 1rem; font-weight: 400; }
         
-        .section-tag {
-            font-family: var(--font-body);
-            color: var(--color-gold);
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            margin-bottom: 2.5rem;
-            display: block;
-            font-weight: 500;
-        }
+        .text-lead { font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--color-light-gray); margin-bottom: 1.5rem; max-width: 800px; line-height: 1.6; font-weight: 300; }
+        .text-body { font-size: 1rem; color: var(--color-gray); line-height: 1.7; }
+        
+        .gold-text { color: var(--color-gold); font-style: italic; }
+        .section-tag { font-family: var(--font-body); color: var(--color-gold); letter-spacing: 4px; text-transform: uppercase; font-size: 0.75rem; margin-bottom: 2.5rem; display: block; font-weight: 500; }
+
+        .huge-quote { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); color: var(--color-gold); line-height: 1.1; text-align: center; max-width: 1000px; margin: 0 auto; padding: 10vh 5vw; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
 
         /* ==========================================================================
-           4. LAYOUT & CONTAINERS
+           4. LAYOUT
            ========================================================================== */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 5vw;
-        }
-
-        .container-narrow {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 5vw;
-        }
-
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 5vw; }
+        .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 5vw; }
         .section-padding { padding: var(--spacing-section) 0; }
         
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; align-items: start; }
@@ -161,263 +96,175 @@
         }
 
         /* ==========================================================================
-           5. CINEMATIC MOMENTS (FULL SCREEN BREAKERS)
+           5. CINEMATIC MOMENTS
            ========================================================================== */
-        .cinematic-moment {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-            clip-path: inset(0);
-        }
-
-        .cinematic-bg {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            transform: scale(1.1);
-            will-change: transform;
-        }
-
-        .cinematic-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8));
-            z-index: 2;
-        }
-
-        .cinematic-text {
-            position: relative;
-            z-index: 3;
-            padding: 0 5vw;
-            max-width: 1200px;
-        }
+        .cinematic-moment { position: relative; height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+        .cinematic-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; transform: scale(1.1); will-change: transform; transition: transform 0.1s ease-out; }
+        .cinematic-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)); z-index: 2; }
+        .cinematic-text { position: relative; z-index: 3; padding: 0 5vw; max-width: 1200px; }
 
         /* ==========================================================================
            6. COMPONENTS
            ========================================================================== */
-        /* Premium Cards */
-        .card-premium {
-            background-color: var(--color-surface);
-            border: 1px solid rgba(255,255,255,0.03);
-            padding: 3rem 2.5rem;
-            border-radius: 1px;
-            transition: var(--transition-smooth);
-            position: relative;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-premium::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 1px;
-            background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
-            opacity: 0; transition: var(--transition-smooth);
-        }
-
-        .card-premium:hover {
-            transform: translateY(-10px);
-            background-color: var(--color-surface-hover);
-            border-color: rgba(255,255,255,0.1);
-        }
-
+        .card-premium { background-color: var(--color-surface); border: 1px solid rgba(255,255,255,0.03); padding: 3rem 2.5rem; transition: var(--transition-smooth); position: relative; height: 100%; display: flex; flex-direction: column; }
+        .card-premium::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--color-gold), transparent); opacity: 0; transition: var(--transition-smooth); }
+        .card-premium:hover { transform: translateY(-10px); background-color: var(--color-surface-hover); border-color: rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
         .card-premium:hover::before { opacity: 1; }
+        .card-icon { font-size: 2rem; color: var(--color-gold); margin-bottom: 1.5rem; }
 
-        .card-icon {
-            font-size: 2rem; color: var(--color-gold); margin-bottom: 2rem;
-        }
+        .btn-outline { display: inline-block; padding: 1.2rem 3rem; border: 1px solid rgba(212, 175, 55, 0.3); color: var(--color-gold); text-decoration: none; font-family: var(--font-body); text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; transition: var(--transition-fast); background: transparent; }
+        .btn-outline:hover { background: var(--color-gold); color: var(--color-black); }
 
-        /* Buttons */
-        .btn-outline {
-            display: inline-block;
-            padding: 1.2rem 3rem;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            color: var(--color-gold);
-            text-decoration: none;
-            font-family: var(--font-body);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.75rem;
-            transition: var(--transition-fast);
-            cursor: pointer;
-            background: transparent;
-        }
+        .flow-container { display: flex; flex-direction: column; align-items: center; max-width: 800px; margin: 0 auto; }
+        .flow-node { background: var(--color-surface); border: 1px solid rgba(255,255,255,0.05); padding: 1.5rem 2.5rem; text-align: center; width: 100%; font-family: var(--font-display); font-size: 1.2rem; color: var(--color-white); transition: var(--transition-smooth); }
+        .flow-node:hover { border-color: var(--color-gold); transform: scale(1.02); color: var(--color-gold); }
+        .flow-arrow { height: 40px; width: 1px; background: linear-gradient(to bottom, var(--color-gold), transparent); margin: 10px 0; opacity: 0.5; }
+        .flow-split { display: flex; gap: 2rem; margin-top: 1rem; position: relative; flex-wrap: wrap; justify-content: center; width: 100%; }
 
-        .btn-outline:hover {
-            background: var(--color-gold);
-            color: var(--color-black);
-        }
-
-        /* Flowcharts / Timelines */
-        .flow-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .flow-node {
-            background: var(--color-surface);
-            border: 1px solid rgba(255,255,255,0.05);
-            padding: 1.5rem 2.5rem;
-            text-align: center;
-            width: 100%;
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            color: var(--color-white);
-            transition: var(--transition-smooth);
-        }
-
-        .flow-node:hover {
-            border-color: var(--color-gold);
-            transform: scale(1.02);
-            color: var(--color-gold);
-        }
-
-        .flow-arrow {
-            height: 40px; width: 1px;
-            background: linear-gradient(to bottom, var(--color-gold), transparent);
-            margin: 10px 0;
-            opacity: 0.5;
-        }
-
-        /* Executive Tables */
-        .table-editorial {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-        }
-
-        .table-editorial th {
-            font-family: var(--font-body);
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            color: var(--color-gray);
-            padding: 1.5rem 0;
-            border-bottom: 1px solid #333;
-            font-weight: 500;
-        }
-
-        .table-editorial td {
-            padding: 2rem 0;
-            border-bottom: 1px solid #1a1a1a;
-            color: var(--color-light-gray);
-            vertical-align: top;
-        }
-        
+        .table-editorial { width: 100%; border-collapse: collapse; text-align: left; }
+        .table-editorial th { font-family: var(--font-body); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; color: var(--color-gray); padding: 1.5rem 0; border-bottom: 1px solid #333; font-weight: 500; }
+        .table-editorial td { padding: 2rem 0; border-bottom: 1px solid #1a1a1a; color: var(--color-light-gray); vertical-align: top; }
         .table-editorial tr:hover td { color: var(--color-white); }
 
+        .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
+        .check-category h4 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 1rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem; color: var(--color-gold); }
+        .check-list { list-style: none; }
+        .check-list li { font-size: 0.9rem; color: var(--color-gray); margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px; line-height: 1.4; }
+        .check-list li::before { content: '□'; font-size: 1.2rem; color: #444; line-height: 1; }
+
         /* ==========================================================================
-           7. NAVIGATION
+           7. PROJETO ARQUITETÔNICO (NOVOS COMPONENTES)
            ========================================================================== */
-        nav {
-            position: fixed;
-            top: 0; width: 100%;
-            padding: 2rem 5vw;
+        .ad-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4vw;
+            align-items: start;
+            margin-top: 4rem;
+            position: relative;
+        }
+        
+        .ad-col {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0));
-            z-index: 999;
-            backdrop-filter: blur(10px);
-            transition: var(--transition-fast);
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
-        nav.scrolled {
-            padding: 1rem 5vw;
-            background: rgba(0,0,0,0.85);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .nav-logo img {
-            height: 35px;
-            width: auto;
+        .ad-col img {
+            width: 100%;
+            height: auto;
             object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            display: block;
         }
 
-        .nav-links { display: flex; gap: 2rem; }
-        .nav-links a {
-            color: var(--color-gray);
-            text-decoration: none;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: var(--transition-fast);
+        .ad-arrow-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
+        .ad-arrow {
+            background: var(--color-black);
+            color: var(--color-gold);
+            padding: 12px 24px;
+            font-family: var(--font-body);
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+
+        .arch-tour-step {
+            margin-bottom: 25vh; /* Muito espaço negativo / Respiro */
+            text-align: center;
+        }
+
+        .arch-tour-img-container {
+            width: 85%;
+            margin: 4rem auto 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .arch-tour-img-container img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+            will-change: transform;
+            /* O zoom é aplicado via JS na classe .zoom-scroll-img */
+            transform-origin: center center;
+        }
+
+        /* ==========================================================================
+           8. NAVIGATION
+           ========================================================================== */
+        nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 5vw; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0)); z-index: 999; transition: var(--transition-fast); }
+        nav.scrolled { background: rgba(0,0,0,0.9); backdrop-filter: blur(10px); padding: 1rem 5vw; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 35px; width: auto; object-fit: contain; }
+        .nav-links { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a { color: var(--color-gray); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; transition: var(--transition-fast); }
         .nav-links a:hover, .nav-links a.active { color: var(--color-gold); }
 
         /* ==========================================================================
-           8. ANIMATIONS (REVEAL)
+           9. ANIMATIONS (REVEAL)
            ========================================================================== */
-        .reveal-up {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: var(--transition-smooth);
-        }
-        .reveal-visible {
-            opacity: 1;
-            transform: translate(0, 0);
-        }
+        .reveal-up { opacity: 0; transform: translateY(40px); transition: var(--transition-smooth); }
+        .reveal-visible { opacity: 1; transform: translate(0, 0); }
 
         /* ==========================================================================
-           9. RESPONSIVE
+           10. RESPONSIVE
            ========================================================================== */
         @media (max-width: 1024px) {
             .grid-2 { grid-template-columns: 1fr; gap: 4rem; }
-            .nav-links { display: none; } /* Simulating hamburger for mobile */
+            .nav-links { display: none; }
+            .arch-tour-img-container { width: 95%; }
         }
-
+        @media (max-width: 900px) {
+            .ad-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .ad-arrow-wrapper { position: relative; top: auto; left: auto; transform: none; margin: 2rem 0; }
+        }
         @media (max-width: 768px) {
-            :root { --spacing-section: 12vh; }
+            :root { --spacing-section: 10vh; }
             .table-editorial, .table-editorial tbody, .table-editorial tr, .table-editorial td, .table-editorial th { display: block; }
             .table-editorial tr { margin-bottom: 2rem; border-bottom: 1px solid #333; padding-bottom: 2rem; }
             .table-editorial td { padding: 0.5rem 0; border: none; }
             .table-editorial thead { display: none; }
-            .table-editorial td::before {
-                content: attr(data-label);
-                display: block;
-                font-size: 0.7rem;
-                text-transform: uppercase;
-                color: var(--color-gold);
-                margin-bottom: 0.3rem;
-            }
+            .table-editorial td::before { content: attr(data-label); display: block; font-size: 0.7rem; text-transform: uppercase; color: var(--color-gold); margin-bottom: 0.3rem; }
+            .arch-tour-img-container { width: 100%; border-radius: 0; }
+            .arch-tour-img-container img { border-radius: 0; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
-    <nav id="navbar">
-        <a href="#hero" class="nav-logo" aria-label="Home">
-            <!-- Logo do Bar (Pintada de Dourado via CSS) -->
+    <nav id="navbar" aria-label="Menu Principal">
+        <a href="#hero" class="nav-logo">
             <img src="https://i.imgur.com/pAzsY4V.png" alt="Dom Henrique Logo" class="logo-gold">
         </a>
         <div class="nav-links">
-            <a href="#conceito">Conceito</a>
+            <a href="#conceito">DNA</a>
             <a href="#jornada">Jornada</a>
             <a href="#arquitetura">Arquitetura</a>
+            <a href="#projeto-arquitetonico">Projeto</a>
             <a href="#identidade">Identidade</a>
-            <a href="#estrategia">Estratégia</a>
+            <a href="#operacao">Operação</a>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <header id="hero" class="cinematic-moment">
-        <!-- Background Vibe Bar Rua/Brasileiro -->
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=2000" alt="Ambiente escuro e elegante de bar" class="cinematic-bg parallax-img">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=2000" alt="Ambiente escuro e elegante de bar" class="cinematic-bg parallax-img" loading="eager">
         <div class="cinematic-overlay" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.95));"></div>
         <div class="cinematic-text reveal-up">
             <div style="margin-bottom: 2rem; display: flex; justify-content: center;">
@@ -428,29 +275,27 @@
         </div>
     </header>
 
-    <!-- POR QUE CASSILÂNDIA? (NOVA SEÇÃO EMOCIONAL) -->
     <section id="conceito" class="section-padding" style="background-color: var(--color-dark);">
         <div class="container container-narrow text-center">
-            <span class="section-tag reveal-up">O Manifesto</span>
+            <span class="section-tag reveal-up">Manifesto</span>
             <h2 class="title-large reveal-up">Por que Cassilândia?</h2>
             
             <div class="reveal-up" style="margin-top: 3rem;">
-                <p class="text-lead" style="margin: 0 auto 2rem auto; color: var(--color-white); font-weight: 400;">Durante anos, a regra era clara: para viver algo extraordinário, era preciso pegar a estrada.</p>
-                <p class="text-body" style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 2rem auto;">
+                <p class="text-lead" style="margin: 0 auto 2rem auto; color: var(--color-white); font-weight: 400;">
+                    Durante anos, a regra era clara: para viver algo extraordinário, era preciso pegar a estrada.
+                </p>
+                <p class="text-body" style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 1.5rem auto;">
                     Campo Grande. Três Lagoas. O interior sempre foi tratado como área de passagem, forçando a juventude a buscar experiências de alto padrão longe de casa.
                 </p>
                 <p class="text-body" style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
-                    O Dom Henrique nasce para rasgar essa regra. Nós não somos passagem. Cassilândia merece a estética de capital, a luz de metrópole e o orgulho de um lugar próprio. Construímos o destino.
+                    O Dom Henrique nasce para rasgar essa regra. Cassilândia merece a estética de capital, a luz de metrópole e o orgulho de um lugar próprio. Não somos mais passagem. Nós somos o destino.
                 </p>
-                <!-- Imagem Ilustrativa: Encontros/Amigos -->
                 <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&q=80&w=1200" alt="Jovens socializando" class="editorial-image reveal-up" loading="lazy" style="max-height: 400px;">
             </div>
         </div>
     </section>
 
-    <!-- CINEMATIC MOMENT 1 -->
     <section class="cinematic-moment" style="height: 80vh;">
-        <!-- Background Caipirinha/Drinks Nacionais -->
         <img src="https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&q=80&w=2000" alt="Drink detalhado" class="cinematic-bg parallax-img" loading="lazy">
         <div class="cinematic-overlay"></div>
         <div class="cinematic-text reveal-up">
@@ -458,7 +303,6 @@
         </div>
     </section>
 
-    <!-- STORYTELLING: SEXTA-FEIRA, 20H -->
     <section class="section-padding container">
         <div class="grid-2">
             <div class="reveal-up">
@@ -468,148 +312,123 @@
                 <p class="text-body" style="margin-bottom: 1.5rem;">
                     Você não enfrentou fila na porta. Não tem comanda de papel. Esbarrou em três amigos antes de chegar ao balcão. A cerveja está trincando.
                 </p>
-                <p class="text-body" style="margin-bottom: 1.5rem;">
-                    A luz quente disfarça o concreto rústico. A foto ficou perfeita, e a noite... a noite está apenas começando.
+                <p class="text-body" style="margin-bottom: 2rem;">
+                    A luz quente disfarça o concreto rústico. A foto ficou perfeita, e a noite está apenas começando.
                 </p>
-                <p class="text-body gold-text" style="font-family: var(--font-display); font-size: 1.5rem;">
-                    Isso é o Dom Henrique.
-                </p>
+                <p class="text-body gold-text" style="font-family: var(--font-display); font-size: 1.5rem;">Isso é o Dom Henrique.</p>
             </div>
             
-            <div class="reveal-up">
-                <!-- Imagem Ilustrativa: Cerveja Gelada / Copo Suado (Vibe Brahma) -->
-                <img src="https://images.unsplash.com/photo-1610964199105-0255b768a48b?auto=format&fit=crop&q=80&w=800" alt="Copo de cerveja gelado" class="editorial-image" style="margin-top: 0; max-height: 500px;" loading="lazy">
+            <div class="reveal-up" style="background: var(--color-surface); padding: 4rem; border-left: 2px solid var(--color-gold);">
+                <span class="section-tag">Core Business</span>
+                <h3 class="title-medium">Lounge Universitário de Auto-Serviço.</h3>
+                <ul class="text-body" style="list-style: none; margin-top: 2rem;">
+                    <li style="margin-bottom: 1.5rem;"><strong style="color: var(--color-white);">⚡ Fricção Zero:</strong> Sem garçons. Compra rápida no caixa, retirada no balcão. Fim das filas para pagar a conta.</li>
+                    <li style="margin-bottom: 1.5rem;"><strong style="color: var(--color-white);">👁️ Estética Imersiva:</strong> Design de luz pensado frame a frame. O ambiente eleva o valor do produto.</li>
+                    <li><strong style="color: var(--color-white);">🤝 Acessibilidade:</strong> Visual de ticket alto, preço de estudante. Democrático na essência.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- POSICIONAMENTO E PILARES -->
-    <section class="section-padding" style="background-color: var(--color-surface);">
+    <blockquote class="huge-quote reveal-up">
+        "O luxo está na experiência, não no preço."
+    </blockquote>
+
+    <section id="jornada" class="section-padding" style="background-color: var(--color-surface);">
         <div class="container">
-            <span class="section-tag reveal-up">O Core Business</span>
-            <h2 class="title-large reveal-up" style="max-width: 900px; margin-bottom: 5rem;">Um Lounge Universitário de Auto-Serviço. Onde a agilidade colide com a sofisticação visual.</h2>
+            <span class="section-tag reveal-up">Neuroarquitetura</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Branding Sensorial</h2>
 
             <div class="grid-3">
                 <div class="card-premium reveal-up">
-                    <div class="card-icon">⚡</div>
-                    <h3 class="title-medium" style="font-size: 1.5rem;">Fricção Zero</h3>
-                    <p class="text-body">Sem garçons. O cliente controla o tempo. Compra, retira, consome. O fim das filas para pagar a conta.</p>
+                    <div class="card-icon">👁️</div>
+                    <h3 class="title-medium" style="font-size: 1.5rem;">Visão</h3>
+                    <p class="text-body">Contraste absoluto. Fundo preto anula o tempo; luz quente sinaliza relaxamento. Fotogenia instantânea estimula o ego digital.</p>
                 </div>
                 <div class="card-premium reveal-up" style="transition-delay: 0.1s;">
-                    <div class="card-icon">👁️</div>
-                    <h3 class="title-medium" style="font-size: 1.5rem;">Estética Imersiva</h3>
-                    <p class="text-body">Iluminação arquitetônica pensada frame a frame. O ambiente aumenta o valor percebido do produto.</p>
+                    <div class="card-icon">👂</div>
+                    <h3 class="title-medium" style="font-size: 1.5rem;">Audição</h3>
+                    <p class="text-body">Música vazando para a rua. Volume protege conversas sem silenciar mesas. Evolução de BPM acelera o consumo à noite.</p>
                 </div>
                 <div class="card-premium reveal-up" style="transition-delay: 0.2s;">
-                    <div class="card-icon">🤝</div>
-                    <h3 class="title-medium" style="font-size: 1.5rem;">Acessibilidade</h3>
-                    <p class="text-body">Visual de ticket altíssimo. Preço compatível com a realidade do universitário. Democrático na essência.</p>
+                    <div class="card-icon">👃</div>
+                    <h3 class="title-medium" style="font-size: 1.5rem;">Olfato & Tato</h3>
+                    <p class="text-body">Zero cheiro de fritura. Aromas cítricos. Madeira fosca, copo pesado trincando. Texturas reais transmitem qualidade premium.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 8rem;">
+                <span class="section-tag reveal-up text-center">UX Físico</span>
+                <h2 class="title-large reveal-up text-center" style="text-align: center; margin-bottom: 4rem;">A Jornada Completa</h2>
+                
+                <div class="flow-container reveal-up">
+                    <div class="flow-node">1. Atração (Acústica & Visual na Rua)</div>
+                    <div class="flow-arrow"></div>
+                    <div class="flow-node">2. Entrada Fluida (Sem catracas)</div>
+                    <div class="flow-arrow"></div>
+                    <div class="flow-node">3. Transação Fricção Zero (Caixa rápido)</div>
+                    <div class="flow-arrow"></div>
+                    <div class="flow-node">4. Colisão Social (Cruzando corredores largos)</div>
+                    <div class="flow-arrow"></div>
+                    <div class="flow-node">5. UGC (Fotos no Neon com o Balde)</div>
+                    <div class="flow-arrow"></div>
+                    <div class="flow-node" style="color: var(--color-gold); border-color: var(--color-gold);">6. Saída Limpa (Sem comandas a pagar)</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CINEMATIC MOMENT 2 -->
     <section class="cinematic-moment">
-        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187" alt="Multidão socializando" class="cinematic-bg parallax-img" loading="lazy">
-        <div class="cinematic-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187" alt="Multidão" class="cinematic-bg parallax-img" loading="lazy">
+        <div class="cinematic-overlay" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8));"></div>
         <div class="cinematic-text reveal-up">
-            <h2 class="title-display" style="font-size: clamp(2rem, 5vw, 4.5rem);">"O melhor marketing sempre foi uma mesa cheia."</h2>
+            <h2 class="title-display" style="font-size: clamp(2.5rem, 6vw, 5rem);">"O melhor marketing sempre foi uma mesa cheia."</h2>
         </div>
     </section>
 
-    <!-- JORNADA DO CLIENTE & BRANDING SENSORIAL -->
-    <section id="jornada" class="section-padding container">
-        <span class="section-tag reveal-up">Neuroarquitetura</span>
-        <h2 class="title-large reveal-up" style="margin-bottom: 2rem;">Branding Sensorial</h2>
-        <p class="text-lead reveal-up" style="margin-bottom: 5rem;">A permanência não é um acidente. É desenhada através dos cinco sentidos.</p>
-
-        <table class="table-editorial reveal-up">
-            <thead>
-                <tr>
-                    <th style="width: 20%;">Sentido</th>
-                    <th>Aplicação Estratégica</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-label="Sentido"><strong style="color: var(--color-white); font-family: var(--font-display); font-size: 1.5rem;">Visão</strong></td>
-                    <td data-label="Aplicação">Contraste absoluto. O preto fosco anula o tempo; a luz quente e os neons sinalizam "relaxamento". O ambiente hiper-fotogênico alimenta o ego digital.</td>
-                </tr>
-                <tr>
-                    <td data-label="Sentido"><strong style="color: var(--color-white); font-family: var(--font-display); font-size: 1.5rem;">Audição</strong></td>
-                    <td data-label="Aplicação">Música acústica vazando para a rua. Volume que camufla ruídos, protege conversas, mas não silencia as mesas. Evolução de BPM conforme a noite avança.</td>
-                </tr>
-                <tr>
-                    <td data-label="Sentido"><strong style="color: var(--color-white); font-family: var(--font-display); font-size: 1.5rem;">Olfato</strong></td>
-                    <td data-label="Aplicação">Exaustão cirúrgica: zero cheiro de cozinha. Aromas cítricos dos drinks dominam, reduzindo ansiedade e prolongando a estadia.</td>
-                </tr>
-                <tr>
-                    <td data-label="Sentido"><strong style="color: var(--color-white); font-family: var(--font-display); font-size: 1.5rem;">Tato</strong></td>
-                    <td data-label="Aplicação">A solidez da madeira, a aspereza do tijolo e o frio do vidro suado. Texturas reais transmitem qualidade premium.</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div style="margin-top: 8rem;">
-            <span class="section-tag reveal-up text-center">UX Físico</span>
-            <h2 class="title-large reveal-up text-center" style="text-align: center; margin-bottom: 4rem;">A Jornada Perfeita</h2>
-            
-            <div class="flow-container reveal-up">
-                <div class="flow-node">Atração (Acústica & Visual da Rua)</div>
-                <div class="flow-arrow"></div>
-                <div class="flow-node">Entrada Fluida (Sem catracas)</div>
-                <div class="flow-arrow"></div>
-                <div class="flow-node">Transação Fricção Zero (Auto-serviço)</div>
-                <div class="flow-arrow"></div>
-                <div class="flow-node">Colisão Social (Corredores de encontro)</div>
-                <div class="flow-arrow"></div>
-                <div class="flow-node">UGC (Criação de Conteúdo/Fotos)</div>
-                <div class="flow-arrow"></div>
-                <div class="flow-node" style="color: var(--color-gold); border-color: var(--color-gold);">Saída Limpa (Sem comandas)</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CINEMATIC MOMENT 3 -->
-    <section class="cinematic-moment">
-        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9" alt="Texturas de arquitetura" class="cinematic-bg parallax-img" loading="lazy">
-        <div class="cinematic-overlay"></div>
-        <div class="cinematic-text reveal-up">
-            <h2 class="title-display" style="font-size: clamp(2rem, 5vw, 4.5rem);">"Nós não abrimos um bar.<br>Criamos um ponto de encontro."</h2>
-        </div>
-    </section>
-
-    <!-- ARQUITETURA & FACHADA -->
     <section id="arquitetura" class="section-padding container">
         <div class="grid-2">
             <div class="reveal-up">
                 <span class="section-tag">Engenharia do Espaço</span>
-                <h2 class="title-large">A Esquina.</h2>
-                <p class="text-lead" style="color: var(--color-white);">O maior ativo comercial do projeto.</p>
+                <h2 class="title-large">A Esquina & A Fachada</h2>
+                <p class="text-lead" style="color: var(--color-white);">Transformando imperfeição em estilo.</p>
                 <p class="text-body" style="margin-bottom: 1.5rem;">
-                    Esquinas são faróis urbanos. Visíveis a 270 graus. Tratamos a fachada não como uma parede, mas como publicidade viva 24h. 
+                    Esquinas são faróis urbanos visíveis a 270 graus. O antigo armazém não é um obstáculo, é nosso canvas. Com um orçamento enxuto, abraçamos o estilo Industrial-Chic.
                 </p>
                 <p class="text-body">
-                    A imperfeição do armazém é o nosso estilo. O contraste do preto com a luz cenográfica transforma o simples em uma obra de design industrial-chic.
+                    A regra de ouro: <strong>Se não tem função e não é bonito, pinte de preto.</strong> O preto camufla canos e fios, jogando os olhos do cliente para a iluminação quente e o neon.
                 </p>
             </div>
-            <div class="reveal-up">
-                <img src="https://i.imgur.com/aoWMzsL.jpeg" alt="Fachada Atual" style="width: 100%; border-radius: 4px; filter: grayscale(20%) contrast(1.2);">
-                <p class="text-body" style="font-size: 0.8rem; text-align: center; margin-top: 1rem; font-style: italic;">O Canvas Brutalista. Antes da luz.</p>
+            <div class="reveal-up" style="align-self: center;">
+                <table class="table-editorial" style="background: var(--color-dark); padding: 2rem; border-radius: 8px;">
+                    <tbody>
+                        <tr>
+                            <td data-label="Evitar"><strong style="color: var(--color-red);">❌ Luz Branca (6000K)</strong></td>
+                            <td data-label="Motivo">Destrói o clima premium, parecendo refeitório.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Evitar"><strong style="color: var(--color-red);">❌ Banners e Logos de Fornecedores</strong></td>
+                            <td data-label="Motivo">Polui a fachada. A marca principal é o Dom Henrique.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Evitar"><strong style="color: var(--color-red);">❌ Excesso de Mesas</strong></td>
+                            <td data-label="Motivo">O bar precisa de espaço negativo para o fluxo livre e colisões sociais.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
         <div style="margin-top: 6rem;">
-            <h3 class="title-medium reveal-up" style="margin-bottom: 3rem;">Materiais Fundamentais</h3>
+            <h3 class="title-medium reveal-up" style="margin-bottom: 3rem;">Materiais & Texturas</h3>
             <div class="grid-4">
                 <div class="card-premium reveal-up">
                     <h4 style="color: var(--color-white); font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 1rem;">Concreto & Tijolo</h4>
-                    <p class="text-body" style="font-size: 0.9rem;">Fundo urbano, quebra a formalidade e garante resistência brutalista.</p>
+                    <p class="text-body" style="font-size: 0.9rem;">Fundo urbano e brutalista. Quebra o "certinho".</p>
                 </div>
                 <div class="card-premium reveal-up" style="transition-delay: 0.1s;">
                     <h4 style="color: var(--color-white); font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 1rem;">Luz Âmbar (2700K)</h4>
-                    <p class="text-body" style="font-size: 0.9rem;">O coração do projeto. Esconde imperfeições e acolhe o cliente.</p>
+                    <p class="text-body" style="font-size: 0.9rem;">O coração do projeto. Cria o chiaroscuro e o conforto.</p>
                 </div>
                 <div class="card-premium reveal-up" style="transition-delay: 0.2s;">
                     <h4 style="color: var(--color-white); font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 1rem;">Metalon Fosco</h4>
@@ -617,23 +436,129 @@
                 </div>
                 <div class="card-premium reveal-up" style="transition-delay: 0.3s;">
                     <h4 style="color: var(--color-white); font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 1rem;">Madeira Naval</h4>
-                    <p class="text-body" style="font-size: 0.9rem;">Traz o calor e o toque hospitaleiro essencial em topos de mesas.</p>
+                    <p class="text-body" style="font-size: 0.9rem;">Traz o calor e a hospitalidade aos tampos de mesas.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CINEMATIC MOMENT 4 -->
+    <section id="projeto-arquitetonico" style="background-color: var(--color-black); padding-top: 10vh;">
+        
+        <div class="container container-narrow text-center">
+            <span class="section-tag reveal-up">O Projeto Arquitetônico</span>
+            <h2 class="title-large reveal-up" style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 2rem;">Da transformação de um antigo armazém ao novo ponto de encontro universitário da região.</h2>
+            <p class="text-body reveal-up" style="max-width: 800px; margin: 0 auto 10vh auto; font-size: 1.1rem;">
+                O Dom Henrique nasce da revitalização de um imóvel histórico que permaneceu fechado por mais de uma década. Em vez de construir uma nova edificação, o projeto preserva sua identidade urbana enquanto transforma completamente a experiência de quem passa por essa esquina. Cada decisão arquitetônica foi pensada para equilibrar operação eficiente, atmosfera premium e viabilidade construtiva.
+            </p>
+        </div>
+
+        <div class="container section-padding">
+            <div class="text-center reveal-up">
+                <span class="section-tag" style="justify-content: center; display: flex;">Da História à Transformação</span>
+            </div>
+            
+            <div class="ad-grid reveal-up">
+                <div class="ad-col">
+                    <h3 class="title-medium" style="color: var(--color-white); text-align: center;">ANTES</h3>
+                    <p class="text-body" style="text-align: center; margin-bottom: 1rem; padding: 0 1rem;">Antigo armazém localizado na Avenida Presidente Juscelino Kubitschek, em Cassilândia/MS. Um imóvel que permaneceu fechado por anos e passou despercebido por grande parte da cidade.</p>
+                    <img src="https://i.imgur.com/mHitWQi.png" alt="Estado anterior do armazém" loading="lazy">
+                </div>
+                
+                <div class="ad-arrow-wrapper">
+                    <div class="ad-arrow">ANTES → DEPOIS</div>
+                </div>
+
+                <div class="ad-col">
+                    <h3 class="title-medium" style="color: var(--color-gold); text-align: center;">DEPOIS</h3>
+                    <p class="text-body" style="text-align: center; margin-bottom: 1rem; padding: 0 1rem;">Proposta arquitetônica de retrofit preservando a volumetria original do edifício e transformando-o em um bar universitário premium com identidade contemporânea.</p>
+                    <img src="https://i.imgur.com/39gXLNz.jpeg" alt="Projeto arquitetônico renderizado" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <div class="arch-tour-step reveal-up">
+            <div class="container container-narrow">
+                <h3 class="title-large" style="margin-bottom: 1rem;">PRIMEIRA IMPRESSÃO</h3>
+                <p class="text-lead" style="margin: 0 auto; color: var(--color-gray);">Ao atravessar as portas, o visitante encontra um ambiente acolhedor, iluminação quente e uma operação intuitiva que incentiva naturalmente a permanência.</p>
+            </div>
+            <div class="arch-tour-img-container">
+                <img src="https://i.imgur.com/PRMbAlY.jpeg" alt="Primeira Impressão do Bar" loading="lazy" class="zoom-scroll-img">
+            </div>
+        </div>
+
+        <div class="arch-tour-step reveal-up">
+            <div class="container container-narrow">
+                <h3 class="title-large" style="margin-bottom: 1rem;">CENTRO DA OPERAÇÃO</h3>
+                <p class="text-lead" style="margin: 0 auto; color: var(--color-gray);">O balcão foi projetado para oferecer atendimento rápido e intuitivo, permitindo que cada cliente retire sua bebida diretamente, reduzindo filas e aumentando a rotatividade sem comprometer a experiência.</p>
+            </div>
+            <div class="arch-tour-img-container">
+                <img src="https://i.imgur.com/oFt5PSL.jpeg" alt="Centro da Operação do Bar" loading="lazy" class="zoom-scroll-img">
+            </div>
+        </div>
+
+        <div class="arch-tour-step reveal-up">
+            <div class="container container-narrow">
+                <h3 class="title-large" style="margin-bottom: 1rem;">COZINHA ABERTA</h3>
+                <p class="text-lead" style="margin: 0 auto; color: var(--color-gray);">A cozinha conversa visualmente com o salão através da janela de atendimento, transmitindo organização, transparência, higiene e velocidade na preparação dos pedidos.</p>
+            </div>
+            <div class="arch-tour-img-container">
+                <img src="https://i.imgur.com/0zSA1tp.jpeg" alt="Cozinha Aberta" loading="lazy" class="zoom-scroll-img">
+            </div>
+        </div>
+
+        <div class="arch-tour-step reveal-up">
+            <div class="container container-narrow">
+                <h3 class="title-large" style="margin-bottom: 1rem;">O ESPAÇO MAIS FOTOGRAFADO</h3>
+                <p class="text-lead" style="margin: 0 auto; color: var(--color-gray);">Todo grande bar possui um ambiente que naturalmente se transforma em cenário para fotos, fortalecendo espontaneamente sua presença nas redes sociais e incentivando o marketing orgânico.</p>
+            </div>
+            <div class="arch-tour-img-container">
+                <img src="https://i.imgur.com/hzx807g.jpeg" alt="Área Instagramável" loading="lazy" class="zoom-scroll-img">
+            </div>
+        </div>
+
+        <div class="arch-tour-step reveal-up">
+            <div class="container container-narrow">
+                <h3 class="title-large" style="margin-bottom: 1rem;">ATÉ OS DETALHES IMPORTAM</h3>
+                <p class="text-lead" style="margin: 0 auto; color: var(--color-gray);">A experiência não termina no salão. Os banheiros seguem exatamente o mesmo padrão arquitetônico, reforçando a percepção de qualidade em todos os ambientes.</p>
+            </div>
+            <div class="arch-tour-img-container">
+                <img src="https://i.imgur.com/FwSTwWE.jpeg" alt="Banheiros e Detalhes" loading="lazy" class="zoom-scroll-img">
+            </div>
+        </div>
+
+        <div class="arch-tour-step reveal-up">
+            <div class="container container-narrow">
+                <h3 class="title-large" style="margin-bottom: 1rem;">VISÃO GERAL DO PROJETO</h3>
+                <p class="text-lead" style="margin: 0 auto; color: var(--color-gray);">Todos os ambientes trabalham em conjunto para criar um fluxo intuitivo, favorecendo circulação, permanência, interação social e eficiência operacional.</p>
+            </div>
+            <div class="arch-tour-img-container">
+                <img src="https://i.imgur.com/vLvfULo.jpeg" alt="Visão Geral do Projeto Arquitetônico" loading="lazy" class="zoom-scroll-img">
+            </div>
+        </div>
+
+        <div class="section-padding container container-narrow text-center">
+            <span class="section-tag reveal-up">Da Visão à Realidade</span>
+            <div class="reveal-up">
+                <p class="text-body" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 5rem;">
+                    Todo grande projeto nasce primeiro como uma ideia. Depois transforma-se em desenho, planejamento, arquitetura e execução. O Dom Henrique representa a materialização de uma visão: provar que uma cidade do interior também pode oferecer uma experiência urbana sofisticada, memorável e acessível.
+                </p>
+            </div>
+        </div>
+        
+        <blockquote class="huge-quote reveal-up" style="border: none; padding-top: 0; padding-bottom: 20vh; font-size: clamp(2rem, 5vw, 4rem);">
+            "Não estamos apenas reformando um antigo armazém. Estamos criando o novo ponto de encontro universitário da região."
+        </blockquote>
+
+    </section>
+
     <section class="cinematic-moment">
-        <!-- Vibe Neon Interior -->
-        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=2000" alt="Neon aesthetics" class="cinematic-bg parallax-img" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9" alt="Neon" class="cinematic-bg parallax-img" loading="lazy">
         <div class="cinematic-overlay" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8));"></div>
         <div class="cinematic-text reveal-up">
-            <h2 class="title-display" style="font-size: clamp(2rem, 5vw, 4.5rem);">"Alguns lugares servem bebidas.<br>Outros criam memórias."</h2>
+            <h2 class="title-display" style="font-size: clamp(2rem, 5vw, 4.5rem);">"Você não precisa viajar para viver uma experiência de capital."</h2>
         </div>
     </section>
 
-    <!-- IDENTIDADE VISUAL & COMUNICAÇÃO -->
     <section id="identidade" class="section-padding" style="background-color: var(--color-dark);">
         <div class="container">
             <span class="section-tag reveal-up">Brand System</span>
@@ -642,21 +567,21 @@
 
             <div class="grid-3" style="margin-bottom: 5rem;">
                 <div class="card-premium reveal-up" style="padding: 0; border: none; overflow: hidden;">
-                    <div style="height: 120px; background: #000; display: flex; align-items: flex-end; padding: 1rem;">#000000</div>
+                    <div style="height: 120px; background: #000; display: flex; align-items: flex-end; padding: 1rem; font-family: monospace;">#000000</div>
                     <div style="padding: 1.5rem;">
                         <h4 style="color: var(--color-white); font-family: var(--font-display);">Preto Absoluto</h4>
                         <p class="text-body" style="font-size: 0.85rem;">Mistério, fundo infinito. Foca a atenção na luz.</p>
                     </div>
                 </div>
                 <div class="card-premium reveal-up" style="padding: 0; border: none; overflow: hidden; transition-delay: 0.1s;">
-                    <div style="height: 120px; background: var(--color-gold); display: flex; align-items: flex-end; padding: 1rem; color: #000; font-weight: 600;">#D4AF37</div>
+                    <div style="height: 120px; background: var(--color-gold); display: flex; align-items: flex-end; padding: 1rem; color: #000; font-weight: 600; font-family: monospace;">#D4AF37</div>
                     <div style="padding: 1.5rem;">
                         <h4 style="color: var(--color-gold); font-family: var(--font-display);">Dourado Cerveja</h4>
                         <p class="text-body" style="font-size: 0.85rem;">Premium, celebração. A cor do produto âncora.</p>
                     </div>
                 </div>
                 <div class="card-premium reveal-up" style="padding: 0; border: none; overflow: hidden; transition-delay: 0.2s;">
-                    <div style="height: 120px; background: var(--color-red); display: flex; align-items: flex-end; padding: 1rem; font-weight: 600;">#8B0000</div>
+                    <div style="height: 120px; background: var(--color-red); display: flex; align-items: flex-end; padding: 1rem; font-weight: 600; font-family: monospace;">#8B0000</div>
                     <div style="padding: 1.5rem;">
                         <h4 style="color: var(--color-red); font-family: var(--font-display);">Rubi Noturno</h4>
                         <p class="text-body" style="font-size: 0.85rem;">Energia vibrante, highlights de ação.</p>
@@ -685,7 +610,6 @@
                     </table>
                 </div>
                 
-                <!-- Imagem Ilustrativa: Visual Escuro / Neon -->
                 <div class="reveal-up" style="align-self: center;">
                     <img src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?auto=format&fit=crop&q=80&w=800" alt="Estilo Visual Noturno" class="editorial-image" loading="lazy">
                 </div>
@@ -693,70 +617,127 @@
         </div>
     </section>
 
-    <!-- MANUAL OPERACIONAL & FINANCEIRO -->
-    <section id="estrategia" class="section-padding container">
-        <span class="section-tag reveal-up">Business & Operations</span>
-        <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Estratégia Invisível</h2>
-
+    <section id="operacao" class="section-padding container">
         <div class="grid-2">
             <div class="reveal-up">
-                <h3 class="title-medium" style="color: var(--color-gold);">Modelo Operacional</h3>
-                <p class="text-body" style="margin-bottom: 1.5rem;">
-                    A eficiência financia a estética. A eliminação do serviço de garçom reduz o passivo trabalhista e zera a margem de calotes (venda antecipada).
+                <span class="section-tag">Backstage</span>
+                <h2 class="title-large">Manual Operacional</h2>
+                <p class="text-body" style="margin-bottom: 2rem;">
+                    A ausência de garçons exige um sistema interno impecável. O balcão é o palco.
                 </p>
-                <ul class="text-body" style="list-style: none; padding-left: 0;">
-                    <li style="margin-bottom: 0.5rem;"><span style="color: var(--color-gold);">✓</span> Caixa de ultra-giro (1 min máx).</li>
-                    <li style="margin-bottom: 0.5rem;"><span style="color: var(--color-gold);">✓</span> Cozinha restrita e sem odores (pagers).</li>
-                    <li style="margin-bottom: 0.5rem;"><span style="color: var(--color-gold);">✓</span> Balcão e banheiros sempre higienizados.</li>
-                </ul>
+                <div class="check-category">
+                    <ul class="check-list">
+                        <li>□ <strong>Abertura:</strong> Reposição total de geladeiras (giro rápido). Som ambiente "Warmup".</li>
+                        <li>□ <strong>Atendimento:</strong> Sorriso, agilidade, tempo máx de fila 1 minuto.</li>
+                        <li>□ <strong>Cozinha:</strong> Exaustão no máximo. Preparo em lotes prévios. Pagers acionados.</li>
+                        <li>□ <strong>Fechamento:</strong> Limpeza pesada, sangria, contagem cega.</li>
+                    </ul>
+                </div>
             </div>
             
-            <div class="reveal-up">
-                <h3 class="title-medium" style="color: var(--color-gold);">Mecânica Financeira</h3>
-                <p class="text-body" style="margin-bottom: 1.5rem;">
-                    <strong>Produto Âncora:</strong> Cerveja 500ml. Margem justa, alto volume. Paga as contas e atrai o fluxo.<br><br>
-                    <strong>Produto Estrela:</strong> Balde de Caipirinha. Alta margem de contribuição. Otimizado para grupos e gatilho perfeito para o User Generated Content (Instagram).
+            <div id="marketing" class="reveal-up" style="background: var(--color-surface); padding: 4rem;">
+                <span class="section-tag">Growth</span>
+                <h2 class="title-large" style="font-size: 2.5rem;">Marketing</h2>
+                <p class="text-body" style="margin-bottom: 2rem;">
+                    O design do bar é o nosso motor orgânico (UGC - User Generated Content). Clientes postam o balde de cerveja no neon, criando prova social grátis.
                 </p>
+                <ul class="check-list">
+                    <li><strong style="color: var(--color-gold);">Open de Quinta:</strong> Cria escassez. Bar cheio às 18h atrai fluxo pra noite toda.</li>
+                    <li><strong style="color: var(--color-gold);">Redes Sociais:</strong> Fotos cinematográficas e curtas. Menos é mais.</li>
+                    <li><strong style="color: var(--color-gold);">Atléticas:</strong> Parcerias de "esquenta". Garantem base fiel de público.</li>
+                </ul>
             </div>
         </div>
+    </section>
 
-        <div style="margin-top: 6rem;" class="reveal-up">
-            <h3 class="title-medium text-center" style="text-align: center; margin-bottom: 3rem;">Growth & Marketing</h3>
-            <table class="table-editorial">
+    <blockquote class="huge-quote reveal-up">
+        "Alguns lugares servem bebidas. Outros criam memórias."
+    </blockquote>
+
+    <section id="financeiro" class="section-padding" style="background-color: var(--color-surface);">
+        <div class="container">
+            <span class="section-tag reveal-up">Escala & Lucro</span>
+            <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Modelo Financeiro</h2>
+
+            <div class="grid-2">
+                <div class="card-premium reveal-up">
+                    <h3 class="title-medium" style="color: var(--color-gold);">Mix Estratégico</h3>
+                    <p class="text-body" style="margin-bottom: 1rem;"><strong>Âncora (Cerveja 500ml):</strong> Margem menor, giro massivo. Justifica a percepção de bar democrático.</p>
+                    <p class="text-body"><strong>Estrela (Balde de Caipirinha):</strong> Alto valor agregado, margem gigante. Produto super instagramável e compartilhado.</p>
+                </div>
+                <div class="card-premium reveal-up" style="transition-delay: 0.1s;">
+                    <h3 class="title-medium" style="color: var(--color-gold);">Ponto de Equilíbrio</h3>
+                    <p class="text-body">A ausência de garçons aniquila passivos e folha inflada. O custo fixo enxuto faz o Ponto de Equilíbrio (PE = CF / IMC) ser atingido mais cedo no mês, maximizando lucros.</p>
+                </div>
+            </div>
+
+            <h3 class="title-medium reveal-up" style="margin-top: 6rem; margin-bottom: 2rem;">Plano de Crescimento</h3>
+            <table class="table-editorial reveal-up">
                 <tbody>
                     <tr>
-                        <td data-label="Estratégia"><strong style="color: var(--color-white);">Open de Quinta-feira</strong></td>
-                        <td data-label="Impacto">Cria urgência e escassez. Enche o bar cedo. Bar cheio às 18h garante fluxo constante até a madrugada.</td>
+                        <td data-label="Timeline" style="width: 20%;"><strong style="color: var(--color-white); font-size: 1.2rem;">Ano 1</strong></td>
+                        <td data-label="Foco"><strong>Dominância Local.</strong> Tornar o Dom Henrique o destino unânime nas quintas e finais de semana universitários de Cassilândia.</td>
                     </tr>
                     <tr>
-                        <td data-label="Estratégia"><strong style="color: var(--color-white);">UGC (User Generated Content)</strong></td>
-                        <td data-label="Impacto">O design do bar trabalha pelo marketing. Clientes tiram fotos espontâneas nos neons. A mídia social orgânica é infinita.</td>
+                        <td data-label="Timeline"><strong style="color: var(--color-white); font-size: 1.2rem;">Ano 2</strong></td>
+                        <td data-label="Foco"><strong>Comunidade & Merch.</strong> Lançamento de bonés, copos térmicos. O Dom Henrique vira lifestyle. Patrocínio ativo de eventos.</td>
                     </tr>
                     <tr>
-                        <td data-label="Estratégia"><strong style="color: var(--color-white);">Parcerias Universitárias</strong></td>
-                        <td data-label="Impacto">Integração com atléticas locais cria uma base de lealdade massiva. Se a liderança bebe no Dom Henrique, a faculdade inteira segue.</td>
+                        <td data-label="Timeline"><strong style="color: var(--color-white); font-size: 1.2rem;">Ano 3</strong></td>
+                        <td data-label="Foco"><strong>Expansão.</strong> Formatação do modelo de franquia "Zero-Atrito" para outras cidades de MS (Dourados, Paranaíba).</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-    <!-- CINEMATIC MOMENT 5 (CONCLUSÃO) -->
-    <section class="cinematic-moment">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=2000" alt="Cena noturna de bar" class="cinematic-bg parallax-img" loading="lazy">
-        <div class="cinematic-overlay" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.95));"></div>
-        <div class="cinematic-text reveal-up">
-            <h2 class="title-display" style="font-size: clamp(2rem, 5vw, 4.5rem);">"O melhor investimento nunca foi em concreto.<br>Foi em experiências."</h2>
+    <section id="manual" class="section-padding container">
+        <span class="section-tag reveal-left">Resumo Executivo</span>
+        <h2 class="title-large reveal-up" style="margin-bottom: 4rem;">Manual da Marca</h2>
+
+        <div class="grid-2">
+            <div class="reveal-up">
+                <table class="table-editorial" style="border: none;">
+                    <tbody>
+                        <tr>
+                            <td data-label="DNA" style="padding: 1rem 0; border-bottom: 1px solid #333;"><strong style="color: var(--color-gold);">Propósito</strong><br>Democratizar a estética e experiência premium.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="DNA" style="padding: 1rem 0; border-bottom: 1px solid #333;"><strong style="color: var(--color-gold);">Arquétipos</strong><br>O Mago (Transforma a noite) + O Cara Comum (Acessível).</td>
+                        </tr>
+                        <tr>
+                            <td data-label="DNA" style="padding: 1rem 0; border-bottom: 1px solid #333;"><strong style="color: var(--color-gold);">Tom de Voz</strong><br>Direto, magnético, despretensioso. O veterano que todos admiram.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="DNA" style="padding: 1rem 0; border-bottom: 1px solid #333;"><strong style="color: var(--color-gold);">Pitch</strong><br>"O lounge de esquina que traz visual de capital operando num formato ágil com preço de estudante."</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             
+            <div class="reveal-up" style="background: var(--color-dark); padding: 4rem; border-radius: 4px;">
+                <h3 class="title-medium" style="color: var(--color-gold);">Conclusão</h3>
+                <p class="text-body" style="font-size: 1.1rem;">
+                    O Dom Henrique prova que Cassilândia não precisa ser carente de inovação. Não somos um bar servindo bebidas; somos um laboratório de experiência humana, neuroarquitetura e gestão de fluxos.
+                </p>
+                <p class="text-body" style="font-size: 1.1rem; margin-top: 1.5rem;">
+                    Quando arquitetura brutalista, luz quente, auto-serviço e preços justos operam juntos, o sucesso não é sorte. É engenharia emocional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cinematic-moment">
+        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b" alt="Bar premium" class="cinematic-bg parallax-img" loading="lazy">
+        <div class="cinematic-overlay" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,1));"></div>
+        <div class="cinematic-text reveal-up">
+            <h2 class="title-display" style="font-size: clamp(2.5rem, 6vw, 5rem);">"O Dom Henrique não quer ser apenas um bar."</h2>
             <div style="margin-top: 5rem;">
                 <a href="#hero" class="btn-outline">Voltar ao Início</a>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-         SCRIPTS GLOBAIS DO SPA
-         ========================================================================== -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             
@@ -768,25 +749,37 @@
                 } else {
                     nav.classList.remove('scrolled');
                 }
-            });
+            }, { passive: true });
 
-            // 2. Efeito Parallax Suave para Hero Images
+            // 2. Efeito Parallax Suave & Zoom Sutil
             const parallaxImgs = document.querySelectorAll('.parallax-img');
+            const zoomImgs = document.querySelectorAll('.zoom-scroll-img');
+            
             window.addEventListener('scroll', () => {
                 let scrollPos = window.pageYOffset;
                 requestAnimationFrame(() => {
+                    // Parallax
                     parallaxImgs.forEach(img => {
-                        // Optimizing: only animate if in viewport
                         const rect = img.getBoundingClientRect();
                         if(rect.top < window.innerHeight && rect.bottom > 0) {
-                            // Scale starts at 1.1, shifts slightly
                             img.style.transform = `translateY(${scrollPos * 0.15}px) scale(1.1)`;
+                        }
+                    });
+                    
+                    // Zoom Max 2% das imagens do Tour
+                    zoomImgs.forEach(img => {
+                        const rect = img.getBoundingClientRect();
+                        if(rect.top < window.innerHeight && rect.bottom > 0) {
+                            let visiblePercent = 1 - (rect.top / window.innerHeight);
+                            visiblePercent = Math.max(0, Math.min(1, visiblePercent));
+                            let scale = 1 + (0.02 * visiblePercent);
+                            img.style.transform = `scale(${scale})`;
                         }
                     });
                 });
             }, { passive: true });
 
-            // 3. Intersection Observer para animações Reveal
+            // 3. Intersection Observer (Fade Up Reveal)
             const revealElements = document.querySelectorAll('.reveal-up, .reveal-left');
             const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
 
@@ -794,7 +787,6 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('reveal-visible');
-                        // Stop observing once revealed for better performance
                         observer.unobserve(entry.target);
                     }
                 });
@@ -802,13 +794,12 @@
 
             revealElements.forEach(el => observer.observe(el));
             
-            // 4. Forçar visibilidade no load
+            // Forçar visibilidade inicial
             setTimeout(() => {
-                const initElements = document.querySelectorAll('#hero .reveal-up');
-                initElements.forEach(el => el.classList.add('reveal-visible'));
+                document.querySelectorAll('#hero .reveal-up').forEach(el => el.classList.add('reveal-visible'));
             }, 100);
 
-            // 5. Lógica de navegação SPA (Active State no Menu)
+            // 4. Lógica de navegação SPA (Active State no Menu)
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-links a');
 
